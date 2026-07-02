@@ -46,6 +46,10 @@ export default function WhereToGetKOIN() {
                   <Link href={contract.explorer} target="_blank">{contract.address}</Link>
                 </p>
               ))}
+              <p className="p-sm color--grey mt-15">
+                vKOIN is a wrapped representation of KOIN. For long-term holding, we recommend
+                bridging to native KOIN on the Koinos blockchain to avoid bridge and wrapped-token risks.
+              </p>
             </div>
           </div>
         </div>
