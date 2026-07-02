@@ -46,12 +46,6 @@ export default function BrandSlider() {
 
     const brands = [
         {
-            name: 'mexc',
-            imageLight: '/images/sections/partners/mexc.png',
-            imageDark: '/images/sections/partners/mexc-white.png',
-            url: 'https://www.mexc.com/price/KOIN'
-        },
-        {
             name: 'coinstore',
             imageLight: '/images/sections/partners/coinstore.png',
             imageDark: '/images/sections/partners/coinstore-white.png',

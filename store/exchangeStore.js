@@ -15,12 +15,6 @@ export const useExchangeStore = create(() => ({
       type: "DEX (vKOIN on Base)",
     },
     {
-      name: "MEXC",
-      icon: "/images/exchanges/mexc-logo.png",
-      url: "https://www.mexc.com/exchange/KOIN_USDT",
-      type: "CEX",
-    },
-    {
       name: "Jupiter",
       icon: "/images/exchanges/jupiter-logo.png",
       url: "https://jup.ag/swap?sell=So11111111111111111111111111111111111111112&buy=8AUxdPqYU4FBy5rZDhMJxTniPs7gtEfdHjP3UKM71m6G",
