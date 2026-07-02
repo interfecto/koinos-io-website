@@ -9,6 +9,12 @@ export const useExchangeStore = create(() => ({
       type: "DEX (vKOIN on Ethereum)",
     },
     {
+      name: "DeFiLlama",
+      icon: "/images/exchanges/defillama.svg",
+      url: "https://swap.defillama.com/?chain=base&from=0x0000000000000000000000000000000000000000&tab=swap&to=0x9b61660cb1a6920e9c912570cd210020b956f34e",
+      type: "DEX (vKOIN on Base)",
+    },
+    {
       name: "MEXC",
       icon: "/images/exchanges/mexc-logo.png",
       url: "https://www.mexc.com/exchange/KOIN_USDT",
