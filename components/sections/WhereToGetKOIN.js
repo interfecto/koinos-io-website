@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useExchangeStore } from "@/store/exchangeStore";
 
 export default function WhereToGetKOIN() {
-  const { exchanges } = useExchangeStore();
+  const { exchanges, contracts } = useExchangeStore();
 
   return (
     <>
@@ -35,6 +35,21 @@ export default function WhereToGetKOIN() {
                   </Link>
                 </div>
               ))}
+            </div>
+          </div>
+          <div className="row justify-content-center mt-50">
+            <div className="col-md-8 text-center">
+              <h6 className="s-20 w-700 mb-15">vKOIN Contract Addresses</h6>
+              {contracts.map((contract) => (
+                <p key={contract.chain} className="p-sm color--grey" style={{ wordBreak: "break-all" }}>
+                  {contract.chain}:{" "}
+                  <Link href={contract.explorer} target="_blank">{contract.address}</Link>
+                </p>
+              ))}
+              <p className="p-sm color--grey mt-15">
+                vKOIN is a wrapped representation of KOIN. For long-term holding, we recommend
+                bridging to native KOIN on the Koinos blockchain to avoid bridge and wrapped-token risks.
+              </p>
             </div>
           </div>
         </div>
