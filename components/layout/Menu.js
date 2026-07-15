@@ -9,6 +9,10 @@ export default function Menu() {
 
       <ul className="wsmenu-list nav-theme">
 
+        <li className="nl-simple" aria-haspopup="true">
+          <Link href="/history" className="h-link">History</Link>
+        </li>
+
         <li aria-haspopup="true">
           <Link href="#" className="h-link">Learn<span className="wsarrow" /></Link>
           <ul className="sub-menu">

@@ -28,6 +28,12 @@ export default function MobileMenu({ handleMobileMenu }) {
           paddingTop: "22px",
         }}
       >
+        <li className="nl-simple" aria-haspopup="true">
+          <Link href="/history" onClick={handleMobileMenu} className="h-link">
+            History
+          </Link>
+        </li>
+
         {/* DROPDOWN SUB MENU */}
         <li aria-haspopup="true">
           <span
