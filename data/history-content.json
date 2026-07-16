@@ -1,12 +1,222 @@
 {
-  "title": "Koinos Exists: A Chronicle of a Blockchain That Cannot Be Recreated",
+  "title": "Koinos, Story of a community",
   "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md",
   "introduction": [
-    "Koinos official visual identity. Source: Koinos media kit.",
+    "The title page combines the official Koinos identity with historical images from the 2020 mining announcement, the 2022 mainnet transition, Koinos Army's 2023 community art, and the 2026 Koinos One dashboard. Each image is sourced and contextualized at its corresponding milestone below.",
     "We are entering an era in which artificial intelligence and large language models can help almost anyone write software. A single developer can generate an application, fork a codebase, modify a protocol, or even launch a new blockchain faster than ever before. In that world, the mere ability to create another chain is no longer the scarce thing.",
     "What cannot be generated on demand is history.",
     "Koinos matters because it exists as a lived blockchain: a chain launched on mainnet, used by real people, shaped by real transactions, tested by markets, criticized by its own community, maintained through difficult transitions, and extended by developers who were not all part of the founding company. Its value is not only in its code, architecture, or technical ideas. It is also in the path that brought it here: the people who mined it, built wallets and tools, debated governance, lost money, donated funds, launched applications, ran infrastructure, and kept the network visible when the original company stepped back."
   ],
+  "peopleContributionAnalysis": {
+    "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-community-contribution-analysis.md",
+    "rankingSourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-community-contribution-ranking.csv",
+    "metric": "Telegram + individually inventoried Discord + X + articles + videos",
+    "people": {
+      "andrew levine": {
+        "person": "Andrew Levine",
+        "rank": 6,
+        "total": 16119,
+        "first": "2019-11-18",
+        "last": "2026-02-11"
+      },
+      "steve gerbino": {
+        "person": "Steve Gerbino",
+        "rank": 10,
+        "total": 9393,
+        "first": "2020-10-06",
+        "last": "2026-03-22"
+      },
+      "michael vandeberg": {
+        "person": "Michael Vandeberg",
+        "rank": 39,
+        "total": 2096,
+        "first": "2020-10-07",
+        "last": "2026-03-04"
+      },
+      "ron hamenahem": {
+        "person": "Ron Hamenahem",
+        "rank": 114,
+        "total": 344,
+        "first": "2019-12-22",
+        "last": "2026-06-26"
+      },
+      "luke willis": {
+        "person": "Luke Willis",
+        "rank": 19,
+        "total": 5786,
+        "first": "2021-11-10",
+        "last": "2024-06-14"
+      },
+      "koinos the goat": {
+        "person": "Koinos The Goat",
+        "rank": 3,
+        "total": 24886,
+        "first": "2021-03-05",
+        "last": "2026-06-09"
+      },
+      "kui he": {
+        "person": "Kui He / motoengineer",
+        "rank": 1,
+        "total": 62037,
+        "first": "2020-05-16",
+        "last": "2026-07-11"
+      },
+      "julian gonzalez": {
+        "person": "Julián González / Jga",
+        "rank": 11,
+        "total": 9200,
+        "first": "2020-10-20",
+        "last": "2026-07-01"
+      },
+      "justin welch": {
+        "person": "Justin Welch / Justin W.",
+        "rank": 15,
+        "total": 7196,
+        "first": "2020-10-14",
+        "last": "2026-05-12"
+      },
+      "adriano foschi": {
+        "person": "Adriano Foschi",
+        "rank": 40,
+        "total": 2026,
+        "first": "2023-04-02",
+        "last": "2026-06-27"
+      },
+      "frank": {
+        "person": "Frank / ElImbatido",
+        "rank": 82,
+        "total": 677,
+        "first": "2021-11-12",
+        "last": "2026-04-24"
+      },
+      "engrave": {
+        "person": "engrave",
+        "rank": 636,
+        "total": 23,
+        "first": "2024-06-20",
+        "last": "2025-07-28"
+      },
+      "vonlooten": {
+        "person": "VonLooten",
+        "rank": 8,
+        "total": 11395,
+        "first": "2021-06-30",
+        "last": "2024-04-13"
+      },
+      "dokterkraakbeen": {
+        "person": "Dokterkraakbeen",
+        "rank": 44,
+        "total": 1713,
+        "first": "2021-10-23",
+        "last": "2026-07-15"
+      },
+      "fbslo": {
+        "person": "fbslo",
+        "rank": 1618,
+        "total": 5,
+        "first": "2021-12-14",
+        "last": "2023-08-03"
+      },
+      "g millie": {
+        "person": "G Millie / DeGemsCrew",
+        "rank": 2,
+        "total": 36303,
+        "first": "2021-11-07",
+        "last": "2026-06-26"
+      },
+      "adem": {
+        "person": "Adem / Kenpachi",
+        "rank": 31,
+        "total": 3280,
+        "first": "2021-08-29",
+        "last": "2024-12-11"
+      },
+      "karlos": {
+        "person": "Karlos",
+        "rank": 52,
+        "total": 1311,
+        "first": "2022-11-09",
+        "last": "2026-03-05"
+      },
+      "mixibo": {
+        "person": "MiXiBo",
+        "rank": 20,
+        "total": 5518,
+        "first": "2021-03-06",
+        "last": "2026-05-04"
+      },
+      "ederaleng": {
+        "person": "Ederaleng",
+        "rank": 51,
+        "total": 1361,
+        "first": "2020-04-16",
+        "last": "2026-02-27"
+      },
+      "saleh hawi": {
+        "person": "Saleh Hawi",
+        "rank": 7,
+        "total": 12180,
+        "first": "2023-01-06",
+        "last": "2026-04-07"
+      },
+      "roamin": {
+        "person": "Roamin",
+        "rank": 38,
+        "total": 2356,
+        "first": "2022-01-20",
+        "last": "2024-07-22"
+      },
+      "jon rice": {
+        "person": "Jon Rice",
+        "rank": 70,
+        "total": 895,
+        "first": "2022-09-07",
+        "last": "2026-07-15"
+      },
+      "pablo garcia": {
+        "person": "Pablo García / pgarcgo",
+        "rank": 14,
+        "total": 8367,
+        "first": "2020-04-16",
+        "last": "2026-07-15"
+      },
+      "interfecto": {
+        "person": "@interfecto / Atb 3tb",
+        "rank": 32,
+        "total": 3126,
+        "first": "2022-11-07",
+        "last": "2026-07-14"
+      },
+      "teing": {
+        "person": "Teing / @TEingvvv",
+        "rank": 1330,
+        "total": 7,
+        "first": "2023-08-05",
+        "last": "2024-03-12"
+      },
+      "alberto": {
+        "person": "Alberto / Transeunte",
+        "rank": 21,
+        "total": 4779,
+        "first": "2021-11-02",
+        "last": "2026-06-11"
+      },
+      "nomad100x": {
+        "person": "Nomad100x",
+        "rank": 17,
+        "total": 6346,
+        "first": "2021-02-05",
+        "last": "2026-07-11"
+      },
+      "carlos welele": {
+        "person": "Carlos Welele",
+        "rank": 5,
+        "total": 18338,
+        "first": "2021-03-08",
+        "last": "2026-06-26"
+      }
+    }
+  },
   "events": [
     {
       "id": "2016-the-steem-lesson-1",
@@ -34,7 +244,31 @@
         },
         {
           "type": "paragraph",
-          "text": "The Koinos whitepaper describes this experience directly: the team had been core developers of Steem until a hostile takeover and exchange attack. Koinos was designed partly as an answer to that failure mode: a fee-less general-purpose blockchain that would be more decentralized at launch, more modular in operation, and more resistant to exchange governance capture."
+          "text": "The danger had been present since Steem's launch. Steemit Inc. controlled a large early-mined stake that had been tolerated under a public understanding that it would fund development and onboarding rather than elect witnesses. Contemporary community accounting placed roughly 65 million visible STEEM and Steem Power in the known Steemit-controlled accounts and estimated the wider stake transferred with the company at about 74 million—close to one fifth of the supply. Because Steem selected twenty principal witnesses by stake-weighted voting and required seventeen witnesses to approve a hard fork, that single block of stake could radically reorder consensus."
+        },
+        {
+          "type": "paragraph",
+          "text": "On February 14, 2020, Justin Sun acquired Steemit Inc. and control of that stake. Initial announcements about moving Steem services or tokens toward TRON made the old social understanding look unenforceable. The existing witnesses responded with temporary soft fork 0.22.2: instead of confiscating the stake, the code restricted several Steemit-controlled accounts from voting witnesses, powering down, or moving funds while the parties negotiated. Supporters described it as a reversible defensive measure; Steemit and Sun's side described it as an attack on property rights. The disagreement was therefore not only personal. It exposed a protocol that depended on an unwritten promise governing enough stake to control its elected block producers."
+        },
+        {
+          "type": "paragraph",
+          "text": "The counterattack on March 2 demonstrated the second vulnerability. Binance, Huobi, and Poloniex powered up customer deposits and used their combined voting weight—widely reported at roughly 80-84 million STEEM—to elect a new slate. These funds were not transferred into Justin Sun's ownership; the exchanges used assets they held in custody as governance power. Together with the Steemit stake, those votes replaced all twenty incumbent witnesses within about an hour. The replacement witnesses immediately adopted version 0.22.5, which removed the restrictions on the Steemit accounts."
+        },
+        {
+          "type": "paragraph",
+          "text": "The community did not simply surrender the chain. Exchanges began withdrawing their votes after the backlash, holders removed STEEM from exchanges and powered it up, dormant stakeholders returned, and voting was concentrated behind established witnesses. By March 6 the community had returned eleven of its witnesses to the top twenty; the balance continued to move, reaching a 10-10 stalemate on March 14. But recovering seats was not the same as recovering durable control: Steem required a stable seventeen-witness supermajority to change the protocol, while either side needed only four seats to block the other. On March 16, another 2.6 million STEEM arrived from Binance and was used to reinforce the Sun-backed slate. The network had become an open-ended capital and coordination contest rather than a credible path back to neutral governance."
+        },
+        {
+          "type": "paragraph",
+          "text": "The exit was a fork. On March 20, 2020, community developers and witnesses launched **Hive** from the Steem state, mirroring eligible accounts, balances, and content while excluding the Steemit Inc. early-mined stake and accounts judged to have supported the takeover. Hive also introduced a thirty-day delay before newly powered-up stake could vote in governance, directly addressing the exchange attack. The community had failed to remove Sun's control from Steem under Steem's own rules, but it preserved its applications, account history, developers, and social network on an independent chain."
+        },
+        {
+          "type": "paragraph",
+          "text": "The conflict had a legal afterlife. On May 20, 2020, Steem hard fork 0.23 transferred 23,627,501 STEEM and 427 SBD from targeted accounts into `community321`. An unknown actor describing itself as a white-knight hacker then moved those funds to Bittrex with instructions to return them to their prior owners. Daniel Notestein, BlockTrades International, and other affected holders filed **Notestein et al. v. Bittrex, Inc.**; Bittrex brought Steemit into the case, and the plaintiffs later asserted their conversion claim directly against Steemit. It was therefore not formally “BlockTrades v. Justin Sun.” Under the court-approved 2023 settlement, Bittrex disbursed the disputed 8,752,313.006 STEEM and 294.207 SBD to the plaintiffs. That recovery covered the portion claimed in the case, not every account affected by the hard fork."
+        },
+        {
+          "type": "paragraph",
+          "text": "The Koinos whitepaper describes the takeover and exchange attack as part of the founding team's direct experience. Koinos was designed partly as an answer to those failure modes: no controlling premine, an open CPU-mining distribution before mainnet, a more modular protocol, and governance that would not depend on hard forks coordinated by a small witness set. The Steem lesson was therefore larger than “DPoS failed.” A community could mobilize impressively and still lose the governance layer when inherited stake, custodial exchanges, and upgrade authority aligned faster than ordinary holders could respond; the fork showed that code could preserve state, but only a community could carry legitimacy to the new chain."
         }
       ],
       "image": null,
@@ -152,7 +386,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Those roles changed over time, especially after Koinos Group stopped being the operating center of the chain. Later names in this article, such as Luke Willis, Koinos The Goat, Kui He, Julián González, Justin Welch, Adriano Foschi, Frank (`@ElImbatido`), VonLooten, fbslo, MiXiBo, Ederaleng, Saleh Hawi, Roamin, Jon Rice, and `@interfecto`, are treated as community contributors unless a cited source explicitly says otherwise."
+          "text": "Those roles changed over time, especially after Koinos Group stopped being the operating center of the chain. Later names in this article, such as Luke Willis, Koinos The Goat, Kui He, Julián González, Justin Welch, Adriano Foschi, Frank (`@ElImbatido`), Engrave, VonLooten, fbslo, MiXiBo, Ederaleng, Saleh Hawi, Roamin, Jon Rice, and `@interfecto`, are treated as community contributors unless a cited source explicitly says otherwise."
         },
         {
           "type": "paragraph",
@@ -168,6 +402,7 @@
             "**Justin Welch / Justin W. / `@ogjustinw`**: early mining-era participant, full-stack / infrastructure engineer, Kollection co-founder, initiator of the Koinos Contract Standards repository, KCS-2 co-author, and a substantial contributor to Koinos.io, Vortex, Koinos.fun, and the Koinos Community Foundation. His professional background helps explain the breadth of that work: his public profiles record an infrastructure career beginning in 2001, Head of Engineering at Steemit from 2016 to 2020, and later senior engineering roles at Splinterlands and AppMakers USA. On Koinos he repeatedly worked across contracts, frontends, backend services, AWS / deployment, indexing, standards, and user support. Several of the products below were collaborations rather than solo projects: Kollection's launch team also included Dokterkraakbeen, Ederaleng, and VonLooten; KCS-2 had four named authors and drew on Roamin's reference implementation; Vortex grew from Roamin's earlier bridge and Ederaleng's leadership; and Koinos.fun was co-developed with Ron Hamenahem and the Koinos architects. X [`@ogjustinw`](https://x.com/ogjustinw), GitHub [`jredbeard`](https://github.com/jredbeard), LinkedIn [`justin-p-welch`](https://www.linkedin.com/in/justin-p-welch/).",
             "**Adriano Foschi / `@adrihoke`**: community product developer focused on removing user friction. He created the first native Koinos mobile wallet, **Konio**; the modular smart-account framework **Veive**; the **Sovrano** authentication and payment track; the **Sovry** Telegram wallet; and the original **Kuku Games** price-prediction prototype. He also coordinated a multi-project onboarding campaign, helped other dApp developers, and in 2025 created an early Foundation planning board and volunteered in the preparations for Vortex. Public profiles: X [`@adrihoke`](https://x.com/adrihoke), GitHub [`adrianofoschi`](https://github.com/adrianofoschi), LinkedIn [`adrianofoschi`](https://www.linkedin.com/in/adrianofoschi).",
             "**Frank / `@ElImbatido`**: Telegram [`@ElImbatido`](https://t.me/ElImbatido), creator and principal developer of **Koiner.App**, its explorer interface, indexing backend, and GraphQL data API. The historical V1 repository was `koiner-dao/koiner-backend`; its [original GitHub URL](https://github.com/koiner-dao/koiner-backend) is no longer available.",
+            "**Engrave / Bartłomiej Górnicki**: independent community infrastructure developer and operator who created **KoinosBlocks**, a public-RPC block explorer that was already recognized as a mainnet explorer during Koinos' first production month. The public GitLab history contains 111 commits through March 2026: 107 under Górnicki's two public author signatures and four by Ron Hamenahem. Engrave also operated infrastructure associated with the explorer, including a public API, snapshots, and a seed node that became especially visible after Koinos Group withdrew its own nodes. That operational importance should not be confused with authorship of Koiner, Koinscan, KoinosScan, or the Koinos protocol itself. GitLab [`engrave/koinos/koinosblocks`](https://gitlab.com/engrave/koinos/koinosblocks) and [KoinosBlocks](https://koinosblocks.com/).",
             "**VonLooten / `@vonlooten`**: KoinDX co-founder and original CEO, early Koinos contributor, product and business strategist, documentation and token-registry maintainer, and one of the ecosystem's most visible pre-launch DeFi communicators. His public Koinos record begins with two small upstream fixes in November 2021 and a February 2022 ecosystem-link repository. At KoinDX he led the public treatment of the DEX, KNDX / KOINDX economics, the proposed DAO, IDO, launchpad, order book, documentation, listings, partnerships, and user support while contributing hands-on product work. The public repository record does not identify him as the principal author of the core AMM contracts; Ederaleng was the CTO and stronger contract developer. X [`@vonlooten`](https://x.com/vonlooten), GitHub [`vonlooten`](https://github.com/vonlooten), and Medium [`@vonlooten`](https://medium.com/@vonlooten).",
             "**Dokterkraakbeen / `@Dokterkraakbeen`**: visual designer, product communicator, standards co-author, and long-running operator across Planet Koinos, KoinDX, Kollection, and the Koinos Awareness Marketing Program. He launched Planet Koinos in April 2022 as a reusable visual, press-kit, translation, sticker, and do-your-own-merchandise resource; created KoinDX's 2022 redesign and new logo; was one of the four named KCS-2 authors; joined the four-person Kollection launch team; and later served as KAMP supervisor, visual lead, and sponsorship coordinator. His 2024-2025 record also shows sustained KoinDX and Kollection communications after VonLooten's departure. No public GitHub identity or commit trail was found that would justify assigning him the marketplace, DEX, or NFT-contract code: his strongest documented authorship is visual, brand, product, standards, campaign, and operational work. Telegram [`@Dokterkraakbeen`](https://t.me/Dokterkraakbeen), [Planet Koinos](https://planetkoinos.com/), and the historical KoinDX [team announcement](https://medium.com/@koindx/koindx-announcement-574aff8f3541).",
             "**fbslo / `@fbsloXBT`**: Slovenia-based full-stack and DeFi developer whose public history before Koinos already included Hive/EVM wrapped-token, multisignature, validator, oracle, and bridge infrastructure. On Koinos he created the original KoinoSwap AMM prototype; joined forces with KoinDX in May 2022; supplied Ethereum validator-contract lineage used by Roamin's first bridge prototype; shipped an open-source Koinos-EVM HTLC atomic-swap beta immediately after mainnet; and later operated a small stablecoin-to-KOIN liquidity service under the KoinSwap name. Public evidence does not establish that his original AMM contract became KoinDX's production core, and no public KoinDX pull requests or commits were found under his GitHub identity. X [`@fbsloXBT`](https://x.com/fbsloXBT), GitHub [`fbslo`](https://github.com/fbslo), and Stack Overflow [`fbslo`](https://stackoverflow.com/users/13095858/fbslo).",
@@ -607,7 +842,39 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#14112021---koin-reaches-its-first-major-price-peak"
     },
     {
-      "id": "2021-proof-of-burn-is-explained-19",
+      "id": "2021-engrave-builds-koinosblocks-into-long-lived-public-infrastructure-19",
+      "date": "02.12.2021-07.03.2026",
+      "title": "Engrave Builds KoinosBlocks into Long-Lived Public Infrastructure",
+      "year": 2021,
+      "era": "building",
+      "summary": "On December 2, 2021, Bartłomiej Górnicki—known in the Koinos community as Engrave—created the public engrave/koinos/koinosblocks repository. Its premise was intentionally light: a Koinos block explorer that used public RPC directly instead of depending on a custom indexing backend. That distinguished it from Frank's later Koiner architecture. KoinosBlocks favored a transparent client over a separate GraphQL and database service. The main implementation burst began on September 14, 2022 as mainnet approached. The public history shows Engrave adding address and transaction navigation, configurable API endpoints, ABI and contract-data…",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "On December 2, 2021, Bartłomiej Górnicki—known in the Koinos community as **Engrave**—created the public [`engrave/koinos/koinosblocks`](https://gitlab.com/engrave/koinos/koinosblocks) repository. Its premise was intentionally light: a Koinos block explorer that used public RPC directly instead of depending on a custom indexing backend. That distinguished it from Frank's later Koiner architecture. KoinosBlocks favored a transparent client over a separate GraphQL and database service."
+        },
+        {
+          "type": "paragraph",
+          "text": "The main implementation burst began on September 14, 2022 as mainnet approached. The public history shows Engrave adding address and transaction navigation, configurable API endpoints, ABI and contract-data decoding, proposal views, direct contract calls, Docker builds, and network-aware deployments. The complete repository history through March 7, 2026 contains 111 commits: 107 under Górnicki's two public author signatures and four by Ron Hamenahem. Ron's small contribution should be preserved, but it does not change the principal authorship: KoinosBlocks was Engrave's project."
+        },
+        {
+          "type": "paragraph",
+          "text": "By Koinos' first production month the explorer had become part of the public mainnet surface. MEXC's December 2022 listing announcement identified `koinosblocks.com` as the Koinos mainnet explorer. Community members and developers then used its address, transaction, block, contract, and proposal links as shared evidence when discussing claims, token transfers, pool payouts, governance upgrades, and failures. Later commits added KAP and Nicknames support, proposal vote-tally corrections, multi-node validation, and separate mainnet and Harbinger deployments."
+        },
+        {
+          "type": "paragraph",
+          "text": "The operational footprint extended beyond the explorer repository. Engrave maintained services associated with the same domain, including an API endpoint, downloadable snapshots, and a seed node. Those services became more visible as independently operated infrastructure disappeared. In October 2025, after Koinos Group withdrew its seed nodes, community operators treated `seed.koinosblocks.com` as one of the few remaining discovery routes. The same dependence later made its sync state and availability a recurring operational concern."
+        },
+        {
+          "type": "paragraph",
+          "text": "This arc matters precisely because Engrave does not rank among the largest public-chat participants. KoinosBlocks shows a different form of historical weight: a quietly maintained service can become a default verification tool, a recovery dependency, and part of the network's discovery layer without its operator producing thousands of messages. It also exposes the sustainability boundary found elsewhere in the ecosystem: an independent service can be open source and indispensable while still depending on one volunteer operator and privately funded infrastructure."
+        }
+      ],
+      "image": null,
+      "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#02122021-07032026---engrave-builds-koinosblocks-into-long-lived-public-infrastructure"
+    },
+    {
+      "id": "2021-proof-of-burn-is-explained-20",
       "date": "19.12.2021",
       "title": "Proof of Burn Is Explained",
       "year": 2021,
@@ -639,7 +906,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#19122021---proof-of-burn-is-explained"
     },
     {
-      "id": "2022-kui-launches-koinos-forum-and-revives-the-community-amas-20",
+      "id": "2022-kui-launches-koinos-forum-and-revives-the-community-amas-21",
       "date": "02-03.02.2022",
       "title": "Kui Launches Koinos Forum and Revives the Community AMAs",
       "year": 2022,
@@ -663,7 +930,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#02-03022022---kui-launches-koinos-forum-and-revives-the-community-amas"
     },
     {
-      "id": "2022-local-koinos-makes-contract-integration-testing-reproducible-21",
+      "id": "2022-local-koinos-makes-contract-integration-testing-reproducible-22",
       "date": "19.02.2022-29.03.2024",
       "title": "Local-Koinos Makes Contract Integration Testing Reproducible",
       "year": 2022,
@@ -687,7 +954,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#19022022-29032024---local-koinos-makes-contract-integration-testing-reproducible"
     },
     {
-      "id": "2022-testnet-v0-3-22",
+      "id": "2022-testnet-v0-3-23",
       "date": "08.03.2022",
       "title": "Testnet v0.3",
       "year": 2022,
@@ -703,7 +970,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#08032022---testnet-v03"
     },
     {
-      "id": "2022-luke-willis-helps-replace-nft-miners-with-fungible-vhp-23",
+      "id": "2022-luke-willis-helps-replace-nft-miners-with-fungible-vhp-24",
       "date": "25.03.2022",
       "title": "Luke Willis Helps Replace NFT Miners with Fungible VHP",
       "year": 2022,
@@ -727,7 +994,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#25032022---luke-willis-helps-replace-nft-miners-with-fungible-vhp"
     },
     {
-      "id": "2022-dokterkraakbeen-launches-planet-koinos-as-a-community-visual-archive-24",
+      "id": "2022-dokterkraakbeen-launches-planet-koinos-as-a-community-visual-archive-25",
       "date": "24.04.2022",
       "title": "Dokterkraakbeen Launches Planet Koinos as a Community Visual Archive",
       "year": 2022,
@@ -760,7 +1027,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#24042022---dokterkraakbeen-launches-planet-koinos-as-a-community-visual-archive"
     },
     {
-      "id": "2022-roamin-s-assemblyscript-sdk-becomes-first-party-koinos-software-25",
+      "id": "2022-roamin-s-assemblyscript-sdk-becomes-first-party-koinos-software-26",
       "date": "27.04.2022",
       "title": "Roamin's AssemblyScript SDK Becomes First-Party Koinos Software",
       "year": 2022,
@@ -804,7 +1071,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#27042022---roamins-assemblyscript-sdk-becomes-first-party-koinos-software"
     },
     {
-      "id": "2022-koinoswap-developer-fbslo-joins-forces-with-koindx-26",
+      "id": "2022-koinoswap-developer-fbslo-joins-forces-with-koindx-27",
       "date": "16-17.05.2022",
       "title": "KoinoSwap Developer fbslo Joins Forces with KoinDX",
       "year": 2022,
@@ -828,7 +1095,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#16-17052022---koinoswap-developer-fbslo-joins-forces-with-koindx"
     },
     {
-      "id": "2022-governance-contract-completed-27",
+      "id": "2022-governance-contract-completed-28",
       "date": "01.06.2022",
       "title": "Governance Contract Completed",
       "year": 2022,
@@ -848,7 +1115,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#01062022---governance-contract-completed"
     },
     {
-      "id": "2022-unified-whitepaper-published-28",
+      "id": "2022-unified-whitepaper-published-29",
       "date": "06.07.2022",
       "title": "Unified Whitepaper Published",
       "year": 2022,
@@ -868,7 +1135,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#06072022---unified-whitepaper-published"
     },
     {
-      "id": "2022-harbinger-testnet-v4-29",
+      "id": "2022-harbinger-testnet-v4-30",
       "date": "19.08.2022",
       "title": "Harbinger Testnet v4",
       "year": 2022,
@@ -888,7 +1155,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#19082022---harbinger-testnet-v4"
     },
     {
-      "id": "2022-roamin-turns-harbinger-into-a-vrf-and-mempool-laboratory-30",
+      "id": "2022-roamin-turns-harbinger-into-a-vrf-and-mempool-laboratory-31",
       "date": "27.09-30.10.2022",
       "title": "Roamin Turns Harbinger into a VRF and Mempool Laboratory",
       "year": 2022,
@@ -912,7 +1179,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#2709-30102022---roamin-turns-harbinger-into-a-vrf-and-mempool-laboratory"
     },
     {
-      "id": "2022-burnkoin-launches-the-first-proof-of-burn-pool-on-testnet-31",
+      "id": "2022-burnkoin-launches-the-first-proof-of-burn-pool-on-testnet-32",
       "date": "11.10.2022",
       "title": "BurnKoin Launches the First Proof-of-Burn Pool on Testnet",
       "year": 2022,
@@ -940,7 +1207,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#11102022---burnkoin-launches-the-first-proof-of-burn-pool-on-testnet"
     },
     {
-      "id": "2022-vonlooten-and-ederaleng-introduce-the-early-koindx-team-32",
+      "id": "2022-vonlooten-and-ederaleng-introduce-the-early-koindx-team-33",
       "date": "28.10.2022",
       "title": "VonLooten and Ederaleng Introduce the Early KoinDX Team",
       "year": 2022,
@@ -988,7 +1255,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#28102022---vonlooten-and-ederaleng-introduce-the-early-koindx-team"
     },
     {
-      "id": "2022-erc-20-koin-snapshot-33",
+      "id": "2022-erc-20-koin-snapshot-34",
       "date": "31.10.2022",
       "title": "ERC-20 KOIN Snapshot",
       "year": 2022,
@@ -1041,7 +1308,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#31102022---erc-20-koin-snapshot"
     },
     {
-      "id": "2022-koinos-mainnet-launches-34",
+      "id": "2022-koinos-mainnet-launches-35",
       "date": "05.11.2022",
       "title": "Koinos Mainnet Launches",
       "year": 2022,
@@ -1085,7 +1352,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#05112022---koinos-mainnet-launches"
     },
     {
-      "id": "2022-fbslo-ships-koinos-evm-atomic-swaps-during-mainnet-week-35",
+      "id": "2022-fbslo-ships-koinos-evm-atomic-swaps-during-mainnet-week-36",
       "date": "04-08.11.2022",
       "title": "fbslo Ships Koinos-EVM Atomic Swaps During Mainnet Week",
       "year": 2022,
@@ -1109,7 +1376,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#04-08112022---fbslo-ships-koinos-evm-atomic-swaps-during-mainnet-week"
     },
     {
-      "id": "2022-roamin-builds-and-runs-the-original-koinos-ethereum-bridge-prototype-36",
+      "id": "2022-roamin-builds-and-runs-the-original-koinos-ethereum-bridge-prototype-37",
       "date": "12.04-18.11.2022",
       "title": "Roamin Builds and Runs the Original Koinos-Ethereum Bridge Prototype",
       "year": 2022,
@@ -1133,7 +1400,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#1204-18112022---roamin-builds-and-runs-the-original-koinos-ethereum-bridge-prototype"
     },
     {
-      "id": "2022-community-developer-frank-launches-koiner-app-37",
+      "id": "2022-community-developer-frank-launches-koiner-app-38",
       "date": "30.11.2022",
       "title": "Community Developer Frank Launches Koiner.App",
       "year": 2022,
@@ -1177,7 +1444,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#30112022---community-developer-frank-launches-koinerapp"
     },
     {
-      "id": "2022-koinos-completes-its-initial-decentralization-38",
+      "id": "2022-koinos-completes-its-initial-decentralization-39",
       "date": "05.12.2022",
       "title": "Koinos Completes Its Initial Decentralization",
       "year": 2022,
@@ -1197,7 +1464,39 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#05122022---koinos-completes-its-initial-decentralization"
     },
     {
-      "id": "2022-burnkoin-becomes-the-first-major-mainnet-pool-39",
+      "id": "2022-mexc-opens-koin-s-main-centralized-liquidity-route-40",
+      "date": "15.12.2022",
+      "title": "MEXC Opens KOIN's Main Centralized Liquidity Route",
+      "year": 2022,
+      "era": "building",
+      "summary": "On December 13, 2022, MEXC announced that it would list Koinos in its Innovation Zone. Deposits and withdrawals were already open, and KOIN/USDT spot trading began on December 15 at 14:00 UTC. The announcement linked koinosblocks.com as the mainnet explorer, making the listing an early external recognition of both the chain and Engrave's public infrastructure. The listing resolved part of the confusion visible during mainnet week. After the ERC-20 snapshot, users needed to distinguish the obsolete Ethereum representation from native KOIN, complete the claim process, and find a venue that supported deposits and withdrawals on the…",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "On December 13, 2022, MEXC [announced that it would list Koinos](https://www.mexc.com/announcements/article/mexc-will-list-koinos-koin-in-innovation-zone-13457056646041) in its Innovation Zone. Deposits and withdrawals were already open, and KOIN/USDT spot trading began on December 15 at 14:00 UTC. The announcement linked `koinosblocks.com` as the mainnet explorer, making the listing an early external recognition of both the chain and Engrave's public infrastructure."
+        },
+        {
+          "type": "paragraph",
+          "text": "The listing resolved part of the confusion visible during mainnet week. After the ERC-20 snapshot, users needed to distinguish the obsolete Ethereum representation from native KOIN, complete the claim process, and find a venue that supported deposits and withdrawals on the live chain. MEXC became the most persistent centralized route for buying, selling, and pricing native KOIN. Wallet support, bridge questions, community onboarding, whale tracking, and market discussion repeatedly converged on it."
+        },
+        {
+          "type": "paragraph",
+          "text": "The dependency spread beyond trading. In April 2023, Frank explained that Koiner synchronized the MEXC price into its backend and combined it with indexed supply data to calculate market capitalization. Community tools and support answers likewise treated MEXC as a practical price and transfer reference. That convenience created concentration at the market-access layer even though the blockchain itself was decentralized."
+        },
+        {
+          "type": "paragraph",
+          "text": "The surviving evidence does not identify the individual who negotiated the original listing. Later community conversations associated Koinos Group contacts with MEXC, but the exchange announcement names only the project and does not assign personal credit. Saleh Hawi's documented exchange campaign began a year later and should not be retroactively treated as authorship of the 2022 listing."
+        },
+        {
+          "type": "paragraph",
+          "text": "This milestone completes an arc that otherwise begins with mainnet confusion and jumps directly to the 2026 delisting crisis. MEXC gave Koinos its longest-lived centralized liquidity route, but that success also made the ecosystem vulnerable to one exchange's operational decisions. When MEXC eventually disabled services and delisted KOIN, the community was forced toward KoinDX, Vortex, Solana, Base, and other decentralized liquidity routes."
+        }
+      ],
+      "image": null,
+      "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#15122022---mexc-opens-koins-main-centralized-liquidity-route"
+    },
+    {
+      "id": "2022-burnkoin-becomes-the-first-major-mainnet-pool-41",
       "date": "05.11-19.12.2022",
       "title": "BurnKoin Becomes the First Major Mainnet Pool",
       "year": 2022,
@@ -1225,7 +1524,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#0511-19122022---burnkoin-becomes-the-first-major-mainnet-pool"
     },
     {
-      "id": "2022-my-koinos-wallet-adds-a-mobile-friendly-web-wallet-and-dapp-sdk-40",
+      "id": "2022-my-koinos-wallet-adds-a-mobile-friendly-web-wallet-and-dapp-sdk-42",
       "date": "10.12.2022-11.07.2024",
       "title": "My Koinos Wallet Adds a Mobile-Friendly Web Wallet and dApp SDK",
       "year": 2022,
@@ -1253,7 +1552,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#10122022-11072024---my-koinos-wallet-adds-a-mobile-friendly-web-wallet-and-dapp-sdk"
     },
     {
-      "id": "2023-fogata-and-block-production-decentralization-41",
+      "id": "2023-fogata-and-block-production-decentralization-43",
       "date": "02.01.2023",
       "title": "Fogata and Block-Production Decentralization",
       "year": 2023,
@@ -1281,7 +1580,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#02012023---fogata-and-block-production-decentralization"
     },
     {
-      "id": "2023-kap-whitepaper-extends-the-luke-and-kui-track-from-mining-to-accounts-42",
+      "id": "2023-kap-whitepaper-extends-the-luke-and-kui-track-from-mining-to-accounts-44",
       "date": "09.01.2023",
       "title": "KAP Whitepaper Extends the Luke and Kui Track from Mining to Accounts",
       "year": 2023,
@@ -1305,7 +1604,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#09012023---kap-whitepaper-extends-the-luke-and-kui-track-from-mining-to-accounts"
     },
     {
-      "id": "2023-justin-starts-the-koinos-contract-standards-process-and-co-authors-kcs-2-43",
+      "id": "2023-justin-starts-the-koinos-contract-standards-process-and-co-authors-kcs-2-45",
       "date": "24-30.01.2023",
       "title": "Justin Starts the Koinos Contract Standards Process and Co-Authors KCS-2",
       "year": 2023,
@@ -1329,7 +1628,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#24-30012023---justin-starts-the-koinos-contract-standards-process-and-co-authors-kcs-2"
     },
     {
-      "id": "2023-koiner-evolves-from-explorer-into-shared-data-infrastructure-44",
+      "id": "2023-koiner-evolves-from-explorer-into-shared-data-infrastructure-46",
       "date": "2023-2024",
       "title": "Koiner Evolves from Explorer into Shared Data Infrastructure",
       "year": 2023,
@@ -1372,7 +1671,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#2023-2024---koiner-evolves-from-explorer-into-shared-data-infrastructure"
     },
     {
-      "id": "2021-the-koin-press-and-motoengineer-become-community-education-channels-45",
+      "id": "2021-the-koin-press-and-motoengineer-become-community-education-channels-47",
       "date": "30.11.2021-14.06.2024",
       "title": "The Koin Press and motoengineer Become Community Education Channels",
       "year": 2021,
@@ -1436,7 +1735,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#30112021-14062024---the-koin-press-and-motoengineer-become-community-education-channels"
     },
     {
-      "id": "2023-running-multiple-producers-on-the-microservice-architecture-46",
+      "id": "2023-running-multiple-producers-on-the-microservice-architecture-48",
       "date": "06.02.2023",
       "title": "Running Multiple Producers on the Microservice Architecture",
       "year": 2023,
@@ -1456,7 +1755,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#06022023---running-multiple-producers-on-the-microservice-architecture"
     },
     {
-      "id": "2023-g-millie-expands-koinos-army-into-nfts-project-promotion-and-amas-47",
+      "id": "2023-g-millie-expands-koinos-army-into-nfts-project-promotion-and-amas-49",
       "date": "04.04.2023-05.01.2024",
       "title": "G Millie Expands Koinos Army into NFTs, Project Promotion, and AMAs",
       "year": 2023,
@@ -1501,7 +1800,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#04042023-05012024---g-millie-expands-koinos-army-into-nfts-project-promotion-and-amas"
     },
     {
-      "id": "2023-roamin-brings-koinos-into-walletconnect-and-builds-the-reusable-sdk-48",
+      "id": "2023-roamin-brings-koinos-into-walletconnect-and-builds-the-reusable-sdk-50",
       "date": "11.04-09.06.2023",
       "title": "Roamin Brings Koinos into WalletConnect and Builds the Reusable SDK",
       "year": 2023,
@@ -1525,7 +1824,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#1104-09062023---roamin-brings-koinos-into-walletconnect-and-builds-the-reusable-sdk"
     },
     {
-      "id": "2023-kap-launches-its-premium-name-service-49",
+      "id": "2023-kap-launches-its-premium-name-service-51",
       "date": "19.04.2023",
       "title": "KAP Launches Its Premium Name Service",
       "year": 2023,
@@ -1561,7 +1860,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#19042023---kap-launches-its-premium-name-service"
     },
     {
-      "id": "2023-koinos-group-focuses-on-infrastructure-and-applications-50",
+      "id": "2023-koinos-group-focuses-on-infrastructure-and-applications-52",
       "date": "20.04.2023",
       "title": "Koinos Group Focuses on Infrastructure and Applications",
       "year": 2023,
@@ -1589,7 +1888,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#20042023---koinos-group-focuses-on-infrastructure-and-applications"
     },
     {
-      "id": "2023-community-developer-justin-welch-launches-kollection-koinos-first-nft-ma-51",
+      "id": "2023-community-developer-justin-welch-launches-kollection-koinos-first-nft-ma-53",
       "date": "27.04.2023",
       "title": "Community Developer Justin Welch Launches Kollection, Koinos' First NFT Marketplace",
       "year": 2023,
@@ -1642,7 +1941,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#27042023---community-developer-justin-welch-launches-kollection-koinos-first-nft-marketplace"
     },
     {
-      "id": "2023-carlos-welele-organizes-community-marketing-workflows-52",
+      "id": "2023-carlos-welele-organizes-community-marketing-workflows-54",
       "date": "13.05-22.11.2023",
       "title": "Carlos Welele Organizes Community Marketing Workflows",
       "year": 2023,
@@ -1670,7 +1969,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#1305-22112023---carlos-welele-organizes-community-marketing-workflows"
     },
     {
-      "id": "2023-wachsman-hackerearth-and-the-20-dapps-100-000-users-campaign-53",
+      "id": "2023-wachsman-hackerearth-and-the-20-dapps-100-000-users-campaign-55",
       "date": "May-July 2023",
       "title": "Wachsman, HackerEarth, and the 20 dApps / 100,000 Users Campaign",
       "year": 2023,
@@ -1694,7 +1993,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#may-july-2023---wachsman-hackerearth-and-the-20-dapps-100000-users-campaign"
     },
     {
-      "id": "2023-kui-and-burnkoin-participate-in-the-first-on-chain-governance-vote-54",
+      "id": "2023-kui-and-burnkoin-participate-in-the-first-on-chain-governance-vote-56",
       "date": "16.05.2023",
       "title": "Kui and BurnKoin Participate in the First On-Chain Governance Vote",
       "year": 2023,
@@ -1718,7 +2017,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#16052023---kui-and-burnkoin-participate-in-the-first-on-chain-governance-vote"
     },
     {
-      "id": "2023-kondor-nfts-turn-collectibles-into-a-wallet-funding-experiment-55",
+      "id": "2023-kondor-nfts-turn-collectibles-into-a-wallet-funding-experiment-57",
       "date": "19.05.2023",
       "title": "Kondor NFTs Turn Collectibles into a Wallet-Funding Experiment",
       "year": 2023,
@@ -1738,7 +2037,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#19052023---kondor-nfts-turn-collectibles-into-a-wallet-funding-experiment"
     },
     {
-      "id": "2023-ron-builds-armana-portal-as-a-mobile-koinos-product-56",
+      "id": "2023-ron-builds-armana-portal-as-a-mobile-koinos-product-58",
       "date": "24.05.2023-24.10.2024",
       "title": "Ron Builds Armana Portal as a Mobile Koinos Product",
       "year": 2023,
@@ -1766,7 +2065,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#24052023-24102024---ron-builds-armana-portal-as-a-mobile-koinos-product"
     },
     {
-      "id": "2023-first-in-band-upgrade-demonstrates-forkless-evolution-57",
+      "id": "2023-first-in-band-upgrade-demonstrates-forkless-evolution-59",
       "date": "14.06.2023",
       "title": "First In-Band Upgrade Demonstrates Forkless Evolution",
       "year": 2023,
@@ -1790,7 +2089,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#14062023---first-in-band-upgrade-demonstrates-forkless-evolution"
     },
     {
-      "id": "2023-koinos-polls-and-early-governance-coordination-58",
+      "id": "2023-koinos-polls-and-early-governance-coordination-60",
       "date": "15.06.2023",
       "title": "Koinos Polls and Early Governance Coordination",
       "year": 2023,
@@ -1826,7 +2125,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#15062023---koinos-polls-and-early-governance-coordination"
     },
     {
-      "id": "2023-adriano-launches-konio-the-first-native-mobile-wallet-59",
+      "id": "2023-adriano-launches-konio-the-first-native-mobile-wallet-61",
       "date": "16.06.2023",
       "title": "Adriano Launches Konio, the First Native Mobile Wallet",
       "year": 2023,
@@ -1871,7 +2170,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#16062023---adriano-launches-konio-the-first-native-mobile-wallet"
     },
     {
-      "id": "2023-fbslo-operates-a-small-stablecoin-to-koin-gateway-60",
+      "id": "2023-fbslo-operates-a-small-stablecoin-to-koin-gateway-62",
       "date": "05.07.2023-04.01.2024",
       "title": "fbslo Operates a Small Stablecoin-to-KOIN Gateway",
       "year": 2023,
@@ -1895,7 +2194,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#05072023-04012024---fbslo-operates-a-small-stablecoin-to-koin-gateway"
     },
     {
-      "id": "2023-koindx-launches-the-first-dex-on-koinos-61",
+      "id": "2023-koindx-launches-the-first-dex-on-koinos-63",
       "date": "August 2023",
       "title": "KoinDX Launches the First DEX on Koinos",
       "year": 2023,
@@ -1944,7 +2243,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#august-2023---koindx-launches-the-first-dex-on-koinos"
     },
     {
-      "id": "2023-teing-builds-a-chinese-language-koinos-field-guide-62",
+      "id": "2023-teing-builds-a-chinese-language-koinos-field-guide-64",
       "date": "05.08-17.12.2023",
       "title": "Teing Builds a Chinese-Language Koinos Field Guide",
       "year": 2023,
@@ -1985,7 +2284,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#0508-17122023---teing-builds-a-chinese-language-koinos-field-guide"
     },
     {
-      "id": "2023-community-developer-julia-n-gonza-lez-proposes-a-security-oriented-syste-63",
+      "id": "2023-community-developer-julia-n-gonza-lez-proposes-a-security-oriented-syste-65",
       "date": "05.08.2023",
       "title": "Community Developer Julián González Proposes a Security-Oriented System Call",
       "year": 2023,
@@ -2013,7 +2312,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#05082023---community-developer-julian-gonzalez-proposes-a-security-oriented-system-call"
     },
     {
-      "id": "2023-jon-rice-launches-the-koinos-federation-then-resigns-after-the-treasury--64",
+      "id": "2023-jon-rice-launches-the-koinos-federation-then-resigns-after-the-treasury--66",
       "date": "21.08-16.11.2023",
       "title": "Jon Rice Launches the Koinos Federation, Then Resigns After the Treasury Proposal",
       "year": 2023,
@@ -2061,7 +2360,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#2108-16112023---jon-rice-launches-the-koinos-federation-then-resigns-after-the-treasury-proposal"
     },
     {
-      "id": "2023-nomad100x-sponsors-koinos-garden-an-nft-gated-investment-dao-65",
+      "id": "2023-nomad100x-sponsors-koinos-garden-an-nft-gated-investment-dao-67",
       "date": "23.08.2023-30.12.2024",
       "title": "Nomad100x Sponsors Koinos Garden, an NFT-Gated Investment DAO",
       "year": 2023,
@@ -2114,7 +2413,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#23082023-30122024---nomad100x-sponsors-koinos-garden-an-nft-gated-investment-dao"
     },
     {
-      "id": "2023-the-new-system-call-reaches-testnet-66",
+      "id": "2023-the-new-system-call-reaches-testnet-68",
       "date": "17.09.2023",
       "title": "The New System Call Reaches Testnet",
       "year": 2023,
@@ -2134,7 +2433,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#17092023---the-new-system-call-reaches-testnet"
     },
     {
-      "id": "2023-koinos-nicknames-67",
+      "id": "2023-koinos-nicknames-69",
       "date": "30.09.2023",
       "title": "Koinos Nicknames",
       "year": 2023,
@@ -2162,7 +2461,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#30092023---koinos-nicknames"
     },
     {
-      "id": "2023-mixibo-launches-koincity-68",
+      "id": "2023-mixibo-launches-koincity-70",
       "date": "Late September 2023",
       "title": "MiXiBo Launches KoinCity",
       "year": 2023,
@@ -2207,7 +2506,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#late-september-2023---mixibo-launches-koincity"
     },
     {
-      "id": "2023-roamin-s-rest-server-becomes-first-party-koinos-infrastructure-69",
+      "id": "2023-roamin-s-rest-server-becomes-first-party-koinos-infrastructure-71",
       "date": "01.10.2023-21.05.2024",
       "title": "Roamin's REST Server Becomes First-Party Koinos Infrastructure",
       "year": 2023,
@@ -2235,7 +2534,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#01102023-21052024---roamins-rest-server-becomes-first-party-koinos-infrastructure"
     },
     {
-      "id": "2023-koinos-goes-cross-chain-with-chainge-70",
+      "id": "2023-koinos-goes-cross-chain-with-chainge-72",
       "date": "25.10.2023",
       "title": "Koinos Goes Cross-Chain with Chainge",
       "year": 2023,
@@ -2267,7 +2566,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#25102023---koinos-goes-cross-chain-with-chainge"
     },
     {
-      "id": "2023-cafe-identity-speculation-becomes-a-community-topic-71",
+      "id": "2023-cafe-identity-speculation-becomes-a-community-topic-73",
       "date": "November 2023",
       "title": "Cafe Identity Speculation Becomes a Community Topic",
       "year": 2023,
@@ -2287,7 +2586,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#november-2023---cafe-identity-speculation-becomes-a-community-topic"
     },
     {
-      "id": "2023-konio-coordinates-an-ecosystem-wide-onboarding-giveaway-72",
+      "id": "2023-konio-coordinates-an-ecosystem-wide-onboarding-giveaway-74",
       "date": "21.11.2023",
       "title": "Konio Coordinates an Ecosystem-Wide Onboarding Giveaway",
       "year": 2023,
@@ -2316,7 +2615,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#21112023---konio-coordinates-an-ecosystem-wide-onboarding-giveaway"
     },
     {
-      "id": "2023-ron-and-justin-rebuild-koinos-io-as-community-infrastructure-73",
+      "id": "2023-ron-and-justin-rebuild-koinos-io-as-community-infrastructure-75",
       "date": "27.11.2023-23.01.2025",
       "title": "Ron and Justin Rebuild Koinos.io as Community Infrastructure",
       "year": 2023,
@@ -2348,7 +2647,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#27112023-23012025---ron-and-justin-rebuild-koinosio-as-community-infrastructure"
     },
     {
-      "id": "2023-kui-and-roamin-launch-iterate-and-close-koinos-social-74",
+      "id": "2023-kui-and-roamin-launch-iterate-and-close-koinos-social-76",
       "date": "05.12.2023-19.10.2024",
       "title": "Kui and Roamin Launch, Iterate, and Close Koinos-Social",
       "year": 2023,
@@ -2380,7 +2679,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#05122023-19102024---kui-and-roamin-launch-iterate-and-close-koinos-social"
     },
     {
-      "id": "2023-governance-proposal-submitted-on-mainnet-75",
+      "id": "2023-governance-proposal-submitted-on-mainnet-77",
       "date": "06.12.2023",
       "title": "Governance Proposal Submitted on Mainnet",
       "year": 2023,
@@ -2404,7 +2703,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#06122023---governance-proposal-submitted-on-mainnet"
     },
     {
-      "id": "2023-saleh-hawi-coordinates-the-community-exchange-listing-campaign-76",
+      "id": "2023-saleh-hawi-coordinates-the-community-exchange-listing-campaign-78",
       "date": "17.12.2023",
       "title": "Saleh Hawi Coordinates the Community Exchange-Listing Campaign",
       "year": 2023,
@@ -2432,7 +2731,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#17122023---saleh-hawi-coordinates-the-community-exchange-listing-campaign"
     },
     {
-      "id": "2023-community-marketing-with-rhubarb-media-77",
+      "id": "2023-community-marketing-with-rhubarb-media-79",
       "date": "21.12.2023",
       "title": "Community Marketing with Rhubarb Media",
       "year": 2023,
@@ -2460,7 +2759,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#21122023---community-marketing-with-rhubarb-media"
     },
     {
-      "id": "2024-the-focus-shifts-to-developer-experience-78",
+      "id": "2024-the-focus-shifts-to-developer-experience-80",
       "date": "12.01.2024",
       "title": "The Focus Shifts to Developer Experience",
       "year": 2024,
@@ -2488,7 +2787,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#12012024---the-focus-shifts-to-developer-experience"
     },
     {
-      "id": "2024-governance-proposal-resubmitted-79",
+      "id": "2024-governance-proposal-resubmitted-81",
       "date": "14.01.2024",
       "title": "Governance Proposal Resubmitted",
       "year": 2024,
@@ -2512,7 +2811,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#14012024---governance-proposal-resubmitted"
     },
     {
-      "id": "2024-first-governance-proposal-applied-without-a-hard-fork-80",
+      "id": "2024-first-governance-proposal-applied-without-a-hard-fork-82",
       "date": "12.02.2024",
       "title": "First Governance Proposal Applied Without a Hard Fork",
       "year": 2024,
@@ -2536,7 +2835,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#12022024---first-governance-proposal-applied-without-a-hard-fork"
     },
     {
-      "id": "2024-kui-operates-burnkoin-through-bot-pressure-liquidity-limits-and-retireme-81",
+      "id": "2024-kui-operates-burnkoin-through-bot-pressure-liquidity-limits-and-retireme-83",
       "date": "January 2024-June 2025",
       "title": "Kui Operates BurnKoin Through Bot Pressure, Liquidity Limits, and Retirement",
       "year": 2024,
@@ -2564,7 +2863,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#january-2024-june-2025---kui-operates-burnkoin-through-bot-pressure-liquidity-limits-and-retirement"
     },
     {
-      "id": "2024-koinospro-v1-goes-live-82",
+      "id": "2024-koinospro-v1-goes-live-84",
       "date": "12.03.2024",
       "title": "KoinosPro V1 Goes Live",
       "year": 2024,
@@ -2592,7 +2891,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#12032024---koinospro-v1-goes-live"
     },
     {
-      "id": "2024-saleh-hawi-and-the-community-listing-fund-83",
+      "id": "2024-saleh-hawi-and-the-community-listing-fund-85",
       "date": "March 2024-April 2025",
       "title": "Saleh Hawi and the Community Listing Fund",
       "year": 2024,
@@ -2620,7 +2919,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#march-2024-april-2025---saleh-hawi-and-the-community-listing-fund"
     },
     {
-      "id": "2024-koilib-matures-into-maintained-developer-infrastructure-84",
+      "id": "2024-koilib-matures-into-maintained-developer-infrastructure-86",
       "date": "06.04-20.11.2024",
       "title": "Koilib Matures into Maintained Developer Infrastructure",
       "year": 2024,
@@ -2644,7 +2943,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#0604-20112024---koilib-matures-into-maintained-developer-infrastructure"
     },
     {
-      "id": "2024-arkinos-makes-contract-development-faster-85",
+      "id": "2024-arkinos-makes-contract-development-faster-87",
       "date": "16.04.2024",
       "title": "Arkinos Makes Contract Development Faster",
       "year": 2024,
@@ -2664,7 +2963,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#16042024---arkinos-makes-contract-development-faster"
     },
     {
-      "id": "2024-veive-turns-adriano-s-wallet-work-into-a-modular-smart-account-framework-86",
+      "id": "2024-veive-turns-adriano-s-wallet-work-into-a-modular-smart-account-framework-88",
       "date": "17.04.2024",
       "title": "Veive Turns Adriano's Wallet Work into a Modular Smart-Account Framework",
       "year": 2024,
@@ -2688,7 +2987,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#17042024---veive-turns-adrianos-wallet-work-into-a-modular-smart-account-framework"
     },
     {
-      "id": "2024-steve-coordinates-the-koinos-cluster-v2-0-3-upgrade-87",
+      "id": "2024-steve-coordinates-the-koinos-cluster-v2-0-3-upgrade-89",
       "date": "06.05.2024",
       "title": "Steve Coordinates the Koinos Cluster v2.0.3 Upgrade",
       "year": 2024,
@@ -2708,7 +3007,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#06052024---steve-coordinates-the-koinos-cluster-v203-upgrade"
     },
     {
-      "id": "2024-kuku-games-opens-live-koin-prediction-pools-88",
+      "id": "2024-kuku-games-opens-live-koin-prediction-pools-90",
       "date": "13.05.2024",
       "title": "Kuku Games Opens Live KOIN Prediction Pools",
       "year": 2024,
@@ -2732,7 +3031,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#13052024---kuku-games-opens-live-koin-prediction-pools"
     },
     {
-      "id": "2024-ecosystem-becomes-concrete-dapps-wallets-and-explorers-89",
+      "id": "2024-ecosystem-becomes-concrete-dapps-wallets-and-explorers-91",
       "date": "2024",
       "title": "Ecosystem Becomes Concrete: dApps, Wallets, and Explorers",
       "year": 2024,
@@ -2769,7 +3068,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#2024---ecosystem-becomes-concrete-dapps-wallets-and-explorers"
     },
     {
-      "id": "2024-luke-extends-kap-names-as-the-original-roadmap-stalls-90",
+      "id": "2024-luke-extends-kap-names-as-the-original-roadmap-stalls-92",
       "date": "10.06.2024-14.03.2025",
       "title": "Luke Extends KAP Names as the Original Roadmap Stalls",
       "year": 2024,
@@ -2793,7 +3092,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#10062024-14032025---luke-extends-kap-names-as-the-original-roadmap-stalls"
     },
     {
-      "id": "2024-saleh-hawi-becomes-a-public-koindx-contributor-91",
+      "id": "2024-saleh-hawi-becomes-a-public-koindx-contributor-93",
       "date": "20.06-29.08.2024",
       "title": "Saleh Hawi Becomes a Public KoinDX Contributor",
       "year": 2024,
@@ -2817,7 +3116,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#2006-29082024---saleh-hawi-becomes-a-public-koindx-contributor"
     },
     {
-      "id": "2024-dokterkraakbeen-organizes-kamp-s-visual-and-influencer-campaign-92",
+      "id": "2024-dokterkraakbeen-organizes-kamp-s-visual-and-influencer-campaign-94",
       "date": "25.06-28.08.2024",
       "title": "Dokterkraakbeen Organizes KAMP's Visual and Influencer Campaign",
       "year": 2024,
@@ -2845,7 +3144,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#2506-28082024---dokterkraakbeen-organizes-kamps-visual-and-influencer-campaign"
     },
     {
-      "id": "2024-nicknames-become-more-flexible-93",
+      "id": "2024-nicknames-become-more-flexible-95",
       "date": "29.06.2024",
       "title": "Nicknames Become More Flexible",
       "year": 2024,
@@ -2865,7 +3164,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#29062024---nicknames-become-more-flexible"
     },
     {
-      "id": "2024-vortex-enters-public-testing-94",
+      "id": "2024-vortex-enters-public-testing-96",
       "date": "09.07.2024",
       "title": "Vortex Enters Public Testing",
       "year": 2024,
@@ -2926,7 +3225,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#09072024---vortex-enters-public-testing"
     },
     {
-      "id": "2024-mixibo-expands-koincity-into-a-broader-token-platform-95",
+      "id": "2024-mixibo-expands-koincity-into-a-broader-token-platform-97",
       "date": "July-December 2024",
       "title": "MiXiBo Expands KoinCity into a Broader Token Platform",
       "year": 2024,
@@ -2958,7 +3257,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#july-december-2024---mixibo-expands-koincity-into-a-broader-token-platform"
     },
     {
-      "id": "2024-community-communication-also-means-guardrails-96",
+      "id": "2024-community-communication-also-means-guardrails-98",
       "date": "July-November 2024",
       "title": "Community Communication Also Means Guardrails",
       "year": 2024,
@@ -2994,7 +3293,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#july-november-2024---community-communication-also-means-guardrails"
     },
     {
-      "id": "2024-koinos-group-deploys-1-million-koin-to-make-usage-free-97",
+      "id": "2024-koinos-group-deploys-1-million-koin-to-make-usage-free-99",
       "date": "29.07.2024",
       "title": "Koinos Group Deploys 1 Million KOIN to Make Usage Free",
       "year": 2024,
@@ -3022,7 +3321,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#29072024---koinos-group-deploys-1-million-koin-to-make-usage-free"
     },
     {
-      "id": "2024-jon-rice-explains-the-federation-s-unexecuted-treasury-deal-98",
+      "id": "2024-jon-rice-explains-the-federation-s-unexecuted-treasury-deal-100",
       "date": "29.07.2024",
       "title": "Jon Rice Explains the Federation's Unexecuted Treasury Deal",
       "year": 2024,
@@ -3054,7 +3353,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#29072024---jon-rice-explains-the-federations-unexecuted-treasury-deal"
     },
     {
-      "id": "2024-kcs-4-and-safer-token-standards-99",
+      "id": "2024-kcs-4-and-safer-token-standards-101",
       "date": "July-October 2024",
       "title": "KCS-4 and Safer Token Standards",
       "year": 2024,
@@ -3086,7 +3385,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#july-october-2024---kcs-4-and-safer-token-standards"
     },
     {
-      "id": "2024-steve-becomes-ceo-and-turns-outreach-into-a-community-task-100",
+      "id": "2024-steve-becomes-ceo-and-turns-outreach-into-a-community-task-102",
       "date": "29.08-08.10.2024",
       "title": "Steve Becomes CEO and Turns Outreach into a Community Task",
       "year": 2024,
@@ -3106,7 +3405,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#2908-08102024---steve-becomes-ceo-and-turns-outreach-into-a-community-task"
     },
     {
-      "id": "2024-a-more-explicit-technical-roadmap-101",
+      "id": "2024-a-more-explicit-technical-roadmap-103",
       "date": "10.10.2024",
       "title": "A More Explicit Technical Roadmap",
       "year": 2024,
@@ -3156,7 +3455,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#10102024---a-more-explicit-technical-roadmap"
     },
     {
-      "id": "2024-pgarcgo-s-node-operation-becomes-persistent-infrastructure-work-102",
+      "id": "2024-pgarcgo-s-node-operation-becomes-persistent-infrastructure-work-104",
       "date": "August-November 2024",
       "title": "pgarcgo's Node Operation Becomes Persistent Infrastructure Work",
       "year": 2024,
@@ -3180,7 +3479,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#august-november-2024---pgarcgos-node-operation-becomes-persistent-infrastructure-work"
     },
     {
-      "id": "2024-kondor-v1-0-0-is-released-103",
+      "id": "2024-kondor-v1-0-0-is-released-105",
       "date": "13.10.2024",
       "title": "Kondor v1.0.0 Is Released",
       "year": 2024,
@@ -3200,7 +3499,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#13102024---kondor-v100-is-released"
     },
     {
-      "id": "2024-sovrano-auth-testnet-begins-the-post-konio-wallet-track-104",
+      "id": "2024-sovrano-auth-testnet-begins-the-post-konio-wallet-track-106",
       "date": "13.11.2024",
       "title": "Sovrano Auth Testnet Begins the Post-Konio Wallet Track",
       "year": 2024,
@@ -3228,7 +3527,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#13112024---sovrano-auth-testnet-begins-the-post-konio-wallet-track"
     },
     {
-      "id": "2024-jon-rice-publishes-the-long-form-case-for-koinos-105",
+      "id": "2024-jon-rice-publishes-the-long-form-case-for-koinos-107",
       "date": "14.11.2024",
       "title": "Jon Rice Publishes the Long-Form Case for Koinos",
       "year": 2024,
@@ -3252,7 +3551,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#14112024---jon-rice-publishes-the-long-form-case-for-koinos"
     },
     {
-      "id": "2024-roadmap-update-and-2025-plans-106",
+      "id": "2024-roadmap-update-and-2025-plans-108",
       "date": "20.12.2024",
       "title": "Roadmap Update and 2025 Plans",
       "year": 2024,
@@ -3284,7 +3583,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#20122024---roadmap-update-and-2025-plans"
     },
     {
-      "id": "2024-andrew-leaves-koinos-group-as-the-company-starts-stepping-back-107",
+      "id": "2024-andrew-leaves-koinos-group-as-the-company-starts-stepping-back-109",
       "date": "December 2024-Early 2025",
       "title": "Andrew Leaves Koinos Group as the Company Starts Stepping Back",
       "year": 2024,
@@ -3316,7 +3615,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#december-2024-early-2025---andrew-leaves-koinos-group-as-the-company-starts-stepping-back"
     },
     {
-      "id": "2025-sovry-takes-the-sovrano-model-into-telegram-108",
+      "id": "2025-sovry-takes-the-sovrano-model-into-telegram-110",
       "date": "02.01.2025",
       "title": "Sovry Takes the Sovrano Model into Telegram",
       "year": 2025,
@@ -3340,7 +3639,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#02012025---sovry-takes-the-sovrano-model-into-telegram"
     },
     {
-      "id": "2025-frank-defines-koiner-v2-as-an-ecosystem-data-provider-109",
+      "id": "2025-frank-defines-koiner-v2-as-an-ecosystem-data-provider-111",
       "date": "04-19.01.2025",
       "title": "Frank Defines Koiner V2 as an Ecosystem Data Provider",
       "year": 2025,
@@ -3364,7 +3663,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#04-19012025---frank-defines-koiner-v2-as-an-ecosystem-data-provider"
     },
     {
-      "id": "2025-koinos-fun-shows-ai-nfts-and-x-based-onboarding-110",
+      "id": "2025-koinos-fun-shows-ai-nfts-and-x-based-onboarding-112",
       "date": "28.01.2025",
       "title": "Koinos.fun Shows AI, NFTs, and X-Based Onboarding",
       "year": 2025,
@@ -3417,7 +3716,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#28012025---koinosfun-shows-ai-nfts-and-x-based-onboarding"
     },
     {
-      "id": "2025-manuscript-extends-wallet-usability-111",
+      "id": "2025-manuscript-extends-wallet-usability-113",
       "date": "06.02.2025",
       "title": "Manuscript Extends Wallet Usability",
       "year": 2025,
@@ -3437,7 +3736,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#06022025---manuscript-extends-wallet-usability"
     },
     {
-      "id": "2024-transeunte-builds-a-bilingual-ai-assisted-community-media-track-112",
+      "id": "2024-transeunte-builds-a-bilingual-ai-assisted-community-media-track-114",
       "date": "24.11.2024-10.02.2025",
       "title": "Transeunte Builds a Bilingual, AI-Assisted Community Media Track",
       "year": 2024,
@@ -3482,7 +3781,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#24112024-10022025---transeunte-builds-a-bilingual-ai-assisted-community-media-track"
     },
     {
-      "id": "2025-armana-builds-koinscan-and-the-kps-user-interface-113",
+      "id": "2025-armana-builds-koinscan-and-the-kps-user-interface-115",
       "date": "February 2025-June 2026",
       "title": "Armana Builds Koinscan and the KPS User Interface",
       "year": 2025,
@@ -3506,7 +3805,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#february-2025-june-2026---armana-builds-koinscan-and-the-kps-user-interface"
     },
     {
-      "id": "2025-michael-ships-the-rest-beta-and-kcs-4-reaches-governance-114",
+      "id": "2025-michael-ships-the-rest-beta-and-kcs-4-reaches-governance-116",
       "date": "20.02-13.03.2025",
       "title": "Michael Ships the REST Beta and KCS-4 Reaches Governance",
       "year": 2025,
@@ -3534,7 +3833,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#2002-13032025---michael-ships-the-rest-beta-and-kcs-4-reaches-governance"
     },
     {
-      "id": "2025-koin-and-vhp-move-to-kcs-4-115",
+      "id": "2025-koin-and-vhp-move-to-kcs-4-117",
       "date": "10-11.04.2025",
       "title": "KOIN and VHP Move to KCS-4",
       "year": 2025,
@@ -3554,7 +3853,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#10-11042025---koin-and-vhp-move-to-kcs-4"
     },
     {
-      "id": "2025-kollection-enters-maintenance-mode-and-exposes-the-cost-of-shared-infras-116",
+      "id": "2025-kollection-enters-maintenance-mode-and-exposes-the-cost-of-shared-infras-118",
       "date": "02.04-20.05.2025",
       "title": "Kollection Enters Maintenance Mode and Exposes the Cost of Shared Infrastructure",
       "year": 2025,
@@ -3582,7 +3881,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#0204-20052025---kollection-enters-maintenance-mode-and-exposes-the-cost-of-shared-infrastructure"
     },
     {
-      "id": "2025-mixibo-downsized-koincity-to-keep-it-alive-117",
+      "id": "2025-mixibo-downsized-koincity-to-keep-it-alive-119",
       "date": "11.04-09.05.2025",
       "title": "MiXiBo Downsized KoinCity to Keep It Alive",
       "year": 2025,
@@ -3610,7 +3909,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#1104-09052025---mixibo-downsized-koincity-to-keep-it-alive"
     },
     {
-      "id": "2025-frank-announces-the-closure-of-koiner-118",
+      "id": "2025-frank-announces-the-closure-of-koiner-120",
       "date": "30.04.2025",
       "title": "Frank Announces the Closure of Koiner",
       "year": 2025,
@@ -3649,7 +3948,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#30042025---frank-announces-the-closure-of-koiner"
     },
     {
-      "id": "2025-koinos-the-goat-publishes-the-chronicles-of-koinos-part-one-119",
+      "id": "2025-koinos-the-goat-publishes-the-chronicles-of-koinos-part-one-121",
       "date": "07.05.2025",
       "title": "Koinos The Goat Publishes The Chronicles of Koinos, Part One",
       "year": 2025,
@@ -3673,7 +3972,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#07052025---koinos-the-goat-publishes-the-chronicles-of-koinos-part-one"
     },
     {
-      "id": "2025-steve-publicly-separates-a-new-network-strategy-from-koinos-120",
+      "id": "2025-steve-publicly-separates-a-new-network-strategy-from-koinos-122",
       "date": "March-May 2025",
       "title": "Steve Publicly Separates a New-Network Strategy from Koinos",
       "year": 2025,
@@ -3697,7 +3996,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#march-may-2025---steve-publicly-separates-a-new-network-strategy-from-koinos"
     },
     {
-      "id": "2025-frank-clarifies-why-koiner-v1-will-not-return-121",
+      "id": "2025-frank-clarifies-why-koiner-v1-will-not-return-123",
       "date": "15.05.2025",
       "title": "Frank Clarifies Why Koiner V1 Will Not Return",
       "year": 2025,
@@ -3725,7 +4024,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#15052025---frank-clarifies-why-koiner-v1-will-not-return"
     },
     {
-      "id": "2025-interfecto-starts-with-llm-documentation-and-ecosystem-maintenance-122",
+      "id": "2025-interfecto-starts-with-llm-documentation-and-ecosystem-maintenance-124",
       "date": "21.04-20.06.2025",
       "title": "@interfecto Starts with LLM Documentation and Ecosystem Maintenance",
       "year": 2025,
@@ -3757,7 +4056,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#2104-20062025---interfecto-starts-with-llm-documentation-and-ecosystem-maintenance"
     },
     {
-      "id": "2025-the-community-foundation-takes-shape-123",
+      "id": "2025-the-community-foundation-takes-shape-125",
       "date": "May-June 2025",
       "title": "The Community Foundation Takes Shape",
       "year": 2025,
@@ -3793,7 +4092,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#may-june-2025---the-community-foundation-takes-shape"
     },
     {
-      "id": "2025-ron-and-julia-n-turn-foundation-discussion-into-a-founding-process-124",
+      "id": "2025-ron-and-julia-n-turn-foundation-discussion-into-a-founding-process-126",
       "date": "06.08-04.09.2025",
       "title": "Ron and Julián Turn Foundation Discussion into a Founding Process",
       "year": 2025,
@@ -3817,7 +4116,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#0608-04092025---ron-and-julian-turn-foundation-discussion-into-a-founding-process"
     },
     {
-      "id": "2025-koinos-community-foundation-is-announced-125",
+      "id": "2025-koinos-community-foundation-is-announced-127",
       "date": "04.09.2025",
       "title": "Koinos Community Foundation Is Announced",
       "year": 2025,
@@ -3877,7 +4176,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#04092025---koinos-community-foundation-is-announced"
     },
     {
-      "id": "2025-interfecto-launches-koinosscan-then-pauses-for-lack-of-feedback-126",
+      "id": "2025-interfecto-launches-koinosscan-then-pauses-for-lack-of-feedback-128",
       "date": "06.08-22.10.2025",
       "title": "@interfecto Launches KoinosScan, Then Pauses for Lack of Feedback",
       "year": 2025,
@@ -3905,7 +4204,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#0608-22102025---interfecto-launches-koinosscan-then-pauses-for-lack-of-feedback"
     },
     {
-      "id": "2025-ron-shifts-full-attention-to-armana-127",
+      "id": "2025-ron-shifts-full-attention-to-armana-129",
       "date": "10.09.2025",
       "title": "Ron Shifts Full Attention to Armana",
       "year": 2025,
@@ -3925,7 +4224,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#10092025---ron-shifts-full-attention-to-armana"
     },
     {
-      "id": "2025-vortex-bridge-goes-live-128",
+      "id": "2025-vortex-bridge-goes-live-130",
       "date": "14.09.2025",
       "title": "Vortex Bridge Goes Live",
       "year": 2025,
@@ -3953,7 +4252,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#14092025---vortex-bridge-goes-live"
     },
     {
-      "id": "2025-koinos-group-handoff-tokens-taxes-and-the-community-buyout-question-129",
+      "id": "2025-koinos-group-handoff-tokens-taxes-and-the-community-buyout-question-131",
       "date": "15.09-20.10.2025",
       "title": "Koinos Group Handoff, Tokens, Taxes, and the Community Buyout Question",
       "year": 2025,
@@ -4005,7 +4304,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#1509-20102025---koinos-group-handoff-tokens-taxes-and-the-community-buyout-question"
     },
     {
-      "id": "2025-koinos-fund-system-goes-live-130",
+      "id": "2025-koinos-fund-system-goes-live-132",
       "date": "14.10.2025",
       "title": "Koinos Fund System Goes Live",
       "year": 2025,
@@ -4068,7 +4367,39 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#14102025---koinos-fund-system-goes-live"
     },
     {
-      "id": "2025-transeunte-tests-whether-kfs-will-fund-community-communication-131",
+      "id": "2025-a-seed-node-and-gossip-outage-tests-the-community-handoff-133",
+      "date": "15.10.2025",
+      "title": "A Seed-Node and Gossip Outage Tests the Community Handoff",
+      "year": 2025,
+      "era": "continuity",
+      "summary": "One day after KFS went live, the post-company network suffered its first clearly documented operational stress test. On October 15, operators in Koinos TCB reported that block production had stopped for several hours and that block timing remained irregular as difficulty adjusted after recovery. The incident occurred shortly after Koinos Group had shut down its nodes, leaving community-operated discovery and production infrastructure to absorb the transition. The discussion initially focused on seed-node concentration. @interfecto observed that seed.koinosblocks.com appeared to be the working route and suggested adding backup seed…",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "One day after KFS went live, the post-company network suffered its first clearly documented operational stress test. On October 15, operators in Koinos TCB reported that block production had stopped for several hours and that block timing remained irregular as difficulty adjusted after recovery. The incident occurred shortly after Koinos Group had shut down its nodes, leaving community-operated discovery and production infrastructure to absorb the transition."
+        },
+        {
+          "type": "paragraph",
+          "text": "The discussion initially focused on seed-node concentration. `@interfecto` observed that `seed.koinosblocks.com` appeared to be the working route and suggested adding backup seed nodes once Engrave's status was known. That was a reasonable operational hypothesis, not a complete post-mortem. Julián González then supplied the clearest contemporaneous summary: all nodes had stopped, and starting his node with `force-gossip` helped production recover. He later restarted against Engrave's seed and reported that he was producing in sync with KoinosBlocks."
+        },
+        {
+          "type": "paragraph",
+          "text": "The attribution and causality need to remain precise. The evidence does not show that Engrave caused the outage. It shows that Koinos Group's seed withdrawal, too few independent discovery routes, inconsistent gossip behavior, and dependence on a small set of volunteer-operated services had created a fragile recovery path. KoinosBlocks was simultaneously part of the resilience—it provided a surviving seed and a shared view of chain state—and part of the concentration risk because so many operators depended on it."
+        },
+        {
+          "type": "paragraph",
+          "text": "The event reached the market-access layer as well. MEXC temporarily disabled KOIN deposits and withdrawals while the chain and its service connections were uncertain, and Foundation contributors discussed taking over the exchange-communication route from Koinos Group. The chain could resume without company intervention, but only after community developers and operators diagnosed nodes, changed configuration, compared explorer state, and coordinated with external services."
+        },
+        {
+          "type": "paragraph",
+          "text": "This belongs beside the Koinos Group handoff rather than being reduced to a transient outage. It converted “community operated” from an organizational claim into an operational fact and exposed what still had to be decentralized: seed discovery, gossip configuration, APIs, snapshots, monitoring, exchange contacts, and recovery knowledge. The later multi-operator API, additional seed infrastructure, monitoring work, and node-recovery tooling should be read partly as responses to this class of failure."
+        }
+      ],
+      "image": null,
+      "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#15102025---a-seed-node-and-gossip-outage-tests-the-community-handoff"
+    },
+    {
+      "id": "2025-transeunte-tests-whether-kfs-will-fund-community-communication-134",
       "date": "19-27.10.2025",
       "title": "Transeunte Tests Whether KFS Will Fund Community Communication",
       "year": 2025,
@@ -4096,7 +4427,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#19-27102025---transeunte-tests-whether-kfs-will-fund-community-communication"
     },
     {
-      "id": "2025-donations-fund-moves-to-community-control-132",
+      "id": "2025-donations-fund-moves-to-community-control-135",
       "date": "25.10.2025",
       "title": "Donations Fund Moves to Community Control",
       "year": 2025,
@@ -4116,7 +4447,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#25102025---donations-fund-moves-to-community-control"
     },
     {
-      "id": "2025-ederaleng-s-kfs-4-submission-exposes-a-chain-stopping-failure-133",
+      "id": "2025-ederaleng-s-kfs-4-submission-exposes-a-chain-stopping-failure-136",
       "date": "26-31.10.2025",
       "title": "Ederaleng's KFS #4 Submission Exposes a Chain-Stopping Failure",
       "year": 2025,
@@ -4140,7 +4471,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#26-31102025---ederalengs-kfs-4-submission-exposes-a-chain-stopping-failure"
     },
     {
-      "id": "2025-vkoin-reaches-solana-through-wormhole-134",
+      "id": "2025-vkoin-reaches-solana-through-wormhole-137",
       "date": "04.11.2025",
       "title": "vKOIN Reaches Solana Through Wormhole",
       "year": 2025,
@@ -4164,7 +4495,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#04112025---vkoin-reaches-solana-through-wormhole"
     },
     {
-      "id": "2025-kui-returns-to-application-building-with-koinos-pulse-135",
+      "id": "2025-kui-returns-to-application-building-with-koinos-pulse-138",
       "date": "05.11.2025",
       "title": "Kui Returns to Application Building with Koinos Pulse",
       "year": 2025,
@@ -4188,7 +4519,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#05112025---kui-returns-to-application-building-with-koinos-pulse"
     },
     {
-      "id": "2025-koinos-group-shutdown-is-summarized-publicly-136",
+      "id": "2025-koinos-group-shutdown-is-summarized-publicly-139",
       "date": "15.12.2025",
       "title": "Koinos Group Shutdown Is Summarized Publicly",
       "year": 2025,
@@ -4208,7 +4539,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#15122025---koinos-group-shutdown-is-summarized-publicly"
     },
     {
-      "id": "2025-mixibo-moves-on-from-active-koincity-development-137",
+      "id": "2025-mixibo-moves-on-from-active-koincity-development-140",
       "date": "30.12.2025",
       "title": "MiXiBo Moves On from Active KoinCity Development",
       "year": 2025,
@@ -4232,7 +4563,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#30122025---mixibo-moves-on-from-active-koincity-development"
     },
     {
-      "id": "2026-delistings-and-the-shift-toward-dex-liquidity-138",
+      "id": "2026-delistings-and-the-shift-toward-dex-liquidity-141",
       "date": "January-April 2026",
       "title": "Delistings and the Shift Toward DEX Liquidity",
       "year": 2026,
@@ -4276,7 +4607,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#january-april-2026---delistings-and-the-shift-toward-dex-liquidity"
     },
     {
-      "id": "2026-ederaleng-proposes-and-launches-the-base-liquidity-route-139",
+      "id": "2026-ederaleng-proposes-and-launches-the-base-liquidity-route-142",
       "date": "16.02-29.05.2026",
       "title": "Ederaleng Proposes and Launches the Base Liquidity Route",
       "year": 2026,
@@ -4300,7 +4631,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#1602-29052026---ederaleng-proposes-and-launches-the-base-liquidity-route"
     },
     {
-      "id": "2026-jon-rice-returns-to-active-community-advocacy-140",
+      "id": "2026-jon-rice-returns-to-active-community-advocacy-143",
       "date": "15.01-02.07.2026",
       "title": "Jon Rice Returns to Active Community Advocacy",
       "year": 2026,
@@ -4328,7 +4659,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#1501-02072026---jon-rice-returns-to-active-community-advocacy"
     },
     {
-      "id": "2026-a-producer-outage-becomes-a-decentralization-mitigation-141",
+      "id": "2026-a-producer-outage-becomes-a-decentralization-mitigation-144",
       "date": "22.01-21.03.2026",
       "title": "A Producer Outage Becomes a Decentralization Mitigation",
       "year": 2026,
@@ -4352,7 +4683,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#2201-21032026---a-producer-outage-becomes-a-decentralization-mitigation"
     },
     {
-      "id": "2025-interfecto-turns-distribution-analysis-into-node-native-indexing-142",
+      "id": "2025-interfecto-turns-distribution-analysis-into-node-native-indexing-145",
       "date": "07.11.2025-03.04.2026",
       "title": "@interfecto Turns Distribution Analysis into Node-Native Indexing",
       "year": 2025,
@@ -4384,7 +4715,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#07112025-03042026---interfecto-turns-distribution-analysis-into-node-native-indexing"
     },
     {
-      "id": "2026-knodel-begins-as-a-local-recoverable-explorer-143",
+      "id": "2026-knodel-begins-as-a-local-recoverable-explorer-146",
       "date": "22.02.2026",
       "title": "Knodel Begins as a Local, Recoverable Explorer",
       "year": 2026,
@@ -4408,7 +4739,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#22022026---knodel-begins-as-a-local-recoverable-explorer"
     },
     {
-      "id": "2026-foundation-work-becomes-operational-144",
+      "id": "2026-foundation-work-becomes-operational-147",
       "date": "February-April 2026",
       "title": "Foundation Work Becomes Operational",
       "year": 2026,
@@ -4448,7 +4779,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#february-april-2026---foundation-work-becomes-operational"
     },
     {
-      "id": "2026-api-koinos-io-is-decentralized-behind-a-load-balancer-145",
+      "id": "2026-api-koinos-io-is-decentralized-behind-a-load-balancer-148",
       "date": "29.05.2026",
       "title": "api.koinos.io Is Decentralized Behind a Load Balancer",
       "year": 2026,
@@ -4484,7 +4815,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#29052026---apikoinosio-is-decentralized-behind-a-load-balancer"
     },
     {
-      "id": "2026-knodel-evolves-into-koinos-one-and-the-teleno-native-node-146",
+      "id": "2026-knodel-evolves-into-koinos-one-and-the-teleno-native-node-149",
       "date": "May-June 2026",
       "title": "Knodel Evolves into Koinos One and the Teleno Native Node",
       "year": 2026,
@@ -4521,7 +4852,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#may-june-2026---knodel-evolves-into-koinos-one-and-the-teleno-native-node"
     },
     {
-      "id": "2026-interfecto-publishes-the-koinos-evm-engine-and-proposes-a-koindx-path-147",
+      "id": "2026-interfecto-publishes-the-koinos-evm-engine-and-proposes-a-koindx-path-150",
       "date": "03.06-07.07.2026",
       "title": "@interfecto Publishes the Koinos EVM Engine and Proposes a KoinDX Path",
       "year": 2026,
@@ -4565,7 +4896,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#0306-07072026---interfecto-publishes-the-koinos-evm-engine-and-proposes-a-koindx-path"
     },
     {
-      "id": "2026-kondor-2-0-returns-148",
+      "id": "2026-kondor-2-0-returns-151",
       "date": "26.06.2026",
       "title": "Kondor 2.0 Returns",
       "year": 2026,
@@ -4593,7 +4924,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#26062026---kondor-20-returns"
     },
     {
-      "id": "2025-interfecto-keeps-koinos-io-and-market-metadata-current-149",
+      "id": "2025-interfecto-keeps-koinos-io-and-market-metadata-current-152",
       "date": "06.08.2025-03.07.2026",
       "title": "@interfecto Keeps Koinos.io and Market Metadata Current",
       "year": 2025,
@@ -4617,7 +4948,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#06082025-03072026---interfecto-keeps-koinosio-and-market-metadata-current"
     },
     {
-      "id": "2026-koinos-chain-v1-5-2-fixes-fast-sync-state-reconstruction-150",
+      "id": "2026-koinos-chain-v1-5-2-fixes-fast-sync-state-reconstruction-153",
       "date": "09.07.2026",
       "title": "koinos-chain v1.5.2 Fixes Fast Sync State Reconstruction",
       "year": 2026,
@@ -4653,7 +4984,7 @@
       "sourceUrl": "https://github.com/pgarciagon/marketing/blob/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md#09072026---koinos-chain-v152-fixes-fast-sync-state-reconstruction"
     },
     {
-      "id": "2026-koinos-one-and-teleno-produce-accepted-mainnet-blocks-151",
+      "id": "2026-koinos-one-and-teleno-produce-accepted-mainnet-blocks-154",
       "date": "12.07.2026",
       "title": "Koinos One and Teleno Produce Accepted Mainnet Blocks",
       "year": 2026,

@@ -1,64 +1,23 @@
 import Layout from "@/components/layout/Layout";
 import historyContent from "@/data/history-content.json";
 import Head from "next/head";
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import styles from "@/styles/History.module.css";
 
-const ERAS = [
-  {
-    id: "origins",
-    label: "Origins",
-    years: "2016—2020",
-    number: "01",
-    summary:
-      "The story begins with the Steem lesson, the formation of OpenOrchard and Koinos Group, the fair-launch mining period, and the first international community branches.",
-  },
-  {
-    id: "building",
-    label: "From token to chain",
-    years: "2021—2022",
-    number: "02",
-    summary:
-      "Testnets, wallets, SDKs, pools, standards, the decentralized claim, and mainnet turn KOIN from a mined token into a working blockchain.",
-  },
-  {
-    id: "ecosystem",
-    label: "An ecosystem emerges",
-    years: "2023",
-    number: "03",
-    summary:
-      "Independent builders expand Koinos with wallets, exchanges, bridges, NFTs, social tools, education, and the first community-led institutions.",
-  },
-  {
-    id: "evolution",
-    label: "Growth & governance",
-    years: "2024",
-    number: "04",
-    summary:
-      "The network shifts toward developer experience, product maturity, public governance, and community funding while leadership and responsibilities change.",
-  },
-  {
-    id: "continuity",
-    label: "Community continuity",
-    years: "2025—2026",
-    number: "05",
-    summary:
-      "Developers, operators, the Foundation, and funded community projects preserve the chain and carry its infrastructure into its next chapter.",
-  },
-];
-
-const PEOPLE_SUMMARY = {
-  label: "Main characters",
-  summary:
-    "Meet the founders, architects, builders, operators, designers, educators, and advocates whose decisions and work shaped the chain.",
-};
-
 const EVENTS = historyContent.events;
+const FIRST_MILESTONE = EVENTS.find((event) => event.era === "origins");
+const HISTORY_TITLE_PARTS = historyContent.title.split(/,\s*/);
+const HISTORY_TITLE_LEAD =
+  HISTORY_TITLE_PARTS.length > 1
+    ? `${HISTORY_TITLE_PARTS.shift()},`
+    : HISTORY_TITLE_PARTS.shift();
+const HISTORY_TITLE_TAIL = HISTORY_TITLE_PARTS.join(", ");
 const MARKETING_REPOSITORY =
   "https://github.com/pgarciagon/marketing/blob/main/";
+const PEOPLE_SOURCE_TITLE = "Koinos Group LLC Is Registered";
 const PEOPLE_SOURCE = EVENTS.find(
-  (event) => event.title === "Koinos Group LLC Is Registered"
+  (event) => event.title === PEOPLE_SOURCE_TITLE
 );
 
 function parsePerson(item) {
@@ -76,23 +35,55 @@ function personSortKey(person) {
   return plainPersonName(person.name).replace(/^@/, "");
 }
 
+function personIdentityKey(person) {
+  return personSortKey(person)
+    .split("/")[0]
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+const PEOPLE_CONTRIBUTIONS =
+  historyContent.peopleContributionAnalysis?.people || {};
+const CONTRIBUTION_NUMBER = new Intl.NumberFormat("en-US");
+
 const PEOPLE = PEOPLE_SOURCE.content
   .filter((block) => block.type === "unordered-list")
   .flatMap((block) => block.items.map(parsePerson))
-  .sort((personA, personB) =>
-    personSortKey(personA).localeCompare(personSortKey(personB), "en", {
-      sensitivity: "base",
-    })
-  );
+  .map((person, sourceIndex) => ({
+    ...person,
+    contribution: PEOPLE_CONTRIBUTIONS[personIdentityKey(person)] || null,
+    sourceIndex,
+  }))
+  .sort((personA, personB) => {
+    const totalA = personA.contribution?.total ?? -1;
+    const totalB = personB.contribution?.total ?? -1;
+    return totalB - totalA || personA.sourceIndex - personB.sourceIndex;
+  });
 const PEOPLE_COUNT = PEOPLE.length;
 const PEOPLE_WHEEL_ITEMS = PEOPLE.map((person, index) => ({
   id: `person-${index + 1}`,
   title: plainPersonName(person.name),
-  date: `${personSortKey(person).charAt(0).toUpperCase()} · ${String(
-    index + 1
-  ).padStart(2, "0")}`,
+  date: person.contribution
+    ? `#${index + 1} · ${CONTRIBUTION_NUMBER.format(
+        person.contribution.total
+      )} contributions`
+    : `#${index + 1} · documentary profile`,
   person,
 }));
+
+const HERO_ACTION_HINTS = {
+  milestones: {
+    label: "Follow the chronology",
+    text: "Each milestone was extracted from a dated section of the sourced chronicle. Its title, complete text, images, and source links were preserved, then all 154 entries were arranged chronologically. Choose any milestone, then keep scrolling as the full story unfolds.",
+  },
+  people: {
+    label: "Meet the main characters",
+    text: "Characters are ordered from highest to lowest by documented public contributions across Telegram, individually inventoried Discord, X, articles, and videos; profiles without a measured count appear last. Choose a name, then keep scrolling through the human story behind the chain.",
+  },
+};
 
 function resolveArticleHref(href) {
   if (/^(https?:\/\/|mailto:|#)/.test(href)) return href;
@@ -142,9 +133,14 @@ function renderInline(text, keyPrefix = "inline") {
 }
 
 function ArticleBody({ event }) {
+  const visibleContent =
+    event.title === PEOPLE_SOURCE_TITLE
+      ? event.content.slice(0, 2)
+      : event.content;
+
   return (
     <div className={styles.articleBody}>
-      {event.content.map((block, blockIndex) => {
+      {visibleContent.map((block, blockIndex) => {
         const key = `${event.id}-${blockIndex}`;
 
         if (block.type === "image") {
@@ -183,26 +179,82 @@ function ArticleBody({ event }) {
   );
 }
 
+function ReaderEntry({ itemId, children, priority = false }) {
+  const entryRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    if (priority) {
+      const animationFrame = window.requestAnimationFrame(() => {
+        setIsVisible(true);
+      });
+      return () => window.cancelAnimationFrame(animationFrame);
+    }
+
+    const entry = entryRef.current;
+    if (!entry) return undefined;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setIsVisible(true);
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      ([intersection]) => {
+        if (!intersection.isIntersecting) return;
+        setIsVisible(true);
+        observer.disconnect();
+      },
+      {
+        rootMargin: "0px 0px 12% 0px",
+        threshold: 0.01,
+      }
+    );
+
+    observer.observe(entry);
+    return () => observer.disconnect();
+  }, [priority]);
+
+  return (
+    <section
+      ref={entryRef}
+      className={`${styles.reader} ${styles.readerEntry} ${
+        priority ? styles.readerEntryPriority : ""
+      } ${
+        isVisible ? styles.readerEntryVisible : ""
+      }`}
+      aria-labelledby={`reader-${itemId}`}
+      data-reader-id={itemId}
+    >
+      {children}
+    </section>
+  );
+}
+
 export default function HistoryPage() {
-  const originEvents = EVENTS.filter((event) => event.era === "origins");
-  const [activeEra, setActiveEra] = useState("origins");
-  const [focusedId, setFocusedId] = useState(originEvents[0].id);
+  const [focusedId, setFocusedId] = useState(FIRST_MILESTONE.id);
   const [openedId, setOpenedId] = useState(null);
+  const [visibleReaderCount, setVisibleReaderCount] = useState(1);
   const [peopleSelected, setPeopleSelected] = useState(false);
+  const [compactNavigatorVisible, setCompactNavigatorVisible] = useState(false);
+  const [heroActionHint, setHeroActionHint] = useState(null);
   const wheelRef = useRef(null);
   const wheelNodes = useRef({});
+  const wheelStageRef = useRef(null);
+  const compactWheelRef = useRef(null);
+  const compactWheelNodes = useRef({});
   const wheelScrollTimer = useRef(null);
+  const wheelProgrammaticScroll = useRef(false);
+  const wheelProgrammaticScrollTimer = useRef(null);
   const wheelDrag = useRef({ active: false, startX: 0, scrollLeft: 0 });
   const didWheelDrag = useRef(false);
+  const historyInteracted = useRef(false);
   const readerRef = useRef(null);
+  const readerLoadMoreRef = useRef(null);
+  const readerScrollRequest = useRef(0);
+  const readerScrollCleanup = useRef(null);
 
-  const chapterEvents = useMemo(
-    () => EVENTS.filter((event) => event.era === activeEra),
-    [activeEra]
-  );
-  const activeEraDetails = ERAS.find((era) => era.id === activeEra);
-  const selectedChapter = peopleSelected ? PEOPLE_SUMMARY : activeEraDetails;
-  const wheelItems = peopleSelected ? PEOPLE_WHEEL_ITEMS : chapterEvents;
+  const wheelItems = peopleSelected ? PEOPLE_WHEEL_ITEMS : EVENTS;
   const focusedIndex = Math.max(
     0,
     wheelItems.findIndex((item) => item.id === focusedId)
@@ -215,60 +267,200 @@ export default function HistoryPage() {
     ? PEOPLE_WHEEL_ITEMS.find((item) => item.id === openedId)
     : null;
   const openedItem = openedPerson || openedEvent;
-  const openedIndex = openedItem
-    ? wheelItems.findIndex((item) => item.id === openedItem.id)
+  const readerSequence = peopleSelected ? PEOPLE_WHEEL_ITEMS : EVENTS;
+  const readerTargetIndex = openedItem
+    ? readerSequence.findIndex((item) => item.id === openedItem.id)
     : -1;
-  const previousOpenedTarget =
-    openedIndex >= 0 ? getAdjacentTarget(openedIndex, -1) : null;
-  const nextOpenedTarget =
-    openedIndex >= 0 ? getAdjacentTarget(openedIndex, 1) : null;
+  const visibleReaderItems =
+    readerTargetIndex >= 0
+      ? readerSequence.slice(0, visibleReaderCount)
+      : [];
+  const hasMoreReaderItems =
+    readerTargetIndex >= 0 && visibleReaderItems.length < readerSequence.length;
 
-  function getAdjacentTarget(fromIndex, direction) {
-    const adjacentIndex = fromIndex + direction;
-    if (adjacentIndex >= 0 && adjacentIndex < wheelItems.length) {
-      return {
-        item: wheelItems[adjacentIndex],
-        crossesChapter: false,
-        eraId: activeEra,
-      };
-    }
+  useEffect(() => {
+    if (openedItem || historyInteracted.current) return undefined;
 
-    if (peopleSelected) {
-      const wrappedIndex =
-        (adjacentIndex + wheelItems.length) % wheelItems.length;
-      return {
-        item: wheelItems[wrappedIndex],
-        crossesChapter: false,
-        eraId: activeEra,
-      };
-    }
+    const wheelStage = wheelStageRef.current;
+    if (!wheelStage) return undefined;
 
-    const activeEraIndex = ERAS.findIndex((era) => era.id === activeEra);
-    const adjacentEra =
-      ERAS[(activeEraIndex + direction + ERAS.length) % ERAS.length];
-    const adjacentEvents = EVENTS.filter(
-      (event) => event.era === adjacentEra.id
+    const openFirstMilestone = () => {
+      if (historyInteracted.current) return;
+      historyInteracted.current = true;
+      flushSync(() => {
+        setPeopleSelected(false);
+        setFocusedId(FIRST_MILESTONE.id);
+        setVisibleReaderCount(1);
+        setOpenedId(FIRST_MILESTONE.id);
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        observer.disconnect();
+        openFirstMilestone();
+      },
+      {
+        rootMargin: "0px 0px 12% 0px",
+        threshold: 0.01,
+      }
     );
 
-    return {
-      item:
-        direction > 0
-          ? adjacentEvents[0]
-          : adjacentEvents[adjacentEvents.length - 1],
-      crossesChapter: true,
-      eraId: adjacentEra.id,
-    };
-  }
+    observer.observe(wheelStage);
+    return () => observer.disconnect();
+  }, [openedItem]);
 
-  function scrollWheelTo(id, behavior = "smooth") {
+  useEffect(() => {
+    const wheelStage = wheelStageRef.current;
+    if (!wheelStage || !openedItem) {
+      setCompactNavigatorVisible(false);
+      return undefined;
+    }
+
+    let animationFrame = null;
+    const syncCompactNavigator = () => {
+      animationFrame = null;
+      setCompactNavigatorVisible(
+        wheelStage.getBoundingClientRect().bottom <= 70
+      );
+    };
+    const requestSync = () => {
+      if (animationFrame !== null) return;
+      animationFrame = window.requestAnimationFrame(syncCompactNavigator);
+    };
+
+    requestSync();
+    window.addEventListener("scroll", requestSync, { passive: true });
+    window.addEventListener("resize", requestSync);
+    return () => {
+      if (animationFrame !== null) {
+        window.cancelAnimationFrame(animationFrame);
+      }
+      window.removeEventListener("scroll", requestSync);
+      window.removeEventListener("resize", requestSync);
+    };
+  }, [openedId, openedItem]);
+
+  useEffect(
+    () => () => {
+      readerScrollCleanup.current?.();
+    },
+    []
+  );
+
+  useEffect(() => {
+    if (!compactNavigatorVisible) return;
+
     window.requestAnimationFrame(() => {
-      const track = wheelRef.current;
-      const node = wheelNodes.current[id];
+      const track = compactWheelRef.current;
+      const node = compactWheelNodes.current[focusedId];
       if (!track || !node) return;
 
       const centeredLeft =
         node.offsetLeft + node.offsetWidth / 2 - track.clientWidth / 2;
+      track.scrollTo({ left: centeredLeft, behavior: "smooth" });
+    });
+  }, [compactNavigatorVisible, focusedId, peopleSelected]);
+
+  useEffect(() => {
+    if (!openedItem) return undefined;
+
+    let animationFrame = null;
+
+    const syncReaderPosition = () => {
+      animationFrame = null;
+      const reader = readerRef.current;
+      if (!reader) return;
+
+      const entries = Array.from(reader.querySelectorAll("[data-reader-id]"));
+      if (!entries.length) return;
+
+      const compactNavigator = document.querySelector(
+        `.${styles.compactNavigator}`
+      );
+      const readingLine =
+        (compactNavigator?.getBoundingClientRect().bottom || 86) + 18;
+      let activeEntry = entries[0];
+
+      entries.forEach((entry) => {
+        if (entry.getBoundingClientRect().top <= readingLine) {
+          activeEntry = entry;
+        }
+      });
+
+      const activeId = activeEntry.dataset.readerId;
+      if (!activeId) return;
+
+      setFocusedId((currentId) =>
+        currentId === activeId ? currentId : activeId
+      );
+
+    };
+
+    const requestSync = () => {
+      if (animationFrame !== null) return;
+      animationFrame = window.requestAnimationFrame(syncReaderPosition);
+    };
+
+    requestSync();
+    window.addEventListener("scroll", requestSync, { passive: true });
+    window.addEventListener("resize", requestSync);
+
+    return () => {
+      if (animationFrame !== null) {
+        window.cancelAnimationFrame(animationFrame);
+      }
+      window.removeEventListener("scroll", requestSync);
+      window.removeEventListener("resize", requestSync);
+    };
+  }, [openedId, openedItem, peopleSelected, visibleReaderCount]);
+
+  useEffect(() => {
+    const sentinel = readerLoadMoreRef.current;
+    if (!sentinel || !hasMoreReaderItems) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        observer.disconnect();
+        setVisibleReaderCount((currentCount) =>
+          Math.min(currentCount + 1, readerSequence.length)
+        );
+      },
+      {
+        rootMargin: "0px 0px 420px 0px",
+        threshold: 0.01,
+      }
+    );
+
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, [
+    hasMoreReaderItems,
+    openedId,
+    peopleSelected,
+    readerSequence.length,
+    visibleReaderCount,
+  ]);
+
+  function scrollWheelTo(id, behavior = "smooth") {
+    wheelProgrammaticScroll.current = true;
+    window.clearTimeout(wheelProgrammaticScrollTimer.current);
+    window.requestAnimationFrame(() => {
+      const track = wheelRef.current;
+      const node = wheelNodes.current[id];
+      if (!track || !node) {
+        wheelProgrammaticScroll.current = false;
+        return;
+      }
+
+      const centeredLeft =
+        node.offsetLeft + node.offsetWidth / 2 - track.clientWidth / 2;
       track.scrollTo({ left: centeredLeft, behavior });
+      wheelProgrammaticScrollTimer.current = window.setTimeout(() => {
+        wheelProgrammaticScroll.current = false;
+      }, behavior === "smooth" ? 720 : 80);
     });
   }
 
@@ -292,26 +484,134 @@ export default function HistoryPage() {
     });
   }
 
-  function revealItem(id, sourceTitle) {
+  function getReaderItemCountThrough(id, isPeople = peopleSelected) {
+    const sequence = isPeople ? PEOPLE_WHEEL_ITEMS : EVENTS;
+    const targetIndex = sequence.findIndex((item) => item.id === id);
+    return targetIndex >= 0 ? targetIndex + 1 : 1;
+  }
+
+  function getReaderEntry(id) {
+    if (!readerRef.current) return null;
+    return Array.from(
+      readerRef.current.querySelectorAll("[data-reader-id]")
+    ).find((entry) => entry.dataset.readerId === id) || null;
+  }
+
+  function scrollReaderTo(id, behavior = "smooth") {
+    readerScrollCleanup.current?.();
+    readerScrollCleanup.current = null;
+
+    const requestId = readerScrollRequest.current + 1;
+    readerScrollRequest.current = requestId;
+    setCompactNavigatorVisible(true);
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        const targetEntry = getReaderEntry(id);
+        if (!targetEntry) return;
+
+        const targetDistance = Math.abs(
+          targetEntry.getBoundingClientRect().top
+        );
+        const resolvedBehavior =
+          behavior === "smooth" && targetDistance > window.innerHeight * 2
+            ? "auto"
+            : behavior;
+
+        if (resolvedBehavior === "auto") {
+          let resizeAnimationFrame = null;
+          let resizeObserver = null;
+          let stopTimer = null;
+
+          const stopAlignment = () => {
+            if (resizeAnimationFrame !== null) {
+              window.cancelAnimationFrame(resizeAnimationFrame);
+              resizeAnimationFrame = null;
+            }
+            resizeObserver?.disconnect();
+            if (stopTimer !== null) window.clearTimeout(stopTimer);
+            if (readerScrollCleanup.current === stopAlignment) {
+              readerScrollCleanup.current = null;
+            }
+          };
+
+          const alignTarget = () => {
+            if (readerScrollRequest.current !== requestId) {
+              stopAlignment();
+              return;
+            }
+            const currentTarget = getReaderEntry(id);
+            if (!currentTarget) return;
+
+            const scrollMargin =
+              Number.parseFloat(
+                window.getComputedStyle(currentTarget).scrollMarginTop
+              ) || 0;
+            const distanceFromMargin =
+              currentTarget.getBoundingClientRect().top - scrollMargin;
+
+            if (Math.abs(distanceFromMargin) < 2) return;
+            window.scrollTo(
+              window.scrollX,
+              Math.max(0, window.scrollY + distanceFromMargin)
+            );
+          };
+
+          if (typeof ResizeObserver !== "undefined" && readerRef.current) {
+            resizeObserver = new ResizeObserver(() => {
+              if (resizeAnimationFrame !== null) return;
+              resizeAnimationFrame = window.requestAnimationFrame(() => {
+                resizeAnimationFrame = null;
+                alignTarget();
+              });
+            });
+            resizeObserver.observe(readerRef.current);
+          }
+
+          readerScrollCleanup.current = stopAlignment;
+          alignTarget();
+          stopTimer = window.setTimeout(() => {
+            alignTarget();
+            stopAlignment();
+          }, 3600);
+          return;
+        }
+
+        targetEntry.scrollIntoView({
+          behavior: resolvedBehavior,
+          block: "start",
+        });
+      });
+    });
+  }
+
+  function revealItem(id, sourceTitle, isPeople = peopleSelected) {
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
     const sourceRect = sourceTitle?.getBoundingClientRect();
     const sourceStyle = sourceTitle ? window.getComputedStyle(sourceTitle) : null;
 
-    flushSync(() => setOpenedId(id));
+    flushSync(() => {
+      setVisibleReaderCount(getReaderItemCountThrough(id, isPeople));
+      setOpenedId(id);
+    });
 
-    const targetTitle = readerRef.current?.querySelector("h2");
+    const targetEntry = getReaderEntry(id);
+    const targetTitle = targetEntry?.querySelector("h2");
+    const targetIsFar =
+      !targetEntry ||
+      Math.abs(targetEntry.getBoundingClientRect().top) >
+        window.innerHeight * 1.25;
     if (
       prefersReducedMotion ||
       !sourceTitle ||
       !sourceRect ||
       !sourceStyle ||
-      !targetTitle
+      !targetTitle ||
+      targetIsFar
     ) {
-      window.requestAnimationFrame(() => {
-        readerRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
+      scrollReaderTo(id);
       return;
     }
 
@@ -346,7 +646,7 @@ export default function HistoryPage() {
     const finishAnimation = () => {
       targetTitle.style.visibility = "";
       flyingTitle.remove();
-      readerRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      scrollReaderTo(id);
     };
 
     flyingTitle.getBoundingClientRect();
@@ -363,90 +663,76 @@ export default function HistoryPage() {
     window.setTimeout(finishAnimation, 820);
   }
 
-  function chooseEra(eraId) {
-    const firstEvent = EVENTS.find((event) => event.era === eraId);
+  function scrollMainNavigatorIntoView() {
+    readerScrollCleanup.current?.();
+    readerScrollCleanup.current = null;
+    readerScrollRequest.current += 1;
+    setCompactNavigatorVisible(false);
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        wheelStageRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    });
+  }
+
+  function openMilestones(event) {
+    event?.preventDefault();
+    historyInteracted.current = true;
     window.clearTimeout(wheelScrollTimer.current);
     flushSync(() => {
       setPeopleSelected(false);
-      setActiveEra(eraId);
-      setFocusedId(firstEvent.id);
-      setOpenedId(null);
+      setFocusedId(FIRST_MILESTONE.id);
+      setVisibleReaderCount(1);
+      setOpenedId(FIRST_MILESTONE.id);
     });
-    scrollWheelTo(firstEvent.id, "auto");
+    scrollWheelTo(FIRST_MILESTONE.id, "auto");
+    scrollMainNavigatorIntoView();
   }
 
-  function openPeople() {
+  function openPeople(event) {
+    event?.preventDefault();
+    historyInteracted.current = true;
     window.clearTimeout(wheelScrollTimer.current);
     flushSync(() => {
       setPeopleSelected(true);
       setFocusedId(PEOPLE_WHEEL_ITEMS[0].id);
-      setOpenedId(null);
+      setVisibleReaderCount(1);
+      setOpenedId(PEOPLE_WHEEL_ITEMS[0].id);
     });
     scrollWheelTo(PEOPLE_WHEEL_ITEMS[0].id, "auto");
+    scrollMainNavigatorIntoView();
   }
 
-  function activateAdjacentTarget(target, openItem = false) {
-    if (!target.crossesChapter) {
-      if (!openItem) {
-        focusWheelItem(target.item.id);
-        return;
-      }
-
-      flushSync(() => {
-        setFocusedId(target.item.id);
-        setOpenedId(target.item.id);
-      });
-      scrollWheelTo(target.item.id);
-    } else {
-      window.clearTimeout(wheelScrollTimer.current);
-      flushSync(() => {
-        setPeopleSelected(false);
-        setActiveEra(target.eraId);
-        setFocusedId(target.item.id);
-        setOpenedId(openItem ? target.item.id : null);
-      });
-      scrollWheelTo(target.item.id, "auto");
+  function handleCompactWheelItemClick(event, item) {
+    historyInteracted.current = true;
+    if (item.id === openedId) {
+      scrollReaderTo(item.id);
+      return;
     }
 
-    if (openItem) {
-      window.requestAnimationFrame(() => {
-        readerRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
-    }
+    const sourceTitle = event.currentTarget.querySelector(
+      `.${styles.compactWheelTitle}`
+    );
+    flushSync(() => {
+      setFocusedId(item.id);
+    });
+    scrollWheelTo(item.id, "auto");
+    revealItem(item.id, sourceTitle);
   }
 
   function stepWheel(direction) {
-    activateAdjacentTarget(getAdjacentTarget(focusedIndex, direction));
-  }
-
-  function updateWheelGeometry() {
-    const track = wheelRef.current;
-    if (!track) return;
-
-    const trackCenter = track.scrollLeft + track.clientWidth / 2;
-    wheelItems.forEach((item) => {
-      const node = wheelNodes.current[item.id];
-      if (!node) return;
-
-      const nodeCenter = node.offsetLeft + node.offsetWidth / 2;
-      const distance = Math.abs(nodeCenter - trackCenter) / node.offsetWidth;
-      node.style.setProperty(
-        "--arc-y",
-        `${Math.min(88, distance * distance * 7)}px`
-      );
-      node.style.setProperty(
-        "--arc-scale",
-        Math.max(0.72, 1 - distance * 0.08)
-      );
-      node.style.setProperty(
-        "--arc-opacity",
-        Math.max(0.16, 1 - distance * 0.22)
-      );
-    });
+    historyInteracted.current = true;
+    const nextIndex =
+      (focusedIndex + direction + wheelItems.length) % wheelItems.length;
+    focusWheelItem(wheelItems[nextIndex].id);
   }
 
   function handleWheelScroll() {
-    updateWheelGeometry();
+    if (wheelProgrammaticScroll.current) return;
+    historyInteracted.current = true;
     window.clearTimeout(wheelScrollTimer.current);
     wheelScrollTimer.current = window.setTimeout(() => {
       const track = wheelRef.current;
@@ -469,13 +755,13 @@ export default function HistoryPage() {
 
       if (nearestItem && nearestItem.id !== focusedId) {
         setFocusedId(nearestItem.id);
-        setOpenedId(null);
       }
     }, 100);
   }
 
   function handleWheelPointerDown(event) {
     if (event.pointerType !== "mouse" || event.button !== 0) return;
+    historyInteracted.current = true;
     const track = wheelRef.current;
     wheelDrag.current = {
       active: true,
@@ -495,7 +781,6 @@ export default function HistoryPage() {
     }
     if (didWheelDrag.current) {
       track.scrollLeft = wheelDrag.current.scrollLeft - distance;
-      updateWheelGeometry();
     }
   }
 
@@ -508,6 +793,7 @@ export default function HistoryPage() {
   }
 
   function handleWheelItemClick(event, item, isFocused) {
+    historyInteracted.current = true;
     if (didWheelDrag.current) {
       didWheelDrag.current = false;
       event.preventDefault();
@@ -523,69 +809,22 @@ export default function HistoryPage() {
     }
   }
 
-  function openAdjacentItem(direction) {
-    if (openedIndex < 0) return;
-    activateAdjacentTarget(
-      getAdjacentTarget(openedIndex, direction),
-      true
-    );
-  }
-
-  function renderReaderNavigation(position) {
-    if (!openedItem) return null;
-
-    return (
-      <nav
-        className={`${styles.readerFooter} ${
-          position === "top" ? styles.readerNavigationTop : ""
-        }`}
-        aria-label={`${
-          peopleSelected ? "Main character" : "Milestone"
-        } navigation at the ${position}`}
-      >
-        <button type="button" onClick={() => openAdjacentItem(-1)}>
-          <span aria-hidden="true">←</span>
-          <span>
-            <small>
-              {peopleSelected
-                ? "Previous person"
-                : previousOpenedTarget.crossesChapter
-                  ? "Previous chapter"
-                  : "Previous milestone"}
-            </small>
-            <strong>{previousOpenedTarget.item.title}</strong>
-          </span>
-        </button>
-        <button type="button" onClick={() => openAdjacentItem(1)}>
-          <span>
-            <small>
-              {peopleSelected
-                ? "Next person"
-                : nextOpenedTarget.crossesChapter
-                  ? "Next chapter"
-                  : "Next milestone"}
-            </small>
-            <strong>{nextOpenedTarget.item.title}</strong>
-          </span>
-          <span aria-hidden="true">→</span>
-        </button>
-      </nav>
-    );
-  }
-
   return (
     <Layout
       headerStyle={1}
       footerStyle={1}
       headerCls="navbar-dark light-hero-header"
-      headTitle="Brief History of Koinos"
+      headTitle={historyContent.title}
     >
       <Head>
         <meta
           name="description"
           content="Explore the lived history of Koinos—from its Steem roots and fair launch to mainnet and community continuity."
         />
-        <meta property="og:title" content="Brief History of Koinos | An Interactive Chronicle" />
+        <meta
+          property="og:title"
+          content={`${historyContent.title} | An Interactive Chronicle`}
+        />
         <meta
           property="og:description"
           content="A decade of people, software, conflict, experiments, and continuity—made explorable."
@@ -598,19 +837,54 @@ export default function HistoryPage() {
             <div className={styles.heroCopy}>
               <p className={styles.eyebrow}>An interactive chronicle · 2016—2026</p>
               <h1 id="history-title" className={styles.heroTitle}>
-                Brief history
-                <span>of Koinos.</span>
+                {HISTORY_TITLE_LEAD}
+                {HISTORY_TITLE_TAIL ? <span>{HISTORY_TITLE_TAIL}</span> : null}
               </h1>
               <p className={styles.heroLead}>
                 Code can be copied. Architecture can be reproduced. But a lived
                 blockchain—its people, choices, failures, and continuity—cannot
                 be recreated.
               </p>
-              <div className={styles.heroActions}>
-                <a className={styles.primaryAction} href="#chronicle">
-                  Enter the chronicle
-                  <span aria-hidden="true">↓</span>
-                </a>
+              <div className={styles.heroActionArea}>
+                <div className={styles.heroActions}>
+                  <a
+                    className={styles.primaryAction}
+                    href="#chronicle"
+                    onClick={openMilestones}
+                    onMouseEnter={() => setHeroActionHint("milestones")}
+                    onMouseLeave={() => setHeroActionHint(null)}
+                    onFocus={() => setHeroActionHint("milestones")}
+                    onBlur={() => setHeroActionHint(null)}
+                  >
+                    Milestones
+                    <span aria-hidden="true">↓</span>
+                  </a>
+                  <a
+                    className={styles.primaryAction}
+                    href="#chronicle"
+                    onClick={openPeople}
+                    onMouseEnter={() => setHeroActionHint("people")}
+                    onMouseLeave={() => setHeroActionHint(null)}
+                    onFocus={() => setHeroActionHint("people")}
+                    onBlur={() => setHeroActionHint(null)}
+                  >
+                    People
+                    <span aria-hidden="true">↓</span>
+                  </a>
+                </div>
+                <div
+                  className={`${styles.heroActionHint} ${
+                    heroActionHint ? styles.heroActionHintVisible : ""
+                  }`}
+                  aria-live="polite"
+                >
+                  {heroActionHint ? (
+                    <>
+                      <span>{HERO_ACTION_HINTS[heroActionHint].label}</span>
+                      <p>{HERO_ACTION_HINTS[heroActionHint].text}</p>
+                    </>
+                  ) : null}
+                </div>
               </div>
             </div>
 
@@ -631,24 +905,6 @@ export default function HistoryPage() {
             </div>
           </div>
 
-          <div className={styles.heroIndex} aria-label="Chronicle overview">
-            <div>
-              <strong>10+</strong>
-              <span>years of history</span>
-            </div>
-            <div>
-              <strong>{EVENTS.length}</strong>
-              <span>documented milestones</span>
-            </div>
-            <div>
-              <strong>{PEOPLE_COUNT}</strong>
-              <span>people in the history</span>
-            </div>
-            <div>
-              <strong>1</strong>
-              <span>continuous living chain</span>
-            </div>
-          </div>
         </section>
 
         <section
@@ -656,67 +912,64 @@ export default function HistoryPage() {
           className={`${styles.chronicle} ${
             openedItem ? "" : styles.chronicleCompact
           }`}
-          aria-labelledby="chronicle-title"
+          aria-label="Historical chronology"
         >
-          <div className={styles.sectionIntro}>
-            <p className={styles.eyebrow}>The chronology</p>
-            <h2 id="chronicle-title">Turn the wheel of time.</h2>
-            <div
-              key={peopleSelected ? "people" : activeEra}
-              className={styles.chapterSummary}
-              aria-live="polite"
+          {compactNavigatorVisible && openedItem ? (
+            <aside
+              className={styles.compactNavigator}
+              aria-label="Quick history index"
             >
-              <span>
-                {peopleSelected
-                  ? `${PEOPLE_COUNT} documented people`
-                  : `Chapter ${activeEraDetails.number} · ${activeEraDetails.years} · ${chapterEvents.length} milestones`}
-              </span>
-              <h3>{selectedChapter.label}</h3>
-              <p>{selectedChapter.summary}</p>
-            </div>
-          </div>
-
-          <div className={styles.eraRail} role="tablist" aria-label="Historical chapters">
-            <button
-              type="button"
-              role="tab"
-              aria-selected={peopleSelected}
-              className={`${styles.eraButton} ${
-                peopleSelected ? styles.eraButtonActive : ""
-              }`}
-              onClick={openPeople}
-            >
-              <span className={styles.eraNumber}>People</span>
-              <span className={styles.eraName}>Main characters</span>
-              <span className={styles.eraYears}>Behind the story</span>
-              <span className={styles.eraCount}>{PEOPLE_COUNT}</span>
-            </button>
-            {ERAS.map((era) => {
-              const count = EVENTS.filter((event) => event.era === era.id).length;
-              return (
-                <button
-                  key={era.id}
-                  type="button"
-                  role="tab"
-                  aria-selected={!peopleSelected && activeEra === era.id}
-                  className={`${styles.eraButton} ${
-                    !peopleSelected && activeEra === era.id
-                      ? styles.eraButtonActive
-                      : ""
-                  }`}
-                  onClick={() => chooseEra(era.id)}
-                >
-                  <span className={styles.eraNumber}>{era.number}</span>
-                  <span className={styles.eraName}>{era.label}</span>
-                  <span className={styles.eraYears}>{era.years}</span>
-                  <span className={styles.eraCount}>{count}</span>
-                </button>
-              );
-            })}
-          </div>
+              <div className={styles.compactNavigatorInner}>
+                <div className={styles.compactWheelBar}>
+                  <div className={styles.compactWheelCounter}>
+                    <span>{peopleSelected ? "People" : "Milestones"}</span>
+                    <strong>
+                      {String(focusedIndex + 1).padStart(2, "0")} / {wheelItems.length}
+                    </strong>
+                  </div>
+                  <ol
+                    ref={compactWheelRef}
+                    className={styles.compactWheelTrack}
+                    aria-label={
+                      peopleSelected
+                        ? "Quick people index ordered by verified contributions"
+                        : "Quick complete milestone index"
+                    }
+                  >
+                    {wheelItems.map((item) => {
+                      const isFocused = item.id === focusedItem.id;
+                      return (
+                        <li key={`compact-item-${item.id}`}>
+                          <button
+                            ref={(node) => {
+                              compactWheelNodes.current[item.id] = node;
+                            }}
+                            type="button"
+                            aria-pressed={isFocused}
+                            className={`${styles.compactWheelButton} ${
+                              isFocused ? styles.compactWheelButtonActive : ""
+                            }`}
+                            onClick={(clickEvent) =>
+                              handleCompactWheelItemClick(clickEvent, item)
+                            }
+                          >
+                            <strong className={styles.compactWheelTitle}>
+                              {item.title}
+                            </strong>
+                            <span>{item.date}</span>
+                          </button>
+                        </li>
+                      );
+                    })}
+                  </ol>
+                </div>
+              </div>
+            </aside>
+          ) : null}
 
           <div
-            key={peopleSelected ? "people" : activeEra}
+            key={peopleSelected ? "people" : "milestones"}
+            ref={wheelStageRef}
             className={styles.wheelStage}
           >
             <div className={styles.wheelHeader}>
@@ -741,15 +994,20 @@ export default function HistoryPage() {
               </div>
             </div>
 
-            <div className={styles.wheelViewport}>
-              <div className={styles.wheelArc} aria-hidden="true" />
+            <div
+              className={`${styles.wheelViewport} ${
+                focusedIndex === 0 ? styles.wheelViewportAtStart : ""
+              }`}
+            >
               <ol
                 ref={wheelRef}
-                className={styles.wheelTrack}
+                className={`${styles.wheelTrack} ${
+                  focusedIndex === 0 ? styles.wheelTrackAtStart : ""
+                }`}
                 aria-label={
                   peopleSelected
-                    ? "Main characters in alphabetical order"
-                    : `${activeEraDetails.label} milestone dates`
+                    ? "Main characters ordered by verified contributions"
+                    : "Complete milestone chronology"
                 }
                 onScroll={handleWheelScroll}
                 onPointerDown={handleWheelPointerDown}
@@ -757,11 +1015,7 @@ export default function HistoryPage() {
                 onPointerUp={handleWheelPointerEnd}
                 onPointerCancel={handleWheelPointerEnd}
               >
-                {wheelItems.map((item, index) => {
-                  const distance = Math.abs(index - focusedIndex);
-                  const arcY = Math.min(88, distance * distance * 7);
-                  const scale = Math.max(0.72, 1 - distance * 0.08);
-                  const opacity = Math.max(0.16, 1 - distance * 0.22);
+                {wheelItems.map((item) => {
                   const isFocused = item.id === focusedItem.id;
 
                   return (
@@ -780,11 +1034,6 @@ export default function HistoryPage() {
                         className={`${styles.wheelDate} ${
                           isFocused ? styles.wheelDateActive : ""
                         }`}
-                        style={{
-                          "--arc-y": `${arcY}px`,
-                          "--arc-scale": scale,
-                          "--arc-opacity": opacity,
-                        }}
                         onClick={(clickEvent) =>
                           handleWheelItemClick(clickEvent, item, isFocused)
                         }
@@ -804,106 +1053,64 @@ export default function HistoryPage() {
           </div>
 
           {openedItem ? (
-            <section
-              key={openedItem.id}
+            <div
+              key={`${peopleSelected ? "people" : "milestones"}-${openedItem.id}`}
               ref={readerRef}
-              className={styles.reader}
-              aria-labelledby={`reader-${openedItem.id}`}
+              className={styles.readerStream}
             >
-              {renderReaderNavigation("top")}
+              {visibleReaderItems.map((readerItem, readerIndex) => {
+                const readerEvent = peopleSelected ? null : readerItem;
+                const readerPerson = peopleSelected ? readerItem : null;
 
-              <header className={styles.readerHeader}>
-                <div className={styles.readerMeta}>
-                  <span>{openedItem.date}</span>
-                </div>
-                <h2 id={`reader-${openedItem.id}`}>{openedItem.title}</h2>
-                <div className={styles.readerByline}>
-                  <span>
-                    Entry {String(openedIndex + 1).padStart(2, "0")} of {wheelItems.length}
-                    {" "}in {selectedChapter.label}
-                  </span>
-                  {openedEvent ? (
-                    <a href={openedEvent.sourceUrl} target="_blank" rel="noreferrer">
-                      View source entry <span aria-hidden="true">↗</span>
-                    </a>
-                  ) : null}
-                </div>
-              </header>
+                return (
+                  <ReaderEntry
+                    key={readerItem.id}
+                    itemId={readerItem.id}
+                    priority={readerIndex === 0}
+                  >
+                    <header className={styles.readerHeader}>
+                      <h2
+                        id={`reader-${readerItem.id}`}
+                        className={
+                          readerPerson ? styles.personReaderTitle : undefined
+                        }
+                      >
+                        {readerItem.title}
+                      </h2>
+                      <div className={styles.readerMeta}>
+                        <span>{readerItem.date}</span>
+                      </div>
+                    </header>
 
-              {openedPerson ? (
-                <div className={styles.articleBody}>
-                  <p>
-                    {renderInline(
-                      openedPerson.person.description,
-                      `${openedPerson.id}-description`
+                    {readerPerson ? (
+                      <div className={styles.articleBody}>
+                        <p>
+                          {renderInline(
+                            readerPerson.person.description,
+                            `${readerPerson.id}-description`
+                          )}
+                        </p>
+                      </div>
+                    ) : (
+                      <ArticleBody event={readerEvent} />
                     )}
-                  </p>
-                </div>
-              ) : (
-                <ArticleBody event={openedEvent} />
-              )}
+                  </ReaderEntry>
+                );
+              })}
 
-              {renderReaderNavigation("bottom")}
-            </section>
+              {hasMoreReaderItems ? (
+                <div
+                  ref={readerLoadMoreRef}
+                  className={styles.readerLoadMore}
+                  aria-hidden="true"
+                >
+                  <i />
+                  <i />
+                  <i />
+                </div>
+              ) : null}
+            </div>
           ) : null}
-        </section>
-
-        <section
-          id="people"
-          className={`${styles.people} ${peopleSelected ? styles.peopleOpen : ""}`}
-          aria-labelledby="people-title"
-        >
-          <div className={styles.peopleIntro}>
-            <div>
-              <p className={styles.eyebrow}>The main characters</p>
-              <h2 id="people-title">The people behind the story.</h2>
-            </div>
-            <div className={styles.peopleIntroCopy}>
-              <strong>{PEOPLE_COUNT} documented people</strong>
-              <p>
-                These are the founders, architects, builders, operators,
-                designers, educators, and advocates named in the chronicle,
-                presented together in alphabetical order.
-              </p>
-            </div>
-          </div>
-
-          <section
-            className={styles.peopleGroup}
-            aria-label="People in alphabetical order"
-          >
-            <ol className={styles.peopleList}>
-              {PEOPLE.map((person, personIndex) => (
-                <li key={person.name} className={styles.person}>
-                  <span className={styles.personNumber}>
-                    {String(personIndex + 1).padStart(2, "0")}
-                  </span>
-                  <h4>{renderInline(person.name, `person-${personIndex}-name`)}</h4>
-                  <p>
-                    {renderInline(
-                      person.description,
-                      `person-${personIndex}-description`
-                    )}
-                  </p>
-                </li>
-              ))}
-            </ol>
-          </section>
-        </section>
-
-        <section className={styles.closing} aria-labelledby="closing-title">
-          <p className={styles.eyebrow}>Why history matters</p>
-          <h2 id="closing-title">
-            A chain is more than the code that runs it.
-          </h2>
-          <div className={styles.closingStatements}>
-            <p><span>01</span> You can fork the architecture.</p>
-            <p><span>02</span> You cannot fork the choices that shaped it.</p>
-            <p><span>03</span> You cannot recreate the people who kept it alive.</p>
-          </div>
-          <a href={historyContent.sourceUrl} target="_blank" rel="noreferrer">
-            Continue with the complete sourced chronicle <span aria-hidden="true">↗</span>
-          </a>
         </section>
       </div>
     </Layout>

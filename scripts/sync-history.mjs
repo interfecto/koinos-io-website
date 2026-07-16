@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -8,9 +8,24 @@ const RAW_ARTICLE_URL =
   "https://raw.githubusercontent.com/pgarciagon/marketing/main/koinos-exists-a-chronicle-of-a-blockchain-that-cannot-be-recreated.md";
 const RAW_IMAGE_ROOT =
   "https://raw.githubusercontent.com/pgarciagon/marketing/main/";
+const CONTRIBUTION_ANALYSIS_URL =
+  "https://github.com/pgarciagon/marketing/blob/main/koinos-community-contribution-analysis.md";
+const CONTRIBUTION_RANKING_URL =
+  "https://github.com/pgarciagon/marketing/blob/main/koinos-community-contribution-ranking.csv";
+const RAW_CONTRIBUTION_RANKING_URL =
+  "https://raw.githubusercontent.com/pgarciagon/marketing/main/koinos-community-contribution-ranking.csv";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const outputPath = path.join(root, "data", "history-content.json");
+const localArticlePath = process.env.HISTORY_SOURCE_FILE;
+const localContributionRankingPath =
+  process.env.HISTORY_CONTRIBUTIONS_FILE ||
+  (localArticlePath
+    ? path.join(
+        path.dirname(path.resolve(process.cwd(), localArticlePath)),
+        "koinos-community-contribution-ranking.csv",
+      )
+    : null);
 
 function toPlainText(value) {
   return value
@@ -159,13 +174,100 @@ function slugify(value) {
     .slice(0, 72);
 }
 
-const response = await fetch(RAW_ARTICLE_URL);
-if (!response.ok) {
-  throw new Error(`Unable to fetch the history article (${response.status})`);
+function parseCsv(value) {
+  const records = [];
+  let record = [];
+  let field = "";
+  let quoted = false;
+
+  for (let index = 0; index < value.length; index += 1) {
+    const character = value[index];
+
+    if (quoted) {
+      if (character === '"' && value[index + 1] === '"') {
+        field += '"';
+        index += 1;
+      } else if (character === '"') {
+        quoted = false;
+      } else {
+        field += character;
+      }
+      continue;
+    }
+
+    if (character === '"') {
+      quoted = true;
+    } else if (character === ",") {
+      record.push(field);
+      field = "";
+    } else if (character === "\n") {
+      record.push(field.replace(/\r$/, ""));
+      records.push(record);
+      record = [];
+      field = "";
+    } else {
+      field += character;
+    }
+  }
+
+  if (field || record.length) {
+    record.push(field.replace(/\r$/, ""));
+    records.push(record);
+  }
+
+  const [headers, ...rows] = records;
+  return rows
+    .filter((row) => row.some(Boolean))
+    .map((row) =>
+      Object.fromEntries(headers.map((header, index) => [header, row[index] || ""])),
+    );
 }
 
-const markdown = await response.text();
+function personIdentityKey(value) {
+  return toPlainText(value)
+    .split("/")[0]
+    .replace(/^@/, "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+let markdown;
+if (localArticlePath) {
+  const resolvedArticlePath = path.resolve(process.cwd(), localArticlePath);
+  markdown = await readFile(resolvedArticlePath, "utf8");
+  console.log(`Reading history article from ${resolvedArticlePath}`);
+} else {
+  const response = await fetch(RAW_ARTICLE_URL);
+  if (!response.ok) {
+    throw new Error(`Unable to fetch the history article (${response.status})`);
+  }
+  markdown = await response.text();
+}
+
+let contributionRankingCsv;
+if (localContributionRankingPath) {
+  contributionRankingCsv = await readFile(localContributionRankingPath, "utf8");
+  console.log(
+    `Reading contribution ranking from ${localContributionRankingPath}`,
+  );
+} else {
+  const response = await fetch(RAW_CONTRIBUTION_RANKING_URL);
+  if (!response.ok) {
+    throw new Error(
+      `Unable to fetch the contribution ranking (${response.status})`,
+    );
+  }
+  contributionRankingCsv = await response.text();
+}
+
 const lines = markdown.split(/\r?\n/);
+const title = toPlainText(
+  lines.find((line) => line.startsWith("# "))?.slice(2) ||
+    "Koinos Exists: A Chronicle of a Blockchain That Cannot Be Recreated",
+);
 const sections = [];
 let current = null;
 
@@ -180,6 +282,43 @@ for (const line of lines) {
 }
 
 if (current) sections.push(current);
+
+const peopleSourceSection = sections.find(
+  ({ heading }) => heading === "23.09.2020 - Koinos Group LLC Is Registered",
+);
+const profileNames = peopleSourceSection
+  ? [...peopleSourceSection.body.join("\n").matchAll(/^-\s+\*\*(.+?)\*\*:/gm)].map(
+      (match) => match[1],
+    )
+  : [];
+const contributionRows = new Map();
+for (const row of parseCsv(contributionRankingCsv)) {
+  const key = personIdentityKey(row.person);
+  const existing = contributionRows.get(key);
+  if (!existing || Number(row.total) > Number(existing.total)) {
+    contributionRows.set(key, row);
+  }
+}
+const people = Object.fromEntries(
+  profileNames.flatMap((profileName) => {
+    const key = personIdentityKey(profileName);
+    const row = contributionRows.get(key);
+    if (!row) return [];
+
+    return [
+      [
+        key,
+        {
+          person: row.person,
+          rank: Number(row.rank),
+          total: Number(row.total),
+          first: row.first,
+          last: row.last,
+        },
+      ],
+    ];
+  }),
+);
 
 const events = sections
   .filter(({ heading }) => heading !== "Summary" && heading !== "Sources")
@@ -213,9 +352,15 @@ const introduction = markdown
   .slice(0, 4);
 
 const content = {
-  title: "Koinos Exists: A Chronicle of a Blockchain That Cannot Be Recreated",
+  title,
   sourceUrl: ARTICLE_URL,
   introduction,
+  peopleContributionAnalysis: {
+    sourceUrl: CONTRIBUTION_ANALYSIS_URL,
+    rankingSourceUrl: CONTRIBUTION_RANKING_URL,
+    metric: "Telegram + individually inventoried Discord + X + articles + videos",
+    people,
+  },
   events,
 };
 
