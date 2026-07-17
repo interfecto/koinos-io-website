@@ -28,12 +28,6 @@ export default function MobileMenu({ handleMobileMenu }) {
           paddingTop: "22px",
         }}
       >
-        <li className="nl-simple" aria-haspopup="true">
-          <Link href="/history" onClick={handleMobileMenu} className="h-link">
-            History
-          </Link>
-        </li>
-
         {/* DROPDOWN SUB MENU */}
         <li aria-haspopup="true">
           <span
@@ -100,6 +94,12 @@ export default function MobileMenu({ handleMobileMenu }) {
         <li className="nl-simple" aria-haspopup="true">
           <Link href="/team" onClick={handleMobileMenu} className="h-link">
             Team
+          </Link>
+        </li>
+
+        <li className="nl-simple" aria-haspopup="true">
+          <Link href="/history" onClick={handleMobileMenu} className="h-link">
+            History
           </Link>
         </li>
 

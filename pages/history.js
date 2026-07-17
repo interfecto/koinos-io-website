@@ -1,5 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import historyContent from "@/data/history-content.json";
+import historyPeople from "@/data/history-people.json";
 import Head from "next/head";
 import { useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
@@ -45,18 +46,42 @@ function personIdentityKey(person) {
     .trim();
 }
 
+const CONTRIBUTION_NUMBER = new Intl.NumberFormat("en-US");
+const CONTRIBUTION_LIST = new Intl.ListFormat("en-US", {
+  style: "long",
+  type: "conjunction",
+});
+
 const PEOPLE_CONTRIBUTIONS =
   historyContent.peopleContributionAnalysis?.people || {};
-const CONTRIBUTION_NUMBER = new Intl.NumberFormat("en-US");
-
-const PEOPLE = PEOPLE_SOURCE.content
+const HISTORICAL_PEOPLE = PEOPLE_SOURCE.content
   .filter((block) => block.type === "unordered-list")
   .flatMap((block) => block.items.map(parsePerson))
   .map((person, sourceIndex) => ({
     ...person,
     contribution: PEOPLE_CONTRIBUTIONS[personIdentityKey(person)] || null,
     sourceIndex,
-  }))
+  }));
+const CONTRIBUTOR_IDENTITIES = new Set(
+  historyPeople.people.map((person) =>
+    personIdentityKey({ name: person.name })
+  )
+);
+const PEOPLE = [
+  ...historyPeople.people.map((contributor, sourceIndex) => ({
+    name: contributor.name,
+    description: contributor.summary,
+    contribution: contributor,
+    stats: contributor,
+    sourceIndex,
+  })),
+  ...HISTORICAL_PEOPLE.filter(
+    (person) => !CONTRIBUTOR_IDENTITIES.has(personIdentityKey(person))
+  ).map((person, sourceIndex) => ({
+    ...person,
+    sourceIndex: historyPeople.people.length + sourceIndex,
+  })),
+]
   .sort((personA, personB) => {
     const totalA = personA.contribution?.total ?? -1;
     const totalB = personB.contribution?.total ?? -1;
@@ -84,6 +109,89 @@ const HERO_ACTION_HINTS = {
     text: "Characters are ordered from highest to lowest by documented public contributions across Telegram, individually inventoried Discord, X, articles, and videos; profiles without a measured count appear last. Choose a name, then keep scrolling through the human story behind the chain.",
   },
 };
+
+function formatStatisticalList(metrics, limit = 3) {
+  return CONTRIBUTION_LIST.format(
+    metrics
+      .slice(0, limit)
+      .map(
+        (metric) =>
+          `${metric.label} (${CONTRIBUTION_NUMBER.format(metric.count)})`
+      )
+  );
+}
+
+function buildStatisticalNarrative(stats) {
+  if (!stats) return "";
+
+  const sentences = [
+    `Across ${CONTRIBUTION_NUMBER.format(
+      stats.total
+    )} verified contributions, the strongest topical concentrations were ${formatStatisticalList(
+      stats.topTopics
+    )}.`,
+  ];
+
+  if (stats.topProducts.length) {
+    sentences.push(
+      `The products mentioned most often were ${formatStatisticalList(
+        stats.topProducts
+      )}; these figures document attention and support activity rather than ownership or authorship.`
+    );
+  }
+
+  if (stats.topGroups.length) {
+    sentences.push(
+      `The largest public-group footprints were recorded in ${formatStatisticalList(
+        stats.topGroups
+      )}, showing where that participation was most sustained.`
+    );
+  }
+
+  return sentences.join(" ");
+}
+
+function PersonStats({ person }) {
+  const stats = person.stats;
+  if (!stats) return null;
+
+  const groups = [
+    ["Top topics", stats.topTopics],
+    ["Products mentioned", stats.topProducts],
+    ["Most-active public groups", stats.topGroups],
+  ];
+
+  return (
+    <aside className={styles.personStats} aria-label={`${person.name} statistics`}>
+      <div className={styles.personStatsTotal}>
+        <span>Verified minimum</span>
+        <strong>{CONTRIBUTION_NUMBER.format(stats.total)}</strong>
+        <small>documented contributions</small>
+      </div>
+
+      {groups.map(([label, metrics]) =>
+        metrics.length ? (
+          <section className={styles.personStatsGroup} key={label}>
+            <h3>{label}</h3>
+            <ol>
+              {metrics.map((metric) => (
+                <li key={`${label}-${metric.label}`}>
+                  <span>{metric.label}</span>
+                  <strong>{CONTRIBUTION_NUMBER.format(metric.count)}</strong>
+                </li>
+              ))}
+            </ol>
+          </section>
+        ) : null
+      )}
+
+      <p className={styles.personStatsNote}>
+        Activity volume documents continuity; it does not imply authorship,
+        leadership, or ownership.
+      </p>
+    </aside>
+  );
+}
 
 function resolveArticleHref(href) {
   if (/^(https?:\/\/|mailto:|#)/.test(href)) return href;
@@ -1083,13 +1191,27 @@ export default function HistoryPage() {
                     </header>
 
                     {readerPerson ? (
-                      <div className={styles.articleBody}>
-                        <p>
-                          {renderInline(
-                            readerPerson.person.description,
-                            `${readerPerson.id}-description`
-                          )}
-                        </p>
+                      <div
+                        className={`${styles.articleBody} ${styles.personProfile}`}
+                      >
+                        <div className={styles.personNarrative}>
+                          {readerPerson.person.description ? (
+                            <p>
+                              {renderInline(
+                                readerPerson.person.description,
+                                `${readerPerson.id}-description`
+                              )}
+                            </p>
+                          ) : null}
+                          {readerPerson.person.stats ? (
+                            <p className={styles.personStatisticalNarrative}>
+                              {buildStatisticalNarrative(
+                                readerPerson.person.stats
+                              )}
+                            </p>
+                          ) : null}
+                        </div>
+                        <PersonStats person={readerPerson.person} />
                       </div>
                     ) : (
                       <ArticleBody event={readerEvent} />

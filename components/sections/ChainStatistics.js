@@ -2,9 +2,9 @@ import React from "react";
 
 export default function ChainStatistics() {
   // Static data instead of fetching from Koiner
-  const accounts = "11.48k";
-  const blocks = "22.62M";
-  const transactions = "994.77k";
+  const accounts = "403.12k";
+  const blocks = "37.69M";
+  const transactions = "1.10M";
 
   const title = "Blockchain Statistics";
   const subtle = "A Powerful Decentralized Network for a Growing Ecosystem"
@@ -95,4 +95,4 @@ export default function ChainStatistics() {
       </div>
     </>
   );
-} 
+}

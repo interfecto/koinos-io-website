@@ -19,12 +19,6 @@ export default function EcosystemPage() {
       "url": "https://koindx.com/"
     },
     {
-      "name": "KAP",
-      "description": "KAP provides easy access to dApps with a free or premium username, serving as the backbone for free-to-use applications on the Koinos blockchain",
-      "icon": "/images/pages/ecosystem/kap.png",
-      "url": "https://kap.domains/"
-    },
-    {
       "name": "Kollection",
       "description": "Kollection is an innovative NFT marketplace where users can buy, sell, and create unique digital assets, fostering a vibrant community of creators and collectors.",
       "icon": "/images/pages/ecosystem/kollection.png",
@@ -35,12 +29,6 @@ export default function EcosystemPage() {
       "description": "Fogata is a robust mining pool specifically designed for Koinos enthusiasts, where users can run their own pools or join those of the community.",
       "icon": "/images/pages/ecosystem/fogata.png",
       "url": "https://fogata.io/"
-    },
-    {
-      "name": "Koincity",
-      "description": "Koincity is an innovative launchpad platform that supports the development and launch of new projects on the Koinos blockchain, helping creators bring their ideas to life.",
-      "icon": "/images/pages/ecosystem/koincity.png",
-      "url": "https://koincity.com/"
     },
     {
       "name": "BurnKoin",
@@ -55,34 +43,16 @@ export default function EcosystemPage() {
       "url": "https://koinosblocks.com/"
     },
     {
-      "name": "Koinosbox Polls",
-      "description": "Koinosbox Polls is a decentralized application that allows users to create, participate in, and manage polls, making community decision-making more transparent and democratic.",
-      "icon": "/images/pages/ecosystem/polls.png",
-      "url": "https://koinosbox.com/polls"
+      "name": "Koinos One",
+      "description": "Koinos One is a community-driven experimental desktop app for running, restoring, backing up, and producing with a native Koinos node.",
+      "icon": "/images/pages/ecosystem/koinos-one.png",
+      "url": "https://github.com/koinos/koinos-one"
     },
     {
-      "name": "Atomic Swaps",
-      "description": "Atomic Swaps is a platform for peer-to-peer cryptocurrency swaps, enabling users to exchange digital assets directly without the need for intermediaries.",
-      "icon": "/images/pages/ecosystem/atomic-swap.png",
-      "url": "https://swap.fbslo.net/"
-    },
-    {
-      "name": "Crypto Bulls",
-      "description": "Crypto Bulls is an action-packed first-person shooter game that combines fast-paced combat with strategic gameplay, offering an exciting experience for gamers.",
-      "icon": "/images/pages/ecosystem/crypto-bulls.png",
-      "url": "https://kryptobulls.io/"
-    },
-    {
-      "name": "Serfdom & Sorcery",
-      "description": "Serfdom & Sorcery is a captivating game set in a fantastical world, where players can immerse themselves in a rich narrative and magical adventures.",
-      "icon": "/images/pages/ecosystem/serfdorm-scorcery.png",
-      "url": "https://twitter.com/SerfdomSorcery"
-    },
-    {
-      "name": "Nicknames",
-      "description": "Nicknames is a service on the Koinos blockchain that allows users to register and resolve unique usernames, making it easier to identify and interact with others.",
-      "icon": "/images/pages/ecosystem/nicknames.png",
-      "url": "https://koinosbox.com/nicknames"
+      "name": "Teleno",
+      "description": "Teleno is an experimental monolithic, Koinos-compatible blockchain node developed as a single native binary. The official Koinos reference implementation remains the microservices architecture.",
+      "icon": "/images/pages/ecosystem/teleno.png",
+      "url": "https://github.com/koinos/teleno"
     },
     {
       "name": "Koin Crew",
@@ -91,22 +61,10 @@ export default function EcosystemPage() {
       "url": "https://koincrew.com/"
     },
     {
-      "name": "Koinos Garden",
-      "description": "Koinos Garden is an investment DAO that brings together a community of investors to collaborate on and fund promising projects within the Koinos ecosystem.",
-      "icon": "/images/pages/ecosystem/koinos-garden.png",
-      "url": "https://dapp.koinosgarden.com/"
-    },
-    {
       "name": "Koinosscan",
       "description": "Explore Koinos Blockchain - Search for wallet addresses to view token transfers and balances and NFTs.",
       "icon": "/images/pages/ecosystem/koinosscan.png",
       "url": "https://koinosscan.com/"
-    },
-    {
-      "name": "Sovrano",
-      "description": "Web3 for everyone - A user-friendly Koinos wallet accessible from any browser, making blockchain interaction simple and secure.",
-      "icon": "/images/pages/ecosystem/sovrano.svg",
-      "url": "https://sovrano.io/"
     },
     {
       "name": "VortexBridge",
@@ -118,7 +76,7 @@ export default function EcosystemPage() {
       "name": "Koinscan",
       "description": "A comprehensive block explorer for the Koinos blockchain, providing detailed transaction data, block information, and network analytics.",
       "icon": "/images/pages/ecosystem/koinscan.png",
-      "url": "https://www.koinscan.io/"
+      "url": "https://www.koinscan.com/"
     }
   ]
 
