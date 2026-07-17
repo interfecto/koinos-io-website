@@ -46,6 +46,23 @@ function personIdentityKey(person) {
     .trim();
 }
 
+function historySlug(value) {
+  return plainPersonName(value)
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function buildHistoryItemHref(item, isPeople) {
+  const parameter = isPeople ? "person" : "milestone";
+  return `/history?${parameter}=${encodeURIComponent(item.id)}#chronicle`;
+}
+
+const CHRONOLOGY_HREF = "/history?view=chronology#chronicle";
+const PEOPLE_HREF = "/history?view=people#chronicle";
+
 const CONTRIBUTION_NUMBER = new Intl.NumberFormat("en-US");
 const CONTRIBUTION_LIST = new Intl.ListFormat("en-US", {
   style: "long",
@@ -88,16 +105,23 @@ const PEOPLE = [
     return totalB - totalA || personA.sourceIndex - personB.sourceIndex;
   });
 const PEOPLE_COUNT = PEOPLE.length;
-const PEOPLE_WHEEL_ITEMS = PEOPLE.map((person, index) => ({
-  id: `person-${index + 1}`,
-  title: plainPersonName(person.name),
-  date: person.contribution
-    ? `#${index + 1} · ${CONTRIBUTION_NUMBER.format(
-        person.contribution.total
-      )} contributions`
-    : `#${index + 1} · documentary profile`,
-  person,
-}));
+const PEOPLE_SLUG_COUNTS = new Map();
+const PEOPLE_WHEEL_ITEMS = PEOPLE.map((person, index) => {
+  const baseSlug = historySlug(person.name) || `profile-${index + 1}`;
+  const occurrence = (PEOPLE_SLUG_COUNTS.get(baseSlug) || 0) + 1;
+  PEOPLE_SLUG_COUNTS.set(baseSlug, occurrence);
+
+  return {
+    id: `person-${baseSlug}${occurrence > 1 ? `-${occurrence}` : ""}`,
+    title: plainPersonName(person.name),
+    date: person.contribution
+      ? `#${index + 1} · ${CONTRIBUTION_NUMBER.format(
+          person.contribution.total
+        )} contributions`
+      : `#${index + 1} · documentary profile`,
+    person,
+  };
+});
 
 const HERO_ACTION_HINTS = {
   milestones: {
@@ -361,6 +385,12 @@ export default function HistoryPage() {
   const readerLoadMoreRef = useRef(null);
   const readerScrollRequest = useRef(0);
   const readerScrollCleanup = useRef(null);
+  const focusedIdRef = useRef(FIRST_MILESTONE.id);
+  const historyLocationRestoreRequest = useRef(0);
+  const historyLocationRestoreFrame = useRef(null);
+  const historyLocationAlignmentTimer = useRef(null);
+  const historyLocationRestoreTimer = useRef(null);
+  const historyLocationRestoring = useRef(false);
 
   const wheelItems = peopleSelected ? PEOPLE_WHEEL_ITEMS : EVENTS;
   const focusedIndex = Math.max(
@@ -385,6 +415,102 @@ export default function HistoryPage() {
       : [];
   const hasMoreReaderItems =
     readerTargetIndex >= 0 && visibleReaderItems.length < readerSequence.length;
+
+  useEffect(() => {
+    focusedIdRef.current = focusedId;
+  }, [focusedId]);
+
+  useEffect(() => {
+    function restoreHistoryLocation({ scroll = true } = {}) {
+      const parameters = new URLSearchParams(window.location.search);
+      const personId = parameters.get("person");
+      const milestoneId =
+        parameters.get("milestone") || parameters.get("chapter");
+      const requestedView = parameters.get("view");
+
+      let isPeople = false;
+      let targetItem = null;
+
+      if (personId) {
+        isPeople = true;
+        targetItem = PEOPLE_WHEEL_ITEMS.find((item) => item.id === personId);
+      } else if (milestoneId) {
+        targetItem = EVENTS.find((item) => item.id === milestoneId);
+      } else if (requestedView === "people") {
+        isPeople = true;
+        targetItem = PEOPLE_WHEEL_ITEMS[0];
+      } else if (
+        requestedView === "chronology" ||
+        window.location.hash === "#chronicle"
+      ) {
+        targetItem = FIRST_MILESTONE;
+      } else {
+        return;
+      }
+
+      if (!targetItem) return;
+
+      historyInteracted.current = true;
+      const restoreRequest = historyLocationRestoreRequest.current + 1;
+      historyLocationRestoreRequest.current = restoreRequest;
+      historyLocationRestoring.current = true;
+      focusedIdRef.current = targetItem.id;
+      setPeopleSelected(isPeople);
+      setFocusedId(targetItem.id);
+      setVisibleReaderCount(getReaderItemCountThrough(targetItem.id, isPeople));
+      setOpenedId(targetItem.id);
+
+      if (!scroll) {
+        historyLocationRestoring.current = false;
+        return;
+      }
+
+      let attempts = 0;
+      const alignTarget = () => {
+        if (historyLocationRestoreRequest.current !== restoreRequest) return;
+        attempts += 1;
+
+        if (!getReaderEntry(targetItem.id) && attempts < 90) {
+          historyLocationRestoreFrame.current =
+            window.requestAnimationFrame(alignTarget);
+          return;
+        }
+
+        scrollWheelTo(targetItem.id, "auto");
+        scrollReaderTo(targetItem.id, "auto");
+        window.clearTimeout(historyLocationAlignmentTimer.current);
+        historyLocationAlignmentTimer.current = window.setTimeout(() => {
+          if (historyLocationRestoreRequest.current !== restoreRequest) return;
+          scrollWheelTo(targetItem.id, "auto");
+          getReaderEntry(targetItem.id)?.scrollIntoView({
+            behavior: "auto",
+            block: "start",
+          });
+        }, 500);
+        window.clearTimeout(historyLocationRestoreTimer.current);
+        historyLocationRestoreTimer.current = window.setTimeout(() => {
+          if (historyLocationRestoreRequest.current === restoreRequest) {
+            historyLocationRestoring.current = false;
+          }
+        }, 900);
+      };
+
+      historyLocationRestoreFrame.current =
+        window.requestAnimationFrame(alignTarget);
+    }
+
+    restoreHistoryLocation();
+    const handlePopState = () => restoreHistoryLocation();
+    window.addEventListener("popstate", handlePopState);
+    return () => {
+      historyLocationRestoreRequest.current += 1;
+      historyLocationRestoring.current = false;
+      window.cancelAnimationFrame(historyLocationRestoreFrame.current);
+      window.clearTimeout(historyLocationAlignmentTimer.current);
+      window.clearTimeout(historyLocationRestoreTimer.current);
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, []);
 
   useEffect(() => {
     if (openedItem || historyInteracted.current) return undefined;
@@ -478,6 +604,7 @@ export default function HistoryPage() {
 
     const syncReaderPosition = () => {
       animationFrame = null;
+      if (historyLocationRestoring.current) return;
       const reader = readerRef.current;
       if (!reader) return;
 
@@ -500,9 +627,14 @@ export default function HistoryPage() {
       const activeId = activeEntry.dataset.readerId;
       if (!activeId) return;
 
-      setFocusedId((currentId) =>
-        currentId === activeId ? currentId : activeId
-      );
+      if (focusedIdRef.current !== activeId) {
+        focusedIdRef.current = activeId;
+        setFocusedId(activeId);
+        const activeItem = readerSequence.find((item) => item.id === activeId);
+        if (activeItem) {
+          replaceHistoryLocation(buildHistoryItemHref(activeItem, peopleSelected));
+        }
+      }
 
     };
 
@@ -568,8 +700,22 @@ export default function HistoryPage() {
       track.scrollTo({ left: centeredLeft, behavior });
       wheelProgrammaticScrollTimer.current = window.setTimeout(() => {
         wheelProgrammaticScroll.current = false;
-      }, behavior === "smooth" ? 720 : 80);
+      }, behavior === "smooth" ? 720 : 260);
     });
+  }
+
+  function pushHistoryLocation(href) {
+    if (`${window.location.pathname}${window.location.search}${window.location.hash}` === href) {
+      return;
+    }
+    window.history.pushState({}, "", href);
+  }
+
+  function replaceHistoryLocation(href) {
+    if (`${window.location.pathname}${window.location.search}${window.location.hash}` === href) {
+      return;
+    }
+    window.history.replaceState({}, "", href);
   }
 
   function focusWheelItem(id, behavior = "smooth") {
@@ -694,6 +840,13 @@ export default function HistoryPage() {
   }
 
   function revealItem(id, sourceTitle, isPeople = peopleSelected) {
+    const selectedItem = (isPeople ? PEOPLE_WHEEL_ITEMS : EVENTS).find(
+      (item) => item.id === id
+    );
+    if (selectedItem) {
+      pushHistoryLocation(buildHistoryItemHref(selectedItem, isPeople));
+    }
+
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
@@ -790,6 +943,7 @@ export default function HistoryPage() {
     event?.preventDefault();
     historyInteracted.current = true;
     window.clearTimeout(wheelScrollTimer.current);
+    pushHistoryLocation(CHRONOLOGY_HREF);
     flushSync(() => {
       setPeopleSelected(false);
       setFocusedId(FIRST_MILESTONE.id);
@@ -804,6 +958,7 @@ export default function HistoryPage() {
     event?.preventDefault();
     historyInteracted.current = true;
     window.clearTimeout(wheelScrollTimer.current);
+    pushHistoryLocation(PEOPLE_HREF);
     flushSync(() => {
       setPeopleSelected(true);
       setFocusedId(PEOPLE_WHEEL_ITEMS[0].id);
@@ -815,8 +970,10 @@ export default function HistoryPage() {
   }
 
   function handleCompactWheelItemClick(event, item) {
+    event.preventDefault();
     historyInteracted.current = true;
     if (item.id === openedId) {
+      pushHistoryLocation(buildHistoryItemHref(item, peopleSelected));
       scrollReaderTo(item.id);
       return;
     }
@@ -901,10 +1058,10 @@ export default function HistoryPage() {
   }
 
   function handleWheelItemClick(event, item, isFocused) {
+    event.preventDefault();
     historyInteracted.current = true;
     if (didWheelDrag.current) {
       didWheelDrag.current = false;
-      event.preventDefault();
       return;
     }
     if (isFocused) {
@@ -957,7 +1114,7 @@ export default function HistoryPage() {
                 <div className={styles.heroActions}>
                   <a
                     className={styles.primaryAction}
-                    href="#chronicle"
+                    href={CHRONOLOGY_HREF}
                     onClick={openMilestones}
                     onMouseEnter={() => setHeroActionHint("milestones")}
                     onMouseLeave={() => setHeroActionHint(null)}
@@ -969,7 +1126,7 @@ export default function HistoryPage() {
                   </a>
                   <a
                     className={styles.primaryAction}
-                    href="#chronicle"
+                    href={PEOPLE_HREF}
                     onClick={openPeople}
                     onMouseEnter={() => setHeroActionHint("people")}
                     onMouseLeave={() => setHeroActionHint(null)}
@@ -1048,12 +1205,12 @@ export default function HistoryPage() {
                       const isFocused = item.id === focusedItem.id;
                       return (
                         <li key={`compact-item-${item.id}`}>
-                          <button
+                          <a
                             ref={(node) => {
                               compactWheelNodes.current[item.id] = node;
                             }}
-                            type="button"
-                            aria-pressed={isFocused}
+                            href={buildHistoryItemHref(item, peopleSelected)}
+                            aria-current={isFocused ? "true" : undefined}
                             className={`${styles.compactWheelButton} ${
                               isFocused ? styles.compactWheelButtonActive : ""
                             }`}
@@ -1065,7 +1222,7 @@ export default function HistoryPage() {
                               {item.title}
                             </strong>
                             <span>{item.date}</span>
-                          </button>
+                          </a>
                         </li>
                       );
                     })}
@@ -1128,12 +1285,12 @@ export default function HistoryPage() {
 
                   return (
                     <li key={item.id}>
-                      <button
+                      <a
                         ref={(node) => {
                           wheelNodes.current[item.id] = node;
                         }}
-                        type="button"
-                        aria-pressed={isFocused}
+                        href={buildHistoryItemHref(item, peopleSelected)}
+                        aria-current={isFocused ? "true" : undefined}
                         aria-label={
                           peopleSelected
                             ? `Main character: ${item.title}`
@@ -1151,7 +1308,7 @@ export default function HistoryPage() {
                         </strong>
                         <span>{item.date}</span>
                         <i aria-hidden="true" />
-                      </button>
+                      </a>
                     </li>
                   );
                 })}
