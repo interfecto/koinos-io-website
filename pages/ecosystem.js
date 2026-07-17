@@ -19,12 +19,6 @@ export default function EcosystemPage() {
       "url": "https://koindx.com/"
     },
     {
-      "name": "Kollection",
-      "description": "Kollection is an innovative NFT marketplace where users can buy, sell, and create unique digital assets, fostering a vibrant community of creators and collectors.",
-      "icon": "/images/pages/ecosystem/kollection.png",
-      "url": "https://kollection.app/"
-    },
-    {
       "name": "Fogata",
       "description": "Fogata is a robust mining pool specifically designed for Koinos enthusiasts, where users can run their own pools or join those of the community.",
       "icon": "/images/pages/ecosystem/fogata.png",
