@@ -1,0 +1,5570 @@
+{
+  "generatedFrom": "koinos-community-contributor-summaries-en.md",
+  "threshold": 500,
+  "methodology": {
+    "ordering": "Verified contribution total, highest to lowest",
+    "note": "Totals are verified minimums derived from public Telegram topic scans, individually inventoried Discord identities, and chronology attribution boundaries. Activity volume is not a measure of quality, authorship, leadership, or historical importance."
+  },
+  "people": [
+    {
+      "rank": 1,
+      "name": "Kui He / motoengineer",
+      "total": 62037,
+      "summary": "Between May 2020 and July 2026, he amassed 62,037 verified contributions: 44,234 Telegram messages, 17,758 Discord messages, 15 articles, and 30 videos. His activity combines day-to-day support with delivered work: he launched Koinos Forum, revived AMAs, co-founded and operated BurnKoin and KAP, co-founded Koinos-Social, maintained nodes, and produced an educational library of thirty videos before joining the Koinos Community Foundation. He discussed mining, mana, governance, dApp security, liquidity, and funding; argued that changes that are difficult to reverse should be evaluated by their collective impact; and summarized less visible work with the phrase, “Builders are laying foundation, you might not always see it.” In 2024–2025, he also proposed explicit funding and interoperability scenarios and debated whether infrastructure should be maintained even during an ecosystem decline. His volume reinforces continuity already demonstrated through products, operations, and education, but it does not make him the author of code belonging to Luke Willis, Roamin, or other collaborators.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 3156
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 3097
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 2317
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 2204
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 1961
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "BurnKoin",
+          "count": 184
+        },
+        {
+          "label": "Chainge",
+          "count": 172
+        },
+        {
+          "label": "Kondor",
+          "count": 166
+        },
+        {
+          "label": "MEXC",
+          "count": 165
+        },
+        {
+          "label": "KoinDX",
+          "count": 150
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 34010
+        },
+        {
+          "label": "Koinos Army",
+          "count": 8016
+        },
+        {
+          "label": "KoinDX",
+          "count": 1083
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "name": "G Millie / DeGemsCrew",
+      "total": 36303,
+      "summary": "Between November 2021 and June 2026, he recorded 36,303 messages, primarily in Koinos Army. He was an organizer, administrator, AMA host, and initiator of the community NFT product, as well as a liaison with DeGems Lounge; he was not the technical founder, artist, or contract developer of Koinos Army Journey. His conversations focused on the market, KoinDX, NFTs, liquidity, and community coordination, and he argued that short-term priorities and funding should be put to a community vote. He also preserved a critical memory of the period after Koinos Group, describing the lack of development, awareness, exchanges, and money as “bleak.” The figure shows that he sustained the social space for years, while the contributions of Glen, Eman, Adem, and MiXiBo must remain separately attributed.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 2442
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 1899
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 1610
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 1514
+        },
+        {
+          "label": "NFTs, collections, games, and digital assets",
+          "count": 785
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinDX",
+          "count": 252
+        },
+        {
+          "label": "Koinos Army",
+          "count": 142
+        },
+        {
+          "label": "MEXC",
+          "count": 137
+        },
+        {
+          "label": "Kollection",
+          "count": 93
+        },
+        {
+          "label": "Kondor",
+          "count": 60
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Army",
+          "count": 26573
+        },
+        {
+          "label": "Koinos",
+          "count": 8095
+        },
+        {
+          "label": "KoinDX",
+          "count": 1209
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "Koinos The Goat",
+      "total": 24886,
+      "summary": "Between March 2021 and June 2026, he accumulated 24,886 contributions, almost all of them messages, plus his independent video The Chronicles of Koinos. He created the Koinos The Goat persona and its fee-eating metaphor, organized and edited community copy, explained mana, inflation, wallets, claims, and dApps, appeared on The Koin Press, and later connected mana to permissions for AI agents. In his interventions, he insisted that “Mana is WORTHLESS. That is why it is so valuable,” proposed talking about game tokens instead of reducing everything to meme tokens, and became increasingly critical of the project's inability to reach the market. His role was economic storytelling, support, and community culture: he himself said, “I am not a dev,” and no code, company position, or protocol authorship can be attributed to his volume.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 2832
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 2300
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 2000
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 1335
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 1316
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Kondor",
+          "count": 180
+        },
+        {
+          "label": "MEXC",
+          "count": 167
+        },
+        {
+          "label": "KoinDX",
+          "count": 129
+        },
+        {
+          "label": "Konio",
+          "count": 55
+        },
+        {
+          "label": "Chainge",
+          "count": 54
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 14409
+        },
+        {
+          "label": "Koinos Army",
+          "count": 10381
+        },
+        {
+          "label": "KoinDX",
+          "count": 52
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "Diamond Hands",
+      "total": 21385,
+      "summary": "Between August 2023 and September 2025, he posted 21,385 messages across the main, Army, and TCB groups. His activity was primarily market discussion and tracking wallets, NFTs, and dApps, but in 2025 he also became an insistent voice in debates about community funds, developer retention, and the Vortex bridge. He argued that the two central problems were the lack of developers capable of maintaining the chain and the token economy, and called for a public decision on whether donated KOIN and USDT should go to the development fund and interoperability. The record demonstrates exceptionally high quantitative and deliberative participation, not authorship of Vortex, contracts, wallets, or Foundation decisions.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 1988
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 1540
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 922
+        },
+        {
+          "label": "NFTs, collections, games, and digital assets",
+          "count": 768
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 738
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 198
+        },
+        {
+          "label": "Kollection",
+          "count": 160
+        },
+        {
+          "label": "Konio",
+          "count": 123
+        },
+        {
+          "label": "Kondor",
+          "count": 120
+        },
+        {
+          "label": "KoinDX",
+          "count": 114
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 10609
+        },
+        {
+          "label": "Koinos Army",
+          "count": 9727
+        },
+        {
+          "label": "Koinos TCB",
+          "count": 675
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "name": "Carlos Welele",
+      "total": 18338,
+      "summary": "Between March 2021 and June 2026, he contributed 18,338 messages in English and Spanish, with a strong presence in the main group, Koinos Army, and Koinos Hispano. He acted as a bilingual explainer, practical moderator, and operator of Koinos Socials distribution flows: he guided users through claims, non-custodial wallets, security, bridges, exchanges, and dApps, and reported fake groups or suspicious contacts. His messages discussed how Kondor, Konio, and other interfaces could hide friction—for example, using mana from another account when moving an entire balance—and presented the Spanish ecosystem as a sequence of products, integrations, and events that had to be translated for non-technical users. Part of his volume consists of relayed announcements and social conversation; it therefore recognizes his communications infrastructure without attributing to him the products he explained.",
+      "topTopics": [
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 1485
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 1409
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 959
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 717
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 577
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 99
+        },
+        {
+          "label": "Kondor",
+          "count": 97
+        },
+        {
+          "label": "Koiner",
+          "count": 79
+        },
+        {
+          "label": "KoinDX",
+          "count": 66
+        },
+        {
+          "label": "Chainge",
+          "count": 56
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 9092
+        },
+        {
+          "label": "Koinos Army",
+          "count": 4482
+        },
+        {
+          "label": "Koincast / Koinos Hispano",
+          "count": 4149
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "name": "Andrew Levine",
+      "total": 16119,
+      "summary": "Between November 2019 and February 2026, he accumulated 16,119 verified contributions, including 4,667 Discord interventions, 11 inventoried X posts, and 11 articles. As a founder and the project's principal early communicator, he explained OpenSeed/OpenOrchard, the fair launch, modular architecture, mana, governance, and the mission of a fee-less experience, while coordinating campaigns and developer relations. In 2022, he said that governance was complete, KoinDX was already working on testnet, and a stablecoin would be a valuable opportunity; in 2023, he emphasized that three years of work included contributions from Kondor, KoinDX, Roamin, Kollection, KAP, and Koiner—not only from the founding team. His activity combines narrative design, product decisions, support, and recognition of third parties, and should be distinguished from the concrete technical implementation performed by Steve, Michael, Julián, and other authors.",
+      "topTopics": [
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 1387
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 931
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 898
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 814
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 481
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinDX",
+          "count": 24
+        },
+        {
+          "label": "Kondor",
+          "count": 15
+        },
+        {
+          "label": "Koiner",
+          "count": 14
+        },
+        {
+          "label": "KoinCity",
+          "count": 10
+        },
+        {
+          "label": "Chainge",
+          "count": 10
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 10145
+        },
+        {
+          "label": "Koinos Army",
+          "count": 632
+        },
+        {
+          "label": "Koinos Social Sharing",
+          "count": 370
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "name": "Saleh Hawi",
+      "total": 12180,
+      "summary": "Between January 2023 and April 2026, he recorded 12,180 messages, especially in the main group, Army, and KoinDX. He was an organizer, moderator, support operator, and product and business contributor to KoinDX, and coordinated a community campaign to secure new exchange listings; he was not one of the original co-founders or the author of the DEX contracts. He explained how to participate in sales and marketplaces, move KOIN among centralized exchanges, wallets, and bridges, use Fogata and supporter NFTs, and understand why a first gasless Web3 experience could be more accessible to newcomers. He also warned about impersonators, nonexistent presales, and private messages, so his volume reflects onboarding and security as well as market promotion.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 1527
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 1317
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 690
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 608
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 598
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinDX",
+          "count": 315
+        },
+        {
+          "label": "MEXC",
+          "count": 135
+        },
+        {
+          "label": "Kondor",
+          "count": 102
+        },
+        {
+          "label": "Konio",
+          "count": 84
+        },
+        {
+          "label": "Chainge",
+          "count": 58
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 6793
+        },
+        {
+          "label": "Koinos Army",
+          "count": 4236
+        },
+        {
+          "label": "KoinDX",
+          "count": 1096
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "name": "VonLooten",
+      "total": 11395,
+      "summary": "Between June 2021 and April 2024, he accumulated 11,395 verified contributions, including 2,327 on Discord and five articles. As KoinDX co-founder and original CEO, he led strategy, communications, documentation, KNDX/KOINDX, the proposed DAO, IDO, launchpad, official pairs, partnerships, and support, while also contributing product work. He explained that pairs should be added through governance and security controls, that supporter NFTs were optional donations without special utility, and that a fee-less DEX could change the DeFi experience. He also discussed the value of the native token and the limits of dApps without a genuine economic purpose. The primary AMM contract code should not automatically be attributed to him: Ederaleng was CTO and has stronger technical implementation evidence.",
+      "topTopics": [
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 988
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 760
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 751
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 652
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 391
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinDX",
+          "count": 280
+        },
+        {
+          "label": "Kondor",
+          "count": 43
+        },
+        {
+          "label": "Kollection",
+          "count": 31
+        },
+        {
+          "label": "Koinos Army",
+          "count": 30
+        },
+        {
+          "label": "Koiner",
+          "count": 28
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 5188
+        },
+        {
+          "label": "Koinos Army",
+          "count": 2157
+        },
+        {
+          "label": "KoinDX",
+          "count": 1376
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "name": "Techno🔮",
+      "total": 9968,
+      "summary": "Between January 2021 and November 2024, he posted 9,968 messages, almost all in the main group. He was a very consistent market and support voice: he tracked mining and large holders, explained how to buy or bridge assets, guided users through Kondor, Koiner, KoinDX, and MEXC, promoted campaigns, and reminded newcomers that team members did not initiate private messages. He publicly defended Julián's unpaid work and used the Kondor NFT as an example of directly supporting a developer. His position in this list comes from conversation, assistance, and amplification—not from a verified product, repository, or formal role.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 985
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 825
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 633
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 551
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 363
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Kondor",
+          "count": 145
+        },
+        {
+          "label": "MEXC",
+          "count": 116
+        },
+        {
+          "label": "Chainge",
+          "count": 91
+        },
+        {
+          "label": "KoinDX",
+          "count": 86
+        },
+        {
+          "label": "Koiner",
+          "count": 82
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 9388
+        },
+        {
+          "label": "KoinDX",
+          "count": 324
+        },
+        {
+          "label": "Koinos Germany",
+          "count": 237
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "name": "Steve Gerbino",
+      "total": 9393,
+      "summary": "Between October 2020 and March 2026, he accumulated 9,393 contributions: 5,873 Telegram messages and 3,520 Discord messages. As a founder and CTO, he explained from the fair-launch period that proof frequency affected ETH expenditure and variance, not hardware; he later covered architecture, releases, nodes, Proof of Burn, KCS, upgrades, and operator support. In 2025, he argued that KCS-4 could enable safe automatic token and NFT listings and went on to propose a new chain that would preserve WASM, resources, Proof of Burn, StateDB, and account abstraction while removing governance and microservices to prioritize speed. That final proposal is a later design position, not a delivered Koinos milestone. His volume accompanies a sustained foundational technical role, although authorship of each component must still follow repository history.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 490
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 454
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 374
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 355
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 329
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Chainge",
+          "count": 86
+        },
+        {
+          "label": "KoinDX",
+          "count": 84
+        },
+        {
+          "label": "MEXC",
+          "count": 39
+        },
+        {
+          "label": "Kondor",
+          "count": 28
+        },
+        {
+          "label": "Kollection",
+          "count": 22
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 4489
+        },
+        {
+          "label": "Koinos Army",
+          "count": 1225
+        },
+        {
+          "label": "Koinos Italia",
+          "count": 92
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "name": "Julián González / Jga",
+      "total": 9200,
+      "summary": "Between October 2020 and July 2026, he accumulated 9,200 contributions: 5,743 Telegram messages, 3,421 Discord messages, and 36 articles. His arc runs from mining and pools through Koilib, Kondor, the WKOIN claim, Fogata, Koinos Polls, Nicknames, Arkinos, smart wallets, KFS, standards, and network maintenance; he also provided bilingual technical support and operated block producers. He explained why a basic NFT standard should not include prices or KOIN calls by default, presented Arkinos as a way to create a contract and frontend in minutes, and helped users recover or move funds based on verifiable contract rules. His volume corresponds to exceptionally broad technical output, but several products and standards were collaborations, and it does not make him a founding protocol architect.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 1174
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 920
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 747
+        },
+        {
+          "label": "mining, VHP, block producers, nodes, and infrastructure operations",
+          "count": 744
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 638
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Kondor",
+          "count": 353
+        },
+        {
+          "label": "Fogata",
+          "count": 122
+        },
+        {
+          "label": "KoinosBlocks",
+          "count": 100
+        },
+        {
+          "label": "BurnKoin",
+          "count": 56
+        },
+        {
+          "label": "Kollection",
+          "count": 56
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 3299
+        },
+        {
+          "label": "Koincast / Koinos Hispano",
+          "count": 2279
+        },
+        {
+          "label": "Koinos Army",
+          "count": 64
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "name": "q t",
+      "total": 8875,
+      "summary": "Between November 2022 and July 2026, q t recorded 8,875 messages across the main group, Army, KoinCity, KoinDX, and Koin Crew. This contributor was an intensive user and critical observer of KoinCity, KoinDX, Chainge, Kollection, KAP, Kanvas, explorers, and mining, with frequent debates about liquidity, marketing, and funding. They encouraged people to use the available dApps and understand their differences, but warned that spending inflated KOIN on proposals made little sense before securing exchanges, a DEX, and Vortex; they also questioned campaigns whose outcome should be measured through volume and adoption. The record helps reconstruct product reception and economic skepticism, not technical authorship or decision-making authority.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 1386
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 1200
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 527
+        },
+        {
+          "label": "NFTs, collections, games, and digital assets",
+          "count": 523
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 501
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinCity",
+          "count": 156
+        },
+        {
+          "label": "KoinDX",
+          "count": 156
+        },
+        {
+          "label": "Chainge",
+          "count": 146
+        },
+        {
+          "label": "MEXC",
+          "count": 84
+        },
+        {
+          "label": "Vortex",
+          "count": 59
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 4231
+        },
+        {
+          "label": "Koinos Army",
+          "count": 2979
+        },
+        {
+          "label": "Koincity",
+          "count": 607
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "name": "edje Ӄ",
+      "total": 8688,
+      "summary": "Between November 2020 and January 2026, edje posted 8,688 messages across the main group, Army, KoinCity, Koin Crew, and KoinDX. This contributor acted as an exploratory user and informal cataloger: testing wallets and bridges, comparing NFT collection utilities, asking about free mana, and proposing a unified service view and an AI assistant kept current with wallets, bridges, and dApps. These interventions document real onboarding failures—for example, Chainge claims that did not appear—and the difficulty of explaining the utility of each collection or product. The historical value lies in sustained observation of UX and the ecosystem, without evidence of authorship of the products mentioned.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 1262
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 777
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 713
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 671
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 492
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinCity",
+          "count": 122
+        },
+        {
+          "label": "KoinDX",
+          "count": 96
+        },
+        {
+          "label": "Chainge",
+          "count": 83
+        },
+        {
+          "label": "MEXC",
+          "count": 74
+        },
+        {
+          "label": "Kondor",
+          "count": 63
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 4291
+        },
+        {
+          "label": "Koinos Army",
+          "count": 2666
+        },
+        {
+          "label": "Koincity",
+          "count": 685
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "name": "Pablo García / pgarcgo",
+      "total": 8367,
+      "summary": "Between April 2020 and July 2026, he accumulated 8,367 verified contributions, including 396 on Discord. He began as an organizer and educator in the Spanish community, created Koincast and project directories, tested testnets, claims, wallets, pools, and dApps, and evolved into operating nodes, community testnet/API infrastructure, Koinos One, the monolithic Teleno node, and state-database and replay repair work. In Spanish, he explained self-custody, seed phrases, and the claim process; in 2025, he summarized priorities such as network operations, Vortex, KFS, and community custody of infrastructure. His activity demonstrates a transition from communications to infrastructure and consensus-adjacent contribution, but it does not retrospectively make him a founding architect of Koinos.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 771
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 644
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 568
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 497
+        },
+        {
+          "label": "mining, VHP, block producers, nodes, and infrastructure operations",
+          "count": 442
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Kondor",
+          "count": 64
+        },
+        {
+          "label": "KoinDX",
+          "count": 43
+        },
+        {
+          "label": "MEXC",
+          "count": 39
+        },
+        {
+          "label": "Koiner",
+          "count": 33
+        },
+        {
+          "label": "Chainge",
+          "count": 27
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 3792
+        },
+        {
+          "label": "Koincast / Koinos Hispano",
+          "count": 3705
+        },
+        {
+          "label": "Koinos TCB",
+          "count": 181
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "name": "Justin Welch / Justin W.",
+      "total": 7196,
+      "summary": "Between October 2020 and May 2026, he recorded 7,196 contributions, including 1,806 on Discord. He moved from miner and technical troubleshooter to Kollection co-founder, initiator of the Koinos Contract Standards repository, KCS-2 co-author, and contributor to Koinos.io, Vortex, Koinos.fun, and the Foundation, working across contracts, frontend, indexing, AWS, and deployments. He explained how aggregators such as DefiLlama depend on separate APIs, advocated native liquidity and an Ethereum-accessible bridge, and said in 2025 that Vortex needed to launch but that he could not responsibly lead it because of limited time, although he would help with engineering. His volume accompanies verifiable deliverables, but Kollection, KCS-2, Vortex, and Koinos.fun had teams and shared authorship.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 1006
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 592
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 533
+        },
+        {
+          "label": "NFTs, collections, games, and digital assets",
+          "count": 464
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 451
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Kollection",
+          "count": 230
+        },
+        {
+          "label": "KoinDX",
+          "count": 70
+        },
+        {
+          "label": "Kondor",
+          "count": 63
+        },
+        {
+          "label": "Chainge",
+          "count": 56
+        },
+        {
+          "label": "MEXC",
+          "count": 38
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 3559
+        },
+        {
+          "label": "Koinos Army",
+          "count": 1654
+        },
+        {
+          "label": "Koinos Social Sharing",
+          "count": 80
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "name": "Tobi",
+      "total": 6979,
+      "summary": "Between April 2021 and June 2026, he posted 6,979 messages, more than six thousand of them in Koinos Army. His conversation combined price tracking, advice about BurnKoin/Fogata/VHP, expectations for KoinDX and dApps, and debates about donations and community funding. He explained that burning KOIN was a long-term strategy and that VHP could recover liquidity through pools or the market; over time, he shifted from expecting dApps to drive adoption to expressing frustration that growth remained almost nonexistent after five years. He is a useful voice for measuring holder sentiment and continuity, not an author of products or infrastructure.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 1106
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 459
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 412
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 259
+        },
+        {
+          "label": "NFTs, collections, games, and digital assets",
+          "count": 150
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 88
+        },
+        {
+          "label": "KoinDX",
+          "count": 61
+        },
+        {
+          "label": "Kollection",
+          "count": 29
+        },
+        {
+          "label": "Chainge",
+          "count": 29
+        },
+        {
+          "label": "BurnKoin",
+          "count": 16
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Army",
+          "count": 6037
+        },
+        {
+          "label": "Koinos",
+          "count": 676
+        },
+        {
+          "label": "KoinDX",
+          "count": 242
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "name": "Nomad100x",
+      "total": 6346,
+      "summary": "Between February 2021 and July 2026, he accumulated 6,346 messages, mainly in the Spanish community and the main group. As a participant, sponsor, and critic, he initiated Koinos Garden by paying an external developer to build an NFT-gated investment and voting DAO, and later debated the Federation, KFS, inflation, bridges, liquidity, and product priorities. He argued that two years of mainnet without a bridge or sufficient DeFi was a problem, supported limited inflation through proposals, and presented the rule “one NFT, one vote” as Garden's basis for decentralization. He described himself as a non-developer: the contract belongs to its GitHub author, and there is no evidence that Garden funded specific projects.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 866
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 589
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 557
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 390
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 269
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 113
+        },
+        {
+          "label": "Kondor",
+          "count": 67
+        },
+        {
+          "label": "KoinDX",
+          "count": 58
+        },
+        {
+          "label": "Chainge",
+          "count": 52
+        },
+        {
+          "label": "Koinos Garden",
+          "count": 46
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koincast / Koinos Hispano",
+          "count": 3304
+        },
+        {
+          "label": "Koinos",
+          "count": 2670
+        },
+        {
+          "label": "Koinos Army",
+          "count": 160
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "name": "Ӄirky Ӄirk 🔮",
+      "total": 5987,
+      "summary": "Between August 2021 and February 2025, this contributor recorded 5,987 messages, primarily in the main group and Koinos Army. The activity centered on onboarding and community culture: comparing narratives, helping with the CLI, Kondor, and MEXC, suggesting quick access to KoinDX/KoinCity/Kollection, and warning that no team member should initiate a private conversation. They argued that charts and comparisons could spark curiosity when accompanied by whitepapers and sources, and called for due diligence so promotion would not resemble another fraudulent project. No product, repository, or formal position was found in connection with this volume.",
+      "topTopics": [
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 623
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 556
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 301
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 282
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 157
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinDX",
+          "count": 27
+        },
+        {
+          "label": "Kondor",
+          "count": 24
+        },
+        {
+          "label": "MEXC",
+          "count": 11
+        },
+        {
+          "label": "KAP",
+          "count": 7
+        },
+        {
+          "label": "Konio",
+          "count": 7
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 3583
+        },
+        {
+          "label": "Koinos Army",
+          "count": 2315
+        },
+        {
+          "label": "KoinDX",
+          "count": 74
+        }
+      ]
+    },
+    {
+      "rank": 19,
+      "name": "Luke Willis",
+      "total": 5786,
+      "summary": "Between November 2021 and June 2024, he accumulated 5,786 contributions: 3,225 Telegram messages, 2,560 Discord messages, and one inventoried article, in addition to 57 audio episodes excluded from the requested total. He created The Koin Press, proposed the fungible Virtual Hash Power credited in the KPoB design, wrote the original BurnKoin contracts and frontend, co-founded KAP, and built its interface. He discussed upgrade security, mining incentives, inflation, and accessibility; he argued that the target should not simply be whoever buys KOIN, but whoever learns, builds a dApp, and becomes an ambassador. His contribution connects protocol, product, and education, with the important boundary that Roamin wrote much of KAP's surviving contract code and Kui shared its operations and communications.",
+      "topTopics": [
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 705
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 373
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 282
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 278
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 235
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KAP",
+          "count": 66
+        },
+        {
+          "label": "BurnKoin",
+          "count": 48
+        },
+        {
+          "label": "Kondor",
+          "count": 24
+        },
+        {
+          "label": "KoinDX",
+          "count": 17
+        },
+        {
+          "label": "MEXC",
+          "count": 10
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 2458
+        },
+        {
+          "label": "Koinos Army",
+          "count": 660
+        },
+        {
+          "label": "Koinos Social Sharing",
+          "count": 68
+        }
+      ]
+    },
+    {
+      "rank": 20,
+      "name": "MiXiBo",
+      "total": 5518,
+      "summary": "Between March 2021 and May 2026, he recorded 5,518 contributions, including 630 on Discord and four articles. As KoinCity's principal developer and operator, he expanded a no-code launchpad into presales, locks, markets, staking, chats, KoinDX integration, APIs, NFT minting, and its own infrastructure; he also maintained direct support in the product group. He explained designs such as orders processed by a hot wallet with shared mana, evaluated the real utility of more than 170 launchpads, and acknowledged both the difficulty of informal partnerships and the need to keep building after closures or failures. His volume is especially concentrated in KoinCity and accompanies genuine authorship and operations, although collections, tokens, and projects created by third parties do not become his work.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 1541
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 727
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 716
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 380
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 302
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinCity",
+          "count": 982
+        },
+        {
+          "label": "KoinDX",
+          "count": 122
+        },
+        {
+          "label": "Kollection",
+          "count": 85
+        },
+        {
+          "label": "Kondor",
+          "count": 45
+        },
+        {
+          "label": "Konio",
+          "count": 32
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koincity",
+          "count": 2980
+        },
+        {
+          "label": "Koinos",
+          "count": 1159
+        },
+        {
+          "label": "Koinos Army",
+          "count": 415
+        }
+      ]
+    },
+    {
+      "rank": 21,
+      "name": "Alberto / Transeunte",
+      "total": 4779,
+      "summary": "Between November 2021 and June 2026, he accumulated 4,779 contributions: 4,743 messages, 34 articles, and two videos. His work encompassed bilingual communications, product archiving, visual storytelling, and advocacy for non-technical users: he created Mundo Koinos/Koinos World, experimented with videos and NFTs, amplified campaigns, and presented a communications and marketing center for funding. His messages focused on markets, wallets, security, and products such as MEXC, Kondor, Sovrano, and Koiner, always asking how to make the ecosystem visible and understandable. He was not a developer; his early NFT collections reached testing, not a maintained production release.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 429
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 425
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 326
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 199
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 129
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 86
+        },
+        {
+          "label": "Kondor",
+          "count": 46
+        },
+        {
+          "label": "Sovrano",
+          "count": 35
+        },
+        {
+          "label": "Koiner",
+          "count": 30
+        },
+        {
+          "label": "KoinDX",
+          "count": 24
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koincast / Koinos Hispano",
+          "count": 2317
+        },
+        {
+          "label": "Koinos",
+          "count": 2287
+        },
+        {
+          "label": "Koinos Army",
+          "count": 101
+        }
+      ]
+    },
+    {
+      "rank": 22,
+      "name": "Jm - Kantian",
+      "total": 4755,
+      "summary": "Between 2023-09-20 and 2025-05-31, this contributor recorded 4,755 contributions, with the strongest presence in Koinos and Koinos Army. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, wallets, explorers, and ecosystem dApps, and community coordination, campaigns, content, and outreach. The products mentioned most often were KoinCity, KoinDX, and MEXC, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 868
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 672
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 425
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 361
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 285
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinCity",
+          "count": 125
+        },
+        {
+          "label": "KoinDX",
+          "count": 121
+        },
+        {
+          "label": "MEXC",
+          "count": 74
+        },
+        {
+          "label": "Chainge",
+          "count": 30
+        },
+        {
+          "label": "Fogata",
+          "count": 23
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 2625
+        },
+        {
+          "label": "Koinos Army",
+          "count": 1651
+        },
+        {
+          "label": "Koincity",
+          "count": 312
+        }
+      ]
+    },
+    {
+      "rank": 23,
+      "name": "MoonMan",
+      "total": 4719,
+      "summary": "Between 2022-03-17 and 2025-03-06, this contributor recorded 4,719 contributions, with the strongest presence in Koinos and KoinDX. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, social conversation, greetings, humor, and everyday group culture, and community coordination, campaigns, content, and outreach. The products mentioned most often were KoinDX, MEXC, and Kondor, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 379
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 360
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 255
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 204
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 178
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinDX",
+          "count": 28
+        },
+        {
+          "label": "MEXC",
+          "count": 26
+        },
+        {
+          "label": "Kondor",
+          "count": 14
+        },
+        {
+          "label": "KoinCity",
+          "count": 12
+        },
+        {
+          "label": "KAP",
+          "count": 9
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 2880
+        },
+        {
+          "label": "KoinDX",
+          "count": 1236
+        },
+        {
+          "label": "Koinos Army",
+          "count": 207
+        }
+      ]
+    },
+    {
+      "rank": 24,
+      "name": "Tonimontana",
+      "total": 4099,
+      "summary": "Between 2020-11-16 and 2024-03-22, this contributor recorded 4,099 contributions, with the strongest presence in Koinos and Koinos Army. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, mining, VHP, block producers, nodes, and infrastructure operations, and wallets, explorers, and ecosystem dApps. The products mentioned most often were MEXC, KoinDX, and Chainge, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 656
+        },
+        {
+          "label": "mining, VHP, block producers, nodes, and infrastructure operations",
+          "count": 221
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 218
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 187
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 182
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 45
+        },
+        {
+          "label": "KoinDX",
+          "count": 24
+        },
+        {
+          "label": "Chainge",
+          "count": 19
+        },
+        {
+          "label": "Koiner",
+          "count": 14
+        },
+        {
+          "label": "Kondor",
+          "count": 6
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 2289
+        },
+        {
+          "label": "Koinos Army",
+          "count": 1517
+        },
+        {
+          "label": "KoinDX",
+          "count": 264
+        }
+      ]
+    },
+    {
+      "rank": 25,
+      "name": "Yo Yo",
+      "total": 3970,
+      "summary": "Between 2024-10-11 and 2025-09-27, this contributor recorded 3,970 contributions, with the strongest presence in Koinos and Koinos TCB. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, wallets, explorers, and ecosystem dApps, and community coordination, campaigns, content, and outreach. The products mentioned most often were Chainge, KoinDX, and Vortex, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 442
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 426
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 226
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 195
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 157
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Chainge",
+          "count": 64
+        },
+        {
+          "label": "KoinDX",
+          "count": 51
+        },
+        {
+          "label": "Vortex",
+          "count": 50
+        },
+        {
+          "label": "MEXC",
+          "count": 22
+        },
+        {
+          "label": "Kondor",
+          "count": 15
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 3021
+        },
+        {
+          "label": "Koinos TCB",
+          "count": 563
+        },
+        {
+          "label": "Koincity",
+          "count": 273
+        }
+      ]
+    },
+    {
+      "rank": 26,
+      "name": "Sergio🔮",
+      "total": 3793,
+      "summary": "Between 2021-12-24 and 2025-12-31, this contributor recorded 3,793 contributions, with the strongest presence in Koincast / Koinos Hispano and Koinos Army. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, community coordination, campaigns, content, and outreach, and wallets, explorers, and ecosystem dApps. The products mentioned most often were KoinDX, Kondor, and Konio, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 807
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 215
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 109
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 65
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 61
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinDX",
+          "count": 26
+        },
+        {
+          "label": "Kondor",
+          "count": 11
+        },
+        {
+          "label": "Konio",
+          "count": 11
+        },
+        {
+          "label": "MEXC",
+          "count": 9
+        },
+        {
+          "label": "Sovrano",
+          "count": 4
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koincast / Koinos Hispano",
+          "count": 1587
+        },
+        {
+          "label": "Koinos Army",
+          "count": 1165
+        },
+        {
+          "label": "Koinos",
+          "count": 892
+        }
+      ]
+    },
+    {
+      "rank": 27,
+      "name": "J Lo 🔮",
+      "total": 3623,
+      "summary": "Between 2021-12-21 and 2026-06-14, this contributor recorded 3,623 contributions, with the strongest presence in Koinos Army and Koinos. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, social conversation, greetings, humor, and everyday group culture, and wallets, explorers, and ecosystem dApps. The products mentioned most often were MEXC, KoinDX, and Chainge, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 472
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 408
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 266
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 122
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 116
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 51
+        },
+        {
+          "label": "KoinDX",
+          "count": 50
+        },
+        {
+          "label": "Chainge",
+          "count": 21
+        },
+        {
+          "label": "Kollection",
+          "count": 20
+        },
+        {
+          "label": "Kondor",
+          "count": 19
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Army",
+          "count": 1919
+        },
+        {
+          "label": "Koinos",
+          "count": 1046
+        },
+        {
+          "label": "KoinDX",
+          "count": 434
+        }
+      ]
+    },
+    {
+      "rank": 28,
+      "name": "Blank User",
+      "total": 3481,
+      "summary": "Between 2024-06-16 and 2026-07-13, this contributor recorded 3,481 contributions, with the strongest presence in Koinos Army and Koincity. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, social conversation, greetings, humor, and everyday group culture, and wallets, explorers, and ecosystem dApps. The products mentioned most often were KoinCity, MEXC, and Koiner, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 390
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 271
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 250
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 82
+        },
+        {
+          "label": "NFTs, collections, games, and digital assets",
+          "count": 80
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinCity",
+          "count": 59
+        },
+        {
+          "label": "MEXC",
+          "count": 25
+        },
+        {
+          "label": "Koiner",
+          "count": 17
+        },
+        {
+          "label": "Konio",
+          "count": 16
+        },
+        {
+          "label": "Kondor",
+          "count": 15
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Army",
+          "count": 2674
+        },
+        {
+          "label": "Koincity",
+          "count": 604
+        },
+        {
+          "label": "Koinos",
+          "count": 181
+        }
+      ]
+    },
+    {
+      "rank": 29,
+      "name": "Isaac Dozier Ӄ 🔮",
+      "total": 3397,
+      "summary": "Between 2020-11-21 and 2026-05-19, this contributor recorded 3,397 contributions, with the strongest presence in Koinos and Koinos Army. The history classification places the messages mainly in wallets, explorers, and ecosystem dApps, community coordination, campaigns, content, and outreach, and prices, liquidity, exchanges, and market development. The products mentioned most often were KoinDX, KAP, and Kondor, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 445
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 435
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 285
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 223
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 188
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinDX",
+          "count": 65
+        },
+        {
+          "label": "KAP",
+          "count": 40
+        },
+        {
+          "label": "Kondor",
+          "count": 29
+        },
+        {
+          "label": "KoinCity",
+          "count": 23
+        },
+        {
+          "label": "Fogata",
+          "count": 17
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 2378
+        },
+        {
+          "label": "Koinos Army",
+          "count": 562
+        },
+        {
+          "label": "Koincity",
+          "count": 209
+        }
+      ]
+    },
+    {
+      "rank": 30,
+      "name": "H🔮",
+      "total": 3308,
+      "summary": "Between 2021-01-21 and 2023-11-21, this contributor recorded 3,308 contributions, with the strongest presence in Koinos and Koinos Army. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, community coordination, campaigns, content, and outreach, and wallets, explorers, and ecosystem dApps. The products mentioned most often were Koiner, MEXC, and KoinDX, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 523
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 366
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 254
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 225
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 190
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Koiner",
+          "count": 19
+        },
+        {
+          "label": "MEXC",
+          "count": 19
+        },
+        {
+          "label": "KoinDX",
+          "count": 12
+        },
+        {
+          "label": "BurnKoin",
+          "count": 9
+        },
+        {
+          "label": "Kondor",
+          "count": 7
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 1705
+        },
+        {
+          "label": "Koinos Army",
+          "count": 1301
+        },
+        {
+          "label": "Koinos Degens",
+          "count": 151
+        }
+      ]
+    },
+    {
+      "rank": 31,
+      "name": "Adem / Kenpachi",
+      "total": 3280,
+      "summary": "Between August 2021 and December 2024, he posted 3,280 messages, mainly in Koinos Army and KoinDX. He was an early Army co-owner, KoinDX moderator and support contact, and curator and marketer for Koinos Army Journey; he welcomed users, circulated events and releases, explained KNDX/IDO/Mana, and warned about impersonation and pre-launch offers. His conversation is primarily evidence of coordination and community culture, not development: there is no public GitHub record or evidence that he wrote contracts, artwork, or tokenomics.",
+      "topTopics": [
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 455
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 432
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 131
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 100
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 67
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinDX",
+          "count": 72
+        },
+        {
+          "label": "Koinos Army",
+          "count": 36
+        },
+        {
+          "label": "MEXC",
+          "count": 12
+        },
+        {
+          "label": "Kondor",
+          "count": 7
+        },
+        {
+          "label": "KAP",
+          "count": 5
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Army",
+          "count": 1971
+        },
+        {
+          "label": "KoinDX",
+          "count": 744
+        },
+        {
+          "label": "Koinos",
+          "count": 549
+        }
+      ]
+    },
+    {
+      "rank": 32,
+      "name": "@interfecto / Atb 3tb",
+      "total": 3126,
+      "summary": "Between November 2022 and July 2026, he accumulated 3,126 contributions, with especially intense activity from 2025 onward in the main group, Army, and TCB. He built LLM-assisted contract guides, a testnet and faucet, KoinosScan, dashboards, monitoring, a Go/SQLite indexer, and the Koinos EVM Engine prototype, while also maintaining public links and data. His messages focus on wallets, MEXC/Chainge/Vortex, security, nodes, and support; he recommended small transactions, empty wallets for testing, and caution with direct messages, and distinguished functional prototypes from audited software. The pattern is feedback-to-commit and applied operations, not authorship of the base protocol.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 546
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 481
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 263
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 222
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 180
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 114
+        },
+        {
+          "label": "Chainge",
+          "count": 83
+        },
+        {
+          "label": "Vortex",
+          "count": 78
+        },
+        {
+          "label": "Kondor",
+          "count": 73
+        },
+        {
+          "label": "KoinDX",
+          "count": 35
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 1765
+        },
+        {
+          "label": "Koinos Army",
+          "count": 681
+        },
+        {
+          "label": "Koinos TCB",
+          "count": 622
+        }
+      ]
+    },
+    {
+      "rank": 33,
+      "name": "Filipe Menchen Ӄ🔮🇧🇷",
+      "total": 2821,
+      "summary": "Between 2021-12-22 and 2026-04-13, this contributor recorded 2,821 contributions, with the strongest presence in Koinos and Koinos Army. The history classification places the messages mainly in wallets, explorers, and ecosystem dApps, prices, liquidity, exchanges, and market development, and social conversation, greetings, humor, and everyday group culture. The products mentioned most often were Konio, Kondor, and KoinDX, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 354
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 232
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 217
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 168
+        },
+        {
+          "label": "NFTs, collections, games, and digital assets",
+          "count": 140
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Konio",
+          "count": 46
+        },
+        {
+          "label": "Kondor",
+          "count": 43
+        },
+        {
+          "label": "KoinDX",
+          "count": 30
+        },
+        {
+          "label": "BurnKoin",
+          "count": 28
+        },
+        {
+          "label": "Kollection",
+          "count": 22
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 1414
+        },
+        {
+          "label": "Koinos Army",
+          "count": 916
+        },
+        {
+          "label": "KoinDX",
+          "count": 229
+        }
+      ]
+    },
+    {
+      "rank": 34,
+      "name": "Henk Cryptotank🔮",
+      "total": 2725,
+      "summary": "Between 2021-11-16 and 2024-06-24, this contributor recorded 2,725 contributions, with the strongest presence in Koinos Army and Koinos. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, community coordination, campaigns, content, and outreach, and social conversation, greetings, humor, and everyday group culture. The products mentioned most often were MEXC, KoinDX, and Kondor, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 217
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 138
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 108
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 64
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 36
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 10
+        },
+        {
+          "label": "KoinDX",
+          "count": 5
+        },
+        {
+          "label": "Kondor",
+          "count": 3
+        },
+        {
+          "label": "Koinos Social",
+          "count": 3
+        },
+        {
+          "label": "Koinos Army",
+          "count": 2
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Army",
+          "count": 1671
+        },
+        {
+          "label": "Koinos",
+          "count": 948
+        },
+        {
+          "label": "KoinDX",
+          "count": 56
+        }
+      ]
+    },
+    {
+      "rank": 35,
+      "name": "Claudio Cascone",
+      "total": 2567,
+      "summary": "Between 2022-02-04 and 2025-11-18, this contributor recorded 2,567 contributions, with the strongest presence in Koinos Italia and Koinos Army. The history classification places the messages mainly in social conversation, greetings, humor, and everyday group culture, wallets, explorers, and ecosystem dApps, and community coordination, campaigns, content, and outreach. The products mentioned most often were Konio, BurnKoin, and Kondor, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 182
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 167
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 121
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 109
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 58
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Konio",
+          "count": 23
+        },
+        {
+          "label": "BurnKoin",
+          "count": 21
+        },
+        {
+          "label": "Kondor",
+          "count": 18
+        },
+        {
+          "label": "KoinDX",
+          "count": 15
+        },
+        {
+          "label": "Fogata",
+          "count": 13
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Italia",
+          "count": 1195
+        },
+        {
+          "label": "Koinos Army",
+          "count": 667
+        },
+        {
+          "label": "Koinos",
+          "count": 568
+        }
+      ]
+    },
+    {
+      "rank": 36,
+      "name": "Sergi Ӄ",
+      "total": 2441,
+      "summary": "Between 2021-12-11 and 2026-01-18, this contributor recorded 2,441 contributions, with the strongest presence in Koinos and Koincast / Koinos Hispano. The history classification places the messages mainly in wallets, explorers, and ecosystem dApps, prices, liquidity, exchanges, and market development, and community coordination, campaigns, content, and outreach. The products mentioned most often were Kondor, KoinDX, and MEXC, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 243
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 179
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 174
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 102
+        },
+        {
+          "label": "NFTs, collections, games, and digital assets",
+          "count": 77
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Kondor",
+          "count": 42
+        },
+        {
+          "label": "KoinDX",
+          "count": 27
+        },
+        {
+          "label": "MEXC",
+          "count": 25
+        },
+        {
+          "label": "Konio",
+          "count": 25
+        },
+        {
+          "label": "Koiner",
+          "count": 20
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 889
+        },
+        {
+          "label": "Koincast / Koinos Hispano",
+          "count": 861
+        },
+        {
+          "label": "Koinos Army",
+          "count": 372
+        }
+      ]
+    },
+    {
+      "rank": 37,
+      "name": "KOBA 🔮",
+      "total": 2433,
+      "summary": "Between 2021-02-22 and 2025-01-23, this contributor recorded 2,433 contributions, with the strongest presence in Koinos and Koinos Army. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, community coordination, campaigns, content, and outreach, and social conversation, greetings, humor, and everyday group culture. The products mentioned most often were Koinos Army, Kondor, and KoinDX, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 185
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 134
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 132
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 78
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 64
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Koinos Army",
+          "count": 2
+        },
+        {
+          "label": "Kondor",
+          "count": 1
+        },
+        {
+          "label": "KoinDX",
+          "count": 1
+        },
+        {
+          "label": "Konio",
+          "count": 1
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 1406
+        },
+        {
+          "label": "Koinos Army",
+          "count": 1018
+        },
+        {
+          "label": "KoinDX",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "rank": 38,
+      "name": "Roamin",
+      "total": 2356,
+      "summary": "Between January 2022 and July 2024, he accumulated 2,356 contributions, 2,340 of them on Discord and only 16 in the reviewed public Telegram groups. He created the AssemblyScript toolchain that became first-party software, Local-Koinos, My Koinos Wallet and its SDK, the first end-to-end Koinos–Ethereum bridge, WalletConnect, the Armana SDK, the original REST server, get_contract_metadata, VRF and stress tests, and Koinos-Social with Kui. On Discord, he presented AssemblyScript as a TypeScript-like CDT and, when Koinos-Social closed, explained that users retained their keys and could move their funds. His low Telegram volume shows why the total must combine platforms; even so, later products such as Vortex or the production REST service had other authors and maintainers.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 4
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 2
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 2
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 1
+        },
+        {
+          "label": "mining, VHP, block producers, nodes, and infrastructure operations",
+          "count": 1
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Koinos-Social",
+          "count": 2
+        },
+        {
+          "label": "Kondor",
+          "count": 1
+        },
+        {
+          "label": "Konio",
+          "count": 1
+        },
+        {
+          "label": "Portal",
+          "count": 1
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 14
+        },
+        {
+          "label": "Koinos Army",
+          "count": 1
+        },
+        {
+          "label": "Koinos Social Sharing",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "rank": 39,
+      "name": "Michael Vandeberg",
+      "total": 2096,
+      "summary": "Between October 2020 and March 2026, he recorded 2,096 contributions, including 901 on Discord. As a founder and blockchain architect, he explained mining, difficulty, microservices, system contracts, StateDB, KCS, upgrades, and operations; development, protocol, nodes, and security predominate in the thematic sample. From the fair launch onward, he noted that increasing proof frequency did not raise the hash rate, and in 2025 he published and supported the KCS-4 proposal while also diagnosing operational problems such as file-descriptor limits. This is foundational technical activity, but attribution of specific code must follow commits and reviews.",
+      "topTopics": [
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 304
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 263
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 256
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 223
+        },
+        {
+          "label": "mining, VHP, block producers, nodes, and infrastructure operations",
+          "count": 216
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Chainge",
+          "count": 33
+        },
+        {
+          "label": "KoinDX",
+          "count": 24
+        },
+        {
+          "label": "Kondor",
+          "count": 22
+        },
+        {
+          "label": "Fogata",
+          "count": 17
+        },
+        {
+          "label": "MEXC",
+          "count": 8
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 1171
+        },
+        {
+          "label": "KoinDX",
+          "count": 13
+        },
+        {
+          "label": "Koinos Army",
+          "count": 11
+        }
+      ]
+    },
+    {
+      "rank": 40,
+      "name": "Adriano Foschi",
+      "total": 2026,
+      "summary": "Between April 2023 and June 2026, he posted 2,026 messages, mainly about Konio, Sovrano, Veive, wallet integration, security, and development. He created the first native Koinos mobile wallet, the modular Veive smart-account framework, the Sovrano authentication and payments track, Sovry, and the Kuku Games prototype, while also coordinating onboarding and community planning. His messages demonstrate dApp support and a sustained effort to hide keys, mana, and complexity behind familiar interfaces. Mentions of other wallets or services describe integration and comparison, not authorship of those products.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 566
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 280
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 201
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 175
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 93
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Konio",
+          "count": 265
+        },
+        {
+          "label": "Sovrano",
+          "count": 184
+        },
+        {
+          "label": "Veive",
+          "count": 86
+        },
+        {
+          "label": "Kondor",
+          "count": 36
+        },
+        {
+          "label": "Koiner",
+          "count": 27
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 1325
+        },
+        {
+          "label": "Koinos Italia",
+          "count": 382
+        },
+        {
+          "label": "Koinos Army",
+          "count": 143
+        }
+      ]
+    },
+    {
+      "rank": 41,
+      "name": "carlos🔮",
+      "total": 1911,
+      "summary": "Between 2022-09-30 and 2025-09-17, this contributor recorded 1,911 contributions, with the strongest presence in Koincast / Koinos Hispano and Koinos. The history classification places the messages mainly in community coordination, campaigns, content, and outreach, prices, liquidity, exchanges, and market development, and wallets, explorers, and ecosystem dApps. The products mentioned most often were Kondor, MEXC, and KoinDX, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 198
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 131
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 126
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 60
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 60
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Kondor",
+          "count": 15
+        },
+        {
+          "label": "MEXC",
+          "count": 15
+        },
+        {
+          "label": "KoinDX",
+          "count": 14
+        },
+        {
+          "label": "Konio",
+          "count": 12
+        },
+        {
+          "label": "KoinCity",
+          "count": 12
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koincast / Koinos Hispano",
+          "count": 1168
+        },
+        {
+          "label": "Koinos",
+          "count": 524
+        },
+        {
+          "label": "Koinos Army",
+          "count": 178
+        }
+      ]
+    },
+    {
+      "rank": 42,
+      "name": "Sh11fty",
+      "total": 1887,
+      "summary": "Between 2023-12-16 and 2025-04-13, this contributor recorded 1,887 contributions, with the strongest presence in Koinos Army and Koinos. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, wallets, explorers, and ecosystem dApps, and transactions, custody, security, and scam prevention. The products mentioned most often were MEXC, KoinDX, and Chainge, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 306
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 131
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 73
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 66
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 66
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 16
+        },
+        {
+          "label": "KoinDX",
+          "count": 10
+        },
+        {
+          "label": "Chainge",
+          "count": 8
+        },
+        {
+          "label": "Konio",
+          "count": 7
+        },
+        {
+          "label": "Kondor",
+          "count": 5
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Army",
+          "count": 1343
+        },
+        {
+          "label": "Koinos",
+          "count": 529
+        },
+        {
+          "label": "KoinDX",
+          "count": 15
+        }
+      ]
+    },
+    {
+      "rank": 43,
+      "name": "⟁ ⃤Aʟı",
+      "total": 1768,
+      "summary": "Between 2023-04-06 and 2023-05-30, this contributor recorded 1,768 contributions, with the strongest presence in Koinos Army and Koinos. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, transactions, custody, security, and scam prevention, and social conversation, greetings, humor, and everyday group culture. The products mentioned most often were MEXC and KoinDX, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 410
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 114
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 46
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 31
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 18
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 2
+        },
+        {
+          "label": "KoinDX",
+          "count": 1
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Army",
+          "count": 1709
+        },
+        {
+          "label": "Koinos",
+          "count": 55
+        },
+        {
+          "label": "KoinDX",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "rank": 44,
+      "name": "Dokterkraakbeen",
+      "total": 1713,
+      "summary": "Between October 2021 and July 2026, he recorded 1,713 messages connected primarily to communications, KoinDX, Kollection, NFTs, and support. He launched Planet Koinos as a visual and translation resource, redesigned KoinDX, was a named KCS-2 co-author, joined the Kollection launch team, and coordinated KAMP's visual and sponsorship work. The corpus demonstrates sustained design, standards, product, and operational contributions, but not a public history that would justify attributing DEX or marketplace contracts to him.",
+      "topTopics": [
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 371
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 277
+        },
+        {
+          "label": "NFTs, collections, games, and digital assets",
+          "count": 104
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 97
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 41
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinDX",
+          "count": 171
+        },
+        {
+          "label": "Kollection",
+          "count": 51
+        },
+        {
+          "label": "Kanvas",
+          "count": 10
+        },
+        {
+          "label": "Vortex",
+          "count": 6
+        },
+        {
+          "label": "Koinos Army",
+          "count": 3
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 1034
+        },
+        {
+          "label": "Koinos Army",
+          "count": 429
+        },
+        {
+          "label": "KoinDX",
+          "count": 116
+        }
+      ]
+    },
+    {
+      "rank": 45,
+      "name": "Pepper",
+      "total": 1677,
+      "summary": "Between 2021-11-14 and 2023-12-06, this contributor recorded 1,677 contributions, with the strongest presence in Koinos and Koinos Army. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, community coordination, campaigns, content, and outreach, and social conversation, greetings, humor, and everyday group culture. The products mentioned most often were MEXC, Kollection, and KAP, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 221
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 114
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 93
+        },
+        {
+          "label": "NFTs, collections, games, and digital assets",
+          "count": 83
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 81
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 30
+        },
+        {
+          "label": "Kollection",
+          "count": 9
+        },
+        {
+          "label": "KAP",
+          "count": 8
+        },
+        {
+          "label": "KoinDX",
+          "count": 6
+        },
+        {
+          "label": "KoinCity",
+          "count": 5
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 827
+        },
+        {
+          "label": "Koinos Army",
+          "count": 804
+        },
+        {
+          "label": "Koinos Social Sharing",
+          "count": 44
+        }
+      ]
+    },
+    {
+      "rank": 46,
+      "name": "silas",
+      "total": 1677,
+      "summary": "Between 2022-02-02 and 2024-03-17, this contributor recorded 1,677 contributions, with the strongest presence in Koinos Army and Koinos. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, social conversation, greetings, humor, and everyday group culture, and wallets, explorers, and ecosystem dApps. The products mentioned most often were MEXC, Koiner, and Kondor, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 248
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 125
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 122
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 85
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 70
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 24
+        },
+        {
+          "label": "Koiner",
+          "count": 10
+        },
+        {
+          "label": "Kondor",
+          "count": 7
+        },
+        {
+          "label": "KoinDX",
+          "count": 6
+        },
+        {
+          "label": "Chainge",
+          "count": 4
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Army",
+          "count": 998
+        },
+        {
+          "label": "Koinos",
+          "count": 653
+        },
+        {
+          "label": "Koinos Holders Representative",
+          "count": 11
+        }
+      ]
+    },
+    {
+      "rank": 47,
+      "name": "Carlos",
+      "total": 1606,
+      "summary": "Between 2022-11-01 and 2026-04-27, this contributor recorded 1,606 contributions, with the strongest presence in Koincast / Koinos Hispano and Koinos. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, community coordination, campaigns, content, and outreach, and wallets, explorers, and ecosystem dApps. The products mentioned most often were MEXC, Kondor, and Konio, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 143
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 84
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 45
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 25
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 22
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 34
+        },
+        {
+          "label": "Kondor",
+          "count": 7
+        },
+        {
+          "label": "Konio",
+          "count": 4
+        },
+        {
+          "label": "KAP",
+          "count": 1
+        },
+        {
+          "label": "KoinDX",
+          "count": 1
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koincast / Koinos Hispano",
+          "count": 737
+        },
+        {
+          "label": "Koinos",
+          "count": 669
+        },
+        {
+          "label": "Koinos Army",
+          "count": 198
+        }
+      ]
+    },
+    {
+      "rank": 48,
+      "name": "John 🔮",
+      "total": 1505,
+      "summary": "Between 2022-01-15 and 2024-06-20, this contributor recorded 1,505 contributions, with the strongest presence in Koinos Army and Koinos. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, community coordination, campaigns, content, and outreach, and social conversation, greetings, humor, and everyday group culture. The products mentioned most often were MEXC, KoinDX, and Kondor, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 234
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 189
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 116
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 100
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 55
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 25
+        },
+        {
+          "label": "KoinDX",
+          "count": 19
+        },
+        {
+          "label": "Kondor",
+          "count": 10
+        },
+        {
+          "label": "KAP",
+          "count": 5
+        },
+        {
+          "label": "Koiner",
+          "count": 3
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Army",
+          "count": 965
+        },
+        {
+          "label": "Koinos",
+          "count": 478
+        },
+        {
+          "label": "Koinos Social Sharing",
+          "count": 51
+        }
+      ]
+    },
+    {
+      "rank": 49,
+      "name": "Lucky Bitcoin",
+      "total": 1472,
+      "summary": "Between 2022-10-29 and 2026-07-12, this contributor recorded 1,472 contributions, with the strongest presence in Koinos and Koinos Army. The history classification places the messages mainly in wallets, explorers, and ecosystem dApps, prices, liquidity, exchanges, and market development, and code, contracts, APIs, testnet, mainnet, and troubleshooting. The products mentioned most often were KoinDX, Portal, and KoinCity, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 112
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 111
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 87
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 67
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 30
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinDX",
+          "count": 18
+        },
+        {
+          "label": "Portal",
+          "count": 16
+        },
+        {
+          "label": "KoinCity",
+          "count": 16
+        },
+        {
+          "label": "Kondor",
+          "count": 11
+        },
+        {
+          "label": "MEXC",
+          "count": 11
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 855
+        },
+        {
+          "label": "Koinos Army",
+          "count": 405
+        },
+        {
+          "label": "Koincity",
+          "count": 136
+        }
+      ]
+    },
+    {
+      "rank": 50,
+      "name": "X",
+      "total": 1371,
+      "summary": "Between 2022-08-28 and 2026-07-01, this contributor recorded 1,371 contributions, with the strongest presence in Koinos Army and Koinos. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, wallets, explorers, and ecosystem dApps, and social conversation, greetings, humor, and everyday group culture. The products mentioned most often were MEXC, KoinDX, and Koiner, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 334
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 86
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 60
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 37
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 21
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 26
+        },
+        {
+          "label": "KoinDX",
+          "count": 8
+        },
+        {
+          "label": "Koiner",
+          "count": 4
+        },
+        {
+          "label": "Koinos Army",
+          "count": 2
+        },
+        {
+          "label": "KoinCity",
+          "count": 1
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Army",
+          "count": 1263
+        },
+        {
+          "label": "Koinos",
+          "count": 96
+        },
+        {
+          "label": "KoinDX",
+          "count": 12
+        }
+      ]
+    },
+    {
+      "rank": 51,
+      "name": "Ederaleng",
+      "total": 1361,
+      "summary": "Between April 2020 and February 2026, he accumulated 1,361 verified contributions, including 356 on Discord. As KoinDX co-founder and original CTO, Kollection contributor, technical lead of the resumed Vortex bridge, and founding Foundation member, he worked on contracts, SDKs, tests, registries, validators, relayers, deployments, and multichain liquidity. His conversations cover KoinDX, Chainge/Vortex, markets, integration, and support; his technical importance is confirmed by artifacts, not inferred from volume alone.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 264
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 192
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 94
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 66
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 59
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinDX",
+          "count": 84
+        },
+        {
+          "label": "Chainge",
+          "count": 46
+        },
+        {
+          "label": "MEXC",
+          "count": 14
+        },
+        {
+          "label": "Kondor",
+          "count": 11
+        },
+        {
+          "label": "Vortex",
+          "count": 8
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koincast / Koinos Hispano",
+          "count": 459
+        },
+        {
+          "label": "Koinos",
+          "count": 275
+        },
+        {
+          "label": "KoinDX",
+          "count": 193
+        }
+      ]
+    },
+    {
+      "rank": 52,
+      "name": "Karlos",
+      "total": 1311,
+      "summary": "Between November 2022 and March 2026, he posted 1,311 messages about wallets, products, mining, markets, and support. He contributed the My Koinos Wallet logo, his SVG version of the VHP symbol used by Koiner and requested by Konio, coin logos and testing for Konio v1.4, and support for the Kondor NFT. This was visual and testing work: there is no evidence for describing him as a wallet or contract developer.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 152
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 93
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 75
+        },
+        {
+          "label": "mining, VHP, block producers, nodes, and infrastructure operations",
+          "count": 63
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 57
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Kondor",
+          "count": 22
+        },
+        {
+          "label": "KoinDX",
+          "count": 15
+        },
+        {
+          "label": "MEXC",
+          "count": 12
+        },
+        {
+          "label": "Fogata",
+          "count": 8
+        },
+        {
+          "label": "KoinosBlocks",
+          "count": 7
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 731
+        },
+        {
+          "label": "Koinos Army",
+          "count": 379
+        },
+        {
+          "label": "KoinDX",
+          "count": 186
+        }
+      ]
+    },
+    {
+      "rank": 53,
+      "name": "Heather S",
+      "total": 1305,
+      "summary": "Between 2023-04-25 and 2025-01-30, this contributor recorded 1,305 contributions, with the strongest presence in Koinos and Koinos Army. The history classification places the messages mainly in community coordination, campaigns, content, and outreach, prices, liquidity, exchanges, and market development, and wallets, explorers, and ecosystem dApps. The products mentioned most often were Koinos Army, Kollection, and Vortex, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 177
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 105
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 81
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 78
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 31
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Koinos Army",
+          "count": 6
+        },
+        {
+          "label": "Kollection",
+          "count": 4
+        },
+        {
+          "label": "Vortex",
+          "count": 2
+        },
+        {
+          "label": "MEXC",
+          "count": 2
+        },
+        {
+          "label": "KAP",
+          "count": 2
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 718
+        },
+        {
+          "label": "Koinos Army",
+          "count": 540
+        },
+        {
+          "label": "Koinos Social Sharing",
+          "count": 43
+        }
+      ]
+    },
+    {
+      "rank": 54,
+      "name": "JM",
+      "total": 1225,
+      "summary": "Between 2021-11-02 and 2024-07-17, this contributor recorded 1,225 contributions, with the strongest presence in Koincast / Koinos Hispano and Koinos. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, wallets, explorers, and ecosystem dApps, and community coordination, campaigns, content, and outreach. The products mentioned most often were MEXC, Chainge, and Koiner, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 104
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 44
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 43
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 41
+        },
+        {
+          "label": "mining, VHP, block producers, nodes, and infrastructure operations",
+          "count": 34
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 19
+        },
+        {
+          "label": "Chainge",
+          "count": 5
+        },
+        {
+          "label": "Koiner",
+          "count": 4
+        },
+        {
+          "label": "KoinDX",
+          "count": 3
+        },
+        {
+          "label": "Kondor",
+          "count": 1
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koincast / Koinos Hispano",
+          "count": 1132
+        },
+        {
+          "label": "Koinos",
+          "count": 86
+        },
+        {
+          "label": "KoinDX",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "rank": 55,
+      "name": "Jeremy Clark",
+      "total": 1194,
+      "summary": "Between 2021-02-16 and 2023-06-10, this contributor recorded 1,194 contributions, with the strongest presence in Koinos and Koincast / Koinos Hispano. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, community coordination, campaigns, content, and outreach, and wallets, explorers, and ecosystem dApps. The products mentioned most often were Kondor and MEXC, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 80
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 72
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 49
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 36
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 32
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Kondor",
+          "count": 2
+        },
+        {
+          "label": "MEXC",
+          "count": 1
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 1193
+        },
+        {
+          "label": "Koincast / Koinos Hispano",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "rank": 56,
+      "name": "Dani",
+      "total": 1179,
+      "summary": "Between 2020-11-25 and 2024-12-14, this contributor recorded 1,179 contributions, with the strongest presence in Koinos and Koincast / Koinos Hispano. The history classification places the messages mainly in NFTs, collections, games, and digital assets, wallets, explorers, and ecosystem dApps, and social conversation, greetings, humor, and everyday group culture. The products mentioned most often were Kondor, Konio, and KoinDX, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "NFTs, collections, games, and digital assets",
+          "count": 117
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 108
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 95
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 87
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 75
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Kondor",
+          "count": 17
+        },
+        {
+          "label": "Konio",
+          "count": 8
+        },
+        {
+          "label": "KoinDX",
+          "count": 6
+        },
+        {
+          "label": "Kollection",
+          "count": 4
+        },
+        {
+          "label": "MEXC",
+          "count": 4
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 972
+        },
+        {
+          "label": "Koincast / Koinos Hispano",
+          "count": 199
+        },
+        {
+          "label": "KoinDX",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "rank": 57,
+      "name": "Aliasghar Khodaei",
+      "total": 1165,
+      "summary": "Between 2024-05-07 and 2025-10-28, this contributor recorded 1,165 contributions, with the strongest presence in Koinos and Koinos Army. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, wallets, explorers, and ecosystem dApps, and transactions, custody, security, and scam prevention. The products mentioned most often were MEXC, Sovrano, and Konio, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 61
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 36
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 31
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 20
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 19
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 17
+        },
+        {
+          "label": "Sovrano",
+          "count": 8
+        },
+        {
+          "label": "Konio",
+          "count": 8
+        },
+        {
+          "label": "Kondor",
+          "count": 5
+        },
+        {
+          "label": "KoinDX",
+          "count": 4
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 1054
+        },
+        {
+          "label": "Koinos Army",
+          "count": 110
+        },
+        {
+          "label": "Koinos Social Sharing",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "rank": 58,
+      "name": "Lint - Flourishing Lead Force",
+      "total": 1083,
+      "summary": "Between 2020-12-18 and 2025-11-05, this contributor recorded 1,083 contributions, with the strongest presence in Koinos and Koinos Army. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, wallets, explorers, and ecosystem dApps, and community coordination, campaigns, content, and outreach. The products mentioned most often were KoinDX, MEXC, and KoinCity, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 144
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 121
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 84
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 74
+        },
+        {
+          "label": "NFTs, collections, games, and digital assets",
+          "count": 58
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinDX",
+          "count": 32
+        },
+        {
+          "label": "MEXC",
+          "count": 14
+        },
+        {
+          "label": "KoinCity",
+          "count": 9
+        },
+        {
+          "label": "Chainge",
+          "count": 9
+        },
+        {
+          "label": "Konio",
+          "count": 8
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 524
+        },
+        {
+          "label": "Koinos Army",
+          "count": 480
+        },
+        {
+          "label": "KoinDX",
+          "count": 75
+        }
+      ]
+    },
+    {
+      "rank": 59,
+      "name": "Eman🔮",
+      "total": 1078,
+      "summary": "Between 2022-10-27 and 2025-01-25, this contributor recorded 1,078 contributions, with the strongest presence in Koinos Army and Koinos. The history classification places the messages mainly in social conversation, greetings, humor, and everyday group culture, wallets, explorers, and ecosystem dApps, and community coordination, campaigns, content, and outreach. The products mentioned most often were Kollection, Koinos Army, and Kondor, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 311
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 122
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 97
+        },
+        {
+          "label": "NFTs, collections, games, and digital assets",
+          "count": 64
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 47
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Kollection",
+          "count": 11
+        },
+        {
+          "label": "Koinos Army",
+          "count": 10
+        },
+        {
+          "label": "Kondor",
+          "count": 7
+        },
+        {
+          "label": "MEXC",
+          "count": 5
+        },
+        {
+          "label": "KoinDX",
+          "count": 5
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Army",
+          "count": 729
+        },
+        {
+          "label": "Koinos",
+          "count": 348
+        },
+        {
+          "label": "Koinos Holders Representative",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "rank": 60,
+      "name": "Moon Ӄ",
+      "total": 1060,
+      "summary": "Between 2023-12-22 and 2026-06-09, this contributor recorded 1,060 contributions, with the strongest presence in Koinos and Koinos Army. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, community coordination, campaigns, content, and outreach, and social conversation, greetings, humor, and everyday group culture. The products mentioned most often were MEXC, Vortex, and Chainge, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 289
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 65
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 47
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 40
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 35
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 34
+        },
+        {
+          "label": "Vortex",
+          "count": 6
+        },
+        {
+          "label": "Chainge",
+          "count": 5
+        },
+        {
+          "label": "KoinDX",
+          "count": 2
+        },
+        {
+          "label": "KoinosBlocks",
+          "count": 1
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 753
+        },
+        {
+          "label": "Koinos Army",
+          "count": 280
+        },
+        {
+          "label": "Koinos TCB",
+          "count": 27
+        }
+      ]
+    },
+    {
+      "rank": 61,
+      "name": "Ali.n",
+      "total": 1033,
+      "summary": "Between 2021-08-21 and 2025-08-30, this contributor recorded 1,033 contributions, with the strongest presence in Koinos and KoinDX. The history classification places the messages mainly in wallets, explorers, and ecosystem dApps, community coordination, campaigns, content, and outreach, and transactions, custody, security, and scam prevention. The products mentioned most often were Konio, KoinDX, and Chainge, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 222
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 134
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 117
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 115
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 80
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Konio",
+          "count": 34
+        },
+        {
+          "label": "KoinDX",
+          "count": 33
+        },
+        {
+          "label": "Chainge",
+          "count": 33
+        },
+        {
+          "label": "Sovrano",
+          "count": 31
+        },
+        {
+          "label": "Kondor",
+          "count": 30
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 958
+        },
+        {
+          "label": "KoinDX",
+          "count": 68
+        },
+        {
+          "label": "Koinos Army",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "rank": 62,
+      "name": "El Cid Holdeador",
+      "total": 1026,
+      "summary": "Between 2021-06-01 and 2026-03-02, this contributor recorded 1,026 contributions, with the strongest presence in Koincast / Koinos Hispano and Koinos. The history classification places the messages mainly in prices, liquidity, exchanges, and market development, wallets, explorers, and ecosystem dApps, and community coordination, campaigns, content, and outreach. The products mentioned most often were MEXC, Koiner, and KoinDX, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 80
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 31
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 30
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 21
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 19
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 14
+        },
+        {
+          "label": "Koiner",
+          "count": 5
+        },
+        {
+          "label": "KoinDX",
+          "count": 4
+        },
+        {
+          "label": "Kondor",
+          "count": 4
+        },
+        {
+          "label": "Konio",
+          "count": 4
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koincast / Koinos Hispano",
+          "count": 978
+        },
+        {
+          "label": "Koinos",
+          "count": 39
+        },
+        {
+          "label": "Koinos Army",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "rank": 63,
+      "name": "Vaxis2",
+      "total": 1026,
+      "summary": "Between 2021-10-10 and 2026-07-02, this contributor recorded 1,026 contributions, with the strongest presence in Koinos and KoinDX. The history classification places the messages mainly in wallets, explorers, and ecosystem dApps, community coordination, campaigns, content, and outreach, and social conversation, greetings, humor, and everyday group culture. The products mentioned most often were KoinDX, Kondor, and Konio, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 127
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 80
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 55
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 50
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 47
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinDX",
+          "count": 22
+        },
+        {
+          "label": "Kondor",
+          "count": 17
+        },
+        {
+          "label": "Konio",
+          "count": 11
+        },
+        {
+          "label": "KAP",
+          "count": 11
+        },
+        {
+          "label": "BurnKoin",
+          "count": 7
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 747
+        },
+        {
+          "label": "KoinDX",
+          "count": 167
+        },
+        {
+          "label": "Koincity",
+          "count": 55
+        }
+      ]
+    },
+    {
+      "rank": 64,
+      "name": "Razor Chrom",
+      "total": 1024,
+      "summary": "Between 2023-11-11 and 2026-07-09, this contributor recorded 1,024 contributions, with the strongest presence in Koinos and KoinDX. The history classification places the messages mainly in wallets, explorers, and ecosystem dApps, prices, liquidity, exchanges, and market development, and community coordination, campaigns, content, and outreach. The products mentioned most often were KoinDX, Chainge, and KoinCity, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 158
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 107
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 58
+        },
+        {
+          "label": "NFTs, collections, games, and digital assets",
+          "count": 47
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 27
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinDX",
+          "count": 46
+        },
+        {
+          "label": "Chainge",
+          "count": 26
+        },
+        {
+          "label": "KoinCity",
+          "count": 15
+        },
+        {
+          "label": "Kollection",
+          "count": 11
+        },
+        {
+          "label": "Kondor",
+          "count": 6
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 535
+        },
+        {
+          "label": "KoinDX",
+          "count": 166
+        },
+        {
+          "label": "Koinos Army",
+          "count": 160
+        }
+      ]
+    },
+    {
+      "rank": 65,
+      "name": "A T",
+      "total": 1009,
+      "summary": "Between 2021-12-28 and 2026-03-12, this contributor recorded 1,009 contributions, with the strongest presence in Koinos and Koinos Army. The history classification places the messages mainly in wallets, explorers, and ecosystem dApps, prices, liquidity, exchanges, and market development, and mining, VHP, block producers, nodes, and infrastructure operations. The products mentioned most often were KoinDX, BurnKoin, and Chainge, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 135
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 98
+        },
+        {
+          "label": "mining, VHP, block producers, nodes, and infrastructure operations",
+          "count": 73
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 72
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 69
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinDX",
+          "count": 21
+        },
+        {
+          "label": "BurnKoin",
+          "count": 6
+        },
+        {
+          "label": "Chainge",
+          "count": 5
+        },
+        {
+          "label": "Fogata",
+          "count": 5
+        },
+        {
+          "label": "Kondor",
+          "count": 5
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 737
+        },
+        {
+          "label": "Koinos Army",
+          "count": 245
+        },
+        {
+          "label": "KoinDX",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "rank": 66,
+      "name": "Doyle B. Runson",
+      "total": 1002,
+      "summary": "Between 2022-01-09 and 2025-05-29, this contributor recorded 1,002 contributions, with the strongest presence in Koinos Army and Koinos. The history classification places the messages mainly in social conversation, greetings, humor, and everyday group culture, prices, liquidity, exchanges, and market development, and wallets, explorers, and ecosystem dApps. The products mentioned most often were Kondor, Chainge, and MEXC, helping to reconstruct which parts of the ecosystem this person followed, tested, or discussed. This summary describes verifiable conversational activity; mentions and volume alone do not demonstrate technical authorship, formal leadership, or an equivalent level of impact.",
+      "topTopics": [
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 91
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 56
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 39
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 28
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 27
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Kondor",
+          "count": 5
+        },
+        {
+          "label": "Chainge",
+          "count": 2
+        },
+        {
+          "label": "MEXC",
+          "count": 2
+        },
+        {
+          "label": "Koinos Blocks",
+          "count": 1
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Army",
+          "count": 736
+        },
+        {
+          "label": "Koinos",
+          "count": 266
+        }
+      ]
+    },
+    {
+      "rank": 67,
+      "name": "DK",
+      "total": 999,
+      "summary": "Between 2022-10-21 and 2025-11-08, this contributor recorded 999 contributions, focused primarily on prices, liquidity, exchanges, and market development and wallets, explorers, and ecosystem dApps. The products mentioned most often were MEXC, Kondor, and Fogata; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 146
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 63
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 54
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 23
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 16
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 10
+        },
+        {
+          "label": "Kondor",
+          "count": 7
+        },
+        {
+          "label": "Fogata",
+          "count": 3
+        },
+        {
+          "label": "Konio",
+          "count": 3
+        },
+        {
+          "label": "Chainge",
+          "count": 3
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Army",
+          "count": 719
+        },
+        {
+          "label": "Koinos",
+          "count": 259
+        },
+        {
+          "label": "Koinos TCB",
+          "count": 21
+        }
+      ]
+    },
+    {
+      "rank": 68,
+      "name": "W",
+      "total": 985,
+      "summary": "Between 2022-11-15 and 2025-05-28, this contributor recorded 985 contributions, focused primarily on prices, liquidity, exchanges, and market development and transactions, custody, security, and scam prevention. The products mentioned most often were MEXC, Konio, and KoinDX; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 154
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 44
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 36
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 28
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 20
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 28
+        },
+        {
+          "label": "Konio",
+          "count": 4
+        },
+        {
+          "label": "KoinDX",
+          "count": 2
+        },
+        {
+          "label": "Fogata",
+          "count": 1
+        },
+        {
+          "label": "Koiner",
+          "count": 1
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Army",
+          "count": 714
+        },
+        {
+          "label": "Koinos",
+          "count": 262
+        },
+        {
+          "label": "KoinDX",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "rank": 69,
+      "name": "High CheeӃs",
+      "total": 966,
+      "summary": "Between 2023-01-09 and 2025-05-07, this contributor recorded 966 contributions, focused primarily on prices, liquidity, exchanges, and market development and wallets, explorers, and ecosystem dApps. The products mentioned most often were MEXC, KoinDX, and Kondor; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 268
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 106
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 50
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 41
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 29
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 68
+        },
+        {
+          "label": "KoinDX",
+          "count": 7
+        },
+        {
+          "label": "Kondor",
+          "count": 4
+        },
+        {
+          "label": "Kollection",
+          "count": 3
+        },
+        {
+          "label": "Koiner",
+          "count": 3
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Army",
+          "count": 680
+        },
+        {
+          "label": "Koinos",
+          "count": 207
+        },
+        {
+          "label": "KoinDX",
+          "count": 65
+        }
+      ]
+    },
+    {
+      "rank": 70,
+      "name": "Jon Rice",
+      "total": 895,
+      "summary": "Between September 2022 and July 2026, he recorded 895 contributions: 892 messages and three articles. His activity addressed communications, coordination, adoption, and funding: he founded the Koinos Federation, articulated the “free, frictionless, familiar” thesis, wrote the public case for Koinos, and amplified Koinos.fun and other products. His role was advocacy and editorial strategy, not protocol engineering.",
+      "topTopics": [
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 186
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 138
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 116
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 81
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 45
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Chainge",
+          "count": 8
+        },
+        {
+          "label": "Vortex",
+          "count": 7
+        },
+        {
+          "label": "Sovrano",
+          "count": 3
+        },
+        {
+          "label": "Kollection",
+          "count": 3
+        },
+        {
+          "label": "Koiner",
+          "count": 2
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 645
+        },
+        {
+          "label": "Koinos Army",
+          "count": 204
+        },
+        {
+          "label": "Koinos TCB",
+          "count": 25
+        }
+      ]
+    },
+    {
+      "rank": 71,
+      "name": "Gamaliel Laryea 🔮",
+      "total": 850,
+      "summary": "Between 2022-01-21 and 2025-08-04, this contributor recorded 850 contributions, focused primarily on social conversation, greetings, humor, and everyday group culture and prices, liquidity, exchanges, and market development. The products mentioned most often were MEXC, Kondor, and KoinDX; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 75
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 73
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 71
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 52
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 46
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 8
+        },
+        {
+          "label": "Kondor",
+          "count": 7
+        },
+        {
+          "label": "KoinDX",
+          "count": 7
+        },
+        {
+          "label": "Koinos Army",
+          "count": 1
+        },
+        {
+          "label": "Koinos Forum",
+          "count": 1
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 417
+        },
+        {
+          "label": "Koinos Army",
+          "count": 397
+        },
+        {
+          "label": "KoinDX",
+          "count": 27
+        }
+      ]
+    },
+    {
+      "rank": 72,
+      "name": "QNguyen",
+      "total": 848,
+      "summary": "Between 2022-03-15 and 2025-03-10, this contributor recorded 848 contributions, focused primarily on wallets, explorers, and ecosystem dApps and prices, liquidity, exchanges, and market development. The products mentioned most often were Kondor, MEXC, and Koiner; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 204
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 102
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 93
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 76
+        },
+        {
+          "label": "mining, VHP, block producers, nodes, and infrastructure operations",
+          "count": 67
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Kondor",
+          "count": 59
+        },
+        {
+          "label": "MEXC",
+          "count": 38
+        },
+        {
+          "label": "Koiner",
+          "count": 25
+        },
+        {
+          "label": "Chainge",
+          "count": 16
+        },
+        {
+          "label": "Konio",
+          "count": 16
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 617
+        },
+        {
+          "label": "Koinos Army",
+          "count": 226
+        },
+        {
+          "label": "KoinDX",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "rank": 73,
+      "name": "Take Your Future BacӃ",
+      "total": 800,
+      "summary": "Between 2023-11-10 and 2025-05-04, this contributor recorded 800 contributions, focused primarily on prices, liquidity, exchanges, and market development and wallets, explorers, and ecosystem dApps. The products mentioned most often were KoinCity, KoinDX, and Chainge; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 265
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 224
+        },
+        {
+          "label": "NFTs, collections, games, and digital assets",
+          "count": 88
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 80
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 78
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinCity",
+          "count": 42
+        },
+        {
+          "label": "KoinDX",
+          "count": 42
+        },
+        {
+          "label": "Chainge",
+          "count": 16
+        },
+        {
+          "label": "MEXC",
+          "count": 12
+        },
+        {
+          "label": "Koiner",
+          "count": 9
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 421
+        },
+        {
+          "label": "Koincity",
+          "count": 111
+        },
+        {
+          "label": "KoinDX",
+          "count": 110
+        }
+      ]
+    },
+    {
+      "rank": 74,
+      "name": "Ignis",
+      "total": 796,
+      "summary": "Between 2023-11-20 and 2024-11-24, this contributor recorded 796 contributions, focused primarily on prices, liquidity, exchanges, and market development and wallets, explorers, and ecosystem dApps. The products mentioned most often were KoinCity, MEXC, and KoinDX; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 181
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 76
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 68
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 49
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 26
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinCity",
+          "count": 13
+        },
+        {
+          "label": "MEXC",
+          "count": 12
+        },
+        {
+          "label": "KoinDX",
+          "count": 4
+        },
+        {
+          "label": "Koiner",
+          "count": 2
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Army",
+          "count": 605
+        },
+        {
+          "label": "Koinos",
+          "count": 191
+        }
+      ]
+    },
+    {
+      "rank": 75,
+      "name": "Mo",
+      "total": 759,
+      "summary": "Between 2022-04-17 and 2024-03-31, this contributor recorded 759 contributions, focused primarily on prices, liquidity, exchanges, and market development and wallets, explorers, and ecosystem dApps. The products mentioned most often were MEXC, Kondor, and KoinDX; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 90
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 75
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 33
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 33
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 31
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 18
+        },
+        {
+          "label": "Kondor",
+          "count": 12
+        },
+        {
+          "label": "KoinDX",
+          "count": 5
+        },
+        {
+          "label": "Koiner",
+          "count": 3
+        },
+        {
+          "label": "Konio",
+          "count": 3
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 428
+        },
+        {
+          "label": "Koinos Army",
+          "count": 324
+        },
+        {
+          "label": "KoinDX",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "rank": 76,
+      "name": "Pablo G.",
+      "total": 746,
+      "summary": "Between 2022-10-24 and 2024-11-24, this contributor recorded 746 contributions, focused primarily on prices, liquidity, exchanges, and market development and community coordination, campaigns, content, and outreach. The products mentioned most often were MEXC, Koinos Social, and KAP; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 105
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 79
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 45
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 44
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 17
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 12
+        },
+        {
+          "label": "Koinos Social",
+          "count": 4
+        },
+        {
+          "label": "KAP",
+          "count": 3
+        },
+        {
+          "label": "Koinos Army",
+          "count": 2
+        },
+        {
+          "label": "Kondor",
+          "count": 2
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Army",
+          "count": 587
+        },
+        {
+          "label": "Koinos Social Sharing",
+          "count": 65
+        },
+        {
+          "label": "Koinos",
+          "count": 54
+        }
+      ]
+    },
+    {
+      "rank": 77,
+      "name": "🔮Snape Several",
+      "total": 726,
+      "summary": "Between 2021-11-15 and 2025-12-05, this contributor recorded 726 contributions, focused primarily on prices, liquidity, exchanges, and market development and community coordination, campaigns, content, and outreach. The products mentioned most often were MEXC, Kondor, and KAP; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 149
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 37
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 23
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 16
+        },
+        {
+          "label": "mining, VHP, block producers, nodes, and infrastructure operations",
+          "count": 16
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 10
+        },
+        {
+          "label": "Kondor",
+          "count": 4
+        },
+        {
+          "label": "KAP",
+          "count": 2
+        },
+        {
+          "label": "Konio",
+          "count": 1
+        },
+        {
+          "label": "BurnKoin",
+          "count": 1
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koincast / Koinos Hispano",
+          "count": 455
+        },
+        {
+          "label": "Koinos",
+          "count": 162
+        },
+        {
+          "label": "Koinos Army",
+          "count": 97
+        }
+      ]
+    },
+    {
+      "rank": 78,
+      "name": "Eduard Schindler",
+      "total": 710,
+      "summary": "Between 2021-05-03 and 2025-05-29, this contributor recorded 710 contributions, focused primarily on code, contracts, APIs, testnet, mainnet, and troubleshooting and social conversation, greetings, humor, and everyday group culture. The products mentioned most often were KoinDX, MEXC, and KAP; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 75
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 68
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 68
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 64
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 64
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinDX",
+          "count": 5
+        },
+        {
+          "label": "MEXC",
+          "count": 2
+        },
+        {
+          "label": "KAP",
+          "count": 2
+        },
+        {
+          "label": "Kondor",
+          "count": 1
+        },
+        {
+          "label": "Chainge",
+          "count": 1
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 433
+        },
+        {
+          "label": "Koinos Army",
+          "count": 257
+        },
+        {
+          "label": "KoinDX",
+          "count": 16
+        }
+      ]
+    },
+    {
+      "rank": 79,
+      "name": "照顾好自己",
+      "total": 703,
+      "summary": "Between 2024-04-04 and 2025-09-19, this contributor recorded 703 contributions, focused primarily on prices, liquidity, exchanges, and market development and wallets, explorers, and ecosystem dApps. The products mentioned most often were Vortex, Chainge, and MEXC; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 153
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 70
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 69
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 64
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 62
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Vortex",
+          "count": 24
+        },
+        {
+          "label": "Chainge",
+          "count": 21
+        },
+        {
+          "label": "MEXC",
+          "count": 18
+        },
+        {
+          "label": "KoinDX",
+          "count": 10
+        },
+        {
+          "label": "Konio",
+          "count": 1
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 466
+        },
+        {
+          "label": "Koinos Army",
+          "count": 194
+        },
+        {
+          "label": "Koinos TCB",
+          "count": 23
+        }
+      ]
+    },
+    {
+      "rank": 80,
+      "name": "koinosrex.koin",
+      "total": 691,
+      "summary": "Between 2023-01-03 and 2025-07-23, this contributor recorded 691 contributions, focused primarily on social conversation, greetings, humor, and everyday group culture and prices, liquidity, exchanges, and market development. The products mentioned most often were KoinCity, Chainge, and KoinDX; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 185
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 96
+        },
+        {
+          "label": "mining, VHP, block producers, nodes, and infrastructure operations",
+          "count": 79
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 77
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 38
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinCity",
+          "count": 12
+        },
+        {
+          "label": "Chainge",
+          "count": 9
+        },
+        {
+          "label": "KoinDX",
+          "count": 8
+        },
+        {
+          "label": "MEXC",
+          "count": 8
+        },
+        {
+          "label": "Kollection",
+          "count": 7
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 457
+        },
+        {
+          "label": "Koincity",
+          "count": 128
+        },
+        {
+          "label": "Koinos Army",
+          "count": 87
+        }
+      ]
+    },
+    {
+      "rank": 81,
+      "name": "sanamo",
+      "total": 686,
+      "summary": "Between 2021-11-14 and 2025-12-30, this contributor recorded 686 contributions, focused primarily on prices, liquidity, exchanges, and market development and community coordination, campaigns, content, and outreach. The products mentioned most often were MEXC, Kondor, and KoinDX; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 89
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 76
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 65
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 63
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 42
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 13
+        },
+        {
+          "label": "Kondor",
+          "count": 8
+        },
+        {
+          "label": "KoinDX",
+          "count": 2
+        },
+        {
+          "label": "Chainge",
+          "count": 1
+        },
+        {
+          "label": "Vortex",
+          "count": 1
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 319
+        },
+        {
+          "label": "Koinos Army",
+          "count": 287
+        },
+        {
+          "label": "Koinos TCB",
+          "count": 37
+        }
+      ]
+    },
+    {
+      "rank": 82,
+      "name": "Frank / ElImbatido",
+      "total": 677,
+      "summary": "Between November 2021 and April 2026, he accumulated 677 contributions, with a disproportionate focus on Koiner, development, nodes, and protocol economics. He created and operated Koiner.App, its indexer, backend, and GraphQL API, and explained both its evolution toward shared data infrastructure and its closure because of costs, workload, and limited adoption. His figure is lower than that of many conversational participants, but his technical impact was high.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 149
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 74
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 57
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 54
+        },
+        {
+          "label": "mining, VHP, block producers, nodes, and infrastructure operations",
+          "count": 52
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Koiner",
+          "count": 89
+        },
+        {
+          "label": "MEXC",
+          "count": 9
+        },
+        {
+          "label": "KoinosBlocks",
+          "count": 5
+        },
+        {
+          "label": "Kondor",
+          "count": 3
+        },
+        {
+          "label": "Kollection",
+          "count": 3
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 433
+        },
+        {
+          "label": "Koinos Army",
+          "count": 184
+        },
+        {
+          "label": "Koinos TCB",
+          "count": 26
+        }
+      ]
+    },
+    {
+      "rank": 83,
+      "name": "Shims Bud",
+      "total": 672,
+      "summary": "Between 2023-11-15 and 2024-05-26, this contributor recorded 672 contributions, focused primarily on social conversation, greetings, humor, and everyday group culture and prices, liquidity, exchanges, and market development. The products mentioned most often were Koinos Army, Koinos-Social, and Koinos Social; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 66
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 51
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 40
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 27
+        },
+        {
+          "label": "NFTs, collections, games, and digital assets",
+          "count": 12
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Koinos Army",
+          "count": 3
+        },
+        {
+          "label": "Koinos-Social",
+          "count": 2
+        },
+        {
+          "label": "Koinos Social",
+          "count": 2
+        },
+        {
+          "label": "KoinDX",
+          "count": 2
+        },
+        {
+          "label": "MEXC",
+          "count": 1
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 346
+        },
+        {
+          "label": "Koinos Army",
+          "count": 314
+        },
+        {
+          "label": "KoinDX",
+          "count": 12
+        }
+      ]
+    },
+    {
+      "rank": 84,
+      "name": "Acoma Ӄ",
+      "total": 662,
+      "summary": "Between 2021-11-15 and 2025-05-15, this contributor recorded 662 contributions, focused primarily on community coordination, campaigns, content, and outreach and prices, liquidity, exchanges, and market development. The products mentioned most often were Vortex and Kollection; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 64
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 40
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 32
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 32
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 21
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Vortex",
+          "count": 2
+        },
+        {
+          "label": "Kollection",
+          "count": 2
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Army",
+          "count": 447
+        },
+        {
+          "label": "Koinos",
+          "count": 204
+        },
+        {
+          "label": "Koinos Social Sharing",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "rank": 85,
+      "name": "Victor",
+      "total": 616,
+      "summary": "Between 2021-11-03 and 2021-12-01, this contributor recorded 616 contributions, focused primarily on prices, liquidity, exchanges, and market development and transactions, custody, security, and scam prevention. The product mentioned most often was Koinos Army; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 76
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 43
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 35
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 28
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 23
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Koinos Army",
+          "count": 1
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos Army",
+          "count": 315
+        },
+        {
+          "label": "Koinos",
+          "count": 301
+        }
+      ]
+    },
+    {
+      "rank": 86,
+      "name": "mog",
+      "total": 611,
+      "summary": "Between 2023-04-15 and 2023-05-20, this contributor recorded 611 contributions, focused primarily on community coordination, campaigns, content, and outreach and prices, liquidity, exchanges, and market development. The products mentioned most often were MEXC and KoinDX; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 77
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 66
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 32
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 27
+        },
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 16
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 7
+        },
+        {
+          "label": "KoinDX",
+          "count": 4
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 424
+        },
+        {
+          "label": "Koinos Army",
+          "count": 148
+        },
+        {
+          "label": "Koinos Social Sharing",
+          "count": 24
+        }
+      ]
+    },
+    {
+      "rank": 87,
+      "name": "Jas",
+      "total": 568,
+      "summary": "Between 2023-11-20 and 2024-06-08, this contributor recorded 568 contributions, focused primarily on social conversation, greetings, humor, and everyday group culture and community coordination, campaigns, content, and outreach. The product mentioned most often was MEXC; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 36
+        },
+        {
+          "label": "community coordination, campaigns, content, and outreach",
+          "count": 27
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 19
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 11
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 6
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "MEXC",
+          "count": 1
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 483
+        },
+        {
+          "label": "Koinos Army",
+          "count": 68
+        },
+        {
+          "label": "Koinos Social Sharing",
+          "count": 14
+        }
+      ]
+    },
+    {
+      "rank": 88,
+      "name": "A.H.D",
+      "total": 559,
+      "summary": "Between 2022-01-16 and 2026-06-27, this contributor recorded 559 contributions, focused primarily on wallets, explorers, and ecosystem dApps and prices, liquidity, exchanges, and market development. The products mentioned most often were Kondor, BurnKoin, and Fogata; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 43
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 39
+        },
+        {
+          "label": "transactions, custody, security, and scam prevention",
+          "count": 20
+        },
+        {
+          "label": "mining, VHP, block producers, nodes, and infrastructure operations",
+          "count": 13
+        },
+        {
+          "label": "social conversation, greetings, humor, and everyday group culture",
+          "count": 13
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "Kondor",
+          "count": 13
+        },
+        {
+          "label": "BurnKoin",
+          "count": 8
+        },
+        {
+          "label": "Fogata",
+          "count": 5
+        },
+        {
+          "label": "MEXC",
+          "count": 5
+        },
+        {
+          "label": "Konio",
+          "count": 4
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 504
+        },
+        {
+          "label": "Koinos Army",
+          "count": 55
+        }
+      ]
+    },
+    {
+      "rank": 89,
+      "name": "Marc",
+      "total": 556,
+      "summary": "Between 2020-11-16 and 2024-03-01, this contributor recorded 556 contributions, focused primarily on mana, Proof of Burn, supply, inflation, and protocol governance and mining, VHP, block producers, nodes, and infrastructure operations. The product mentioned most often was KoinDX; the figure demonstrates conversational continuity, not authorship or formal responsibility for those products.",
+      "topTopics": [
+        {
+          "label": "mana, Proof of Burn, supply, inflation, and protocol governance",
+          "count": 56
+        },
+        {
+          "label": "mining, VHP, block producers, nodes, and infrastructure operations",
+          "count": 51
+        },
+        {
+          "label": "prices, liquidity, exchanges, and market development",
+          "count": 41
+        },
+        {
+          "label": "wallets, explorers, and ecosystem dApps",
+          "count": 40
+        },
+        {
+          "label": "code, contracts, APIs, testnet, mainnet, and troubleshooting",
+          "count": 35
+        }
+      ],
+      "topProducts": [
+        {
+          "label": "KoinDX",
+          "count": 1
+        }
+      ],
+      "topGroups": [
+        {
+          "label": "Koinos",
+          "count": 555
+        },
+        {
+          "label": "Koinos Army",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

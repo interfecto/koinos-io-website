@@ -143,7 +143,7 @@ export default function Footer1() {
               {/* FOOTER COPYRIGHT */}
               <div className="col">
                 <div className="footer-copyright">
-                  <p className="p-sm">© 2025 Koinos. <span>All Rights Reserved</span></p>
+                  <p className="p-sm">© 2026 Koinos. <span>All Rights Reserved</span></p>
                 </div>
               </div>
               {/* FOOTER SOCIALS
