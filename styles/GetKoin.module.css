@@ -403,9 +403,14 @@
 .steps {
   display: grid;
   gap: 1.5rem;
+  min-width: 0;
 }
 
 .step {
+  /* Grid items default to min-width:auto, so an unbreakable contract address
+     in the body text would widen the card past a phone's viewport. */
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 1.9rem;
   border: 1px solid var(--gk-line);
   border-radius: 18px;
@@ -449,6 +454,7 @@
   margin: 0 0 1.05rem;
   line-height: 1.7;
   color: var(--gk-muted);
+  overflow-wrap: anywhere;
 }
 
 .stepLink {
