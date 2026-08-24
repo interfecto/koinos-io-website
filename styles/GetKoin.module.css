@@ -33,7 +33,7 @@
 
 .hero {
   position: relative;
-  padding: 7rem 0 3.5rem;
+  padding: 6rem 0 2.5rem;
   background:
     radial-gradient(circle at 80% 0%, rgba(153, 102, 255, 0.16), transparent 30rem),
     var(--gk-bg);
@@ -92,7 +92,7 @@
 /* --------------------------------------------------------------- section */
 
 .section {
-  padding: 3.5rem 0;
+  padding: 2.75rem 0;
   border-top: 1px solid var(--gk-line);
 }
 
@@ -111,7 +111,7 @@
 }
 
 .sectionLead {
-  margin: 0 0 2rem;
+  margin: 0 0 1.5rem;
   font-size: 1.1rem;
   line-height: 1.65;
   color: var(--gk-muted);
@@ -411,7 +411,7 @@
      in the body text would widen the card past a phone's viewport. */
   min-width: 0;
   overflow-wrap: anywhere;
-  padding: 1.9rem;
+  padding: 1.5rem 1.7rem;
   border: 1px solid var(--gk-line);
   border-radius: 18px;
   background: var(--gk-panel);
@@ -434,7 +434,7 @@
 
 .stepTitle {
   margin: 0 0 0.5rem;
-  font-size: 1.45rem;
+  font-size: 1.3rem;
   font-weight: 700;
   line-height: 1.25;
   color: var(--gk-ink);
@@ -443,6 +443,7 @@
 .stepContext {
   margin: 0;
   font-size: 0.98rem;
+  line-height: 1.6;
   color: var(--gk-muted);
 }
 
@@ -482,7 +483,7 @@
 }
 
 .micro li {
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.45rem;
   line-height: 1.65;
   color: var(--gk-ink);
 }
@@ -496,6 +497,8 @@
 .shot img {
   display: block;
   width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
   height: auto;
   border: 1px solid var(--gk-line);
   border-radius: 12px;
@@ -507,7 +510,7 @@
    without looking cropped, and keep them phone-width. */
 .shotNarrow img {
   width: auto;
-  max-width: min(320px, 100%);
+  max-width: min(280px, 100%);
   margin: 0 auto;
   padding: 0.75rem;
   background: var(--gk-panel-2);

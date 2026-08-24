@@ -170,7 +170,7 @@ function StepCard({ step, index, total, onFollowRoute }) {
       </div>
 
       <div className={styles.stepBody}>
-        {step.body.map((paragraph, i) => (
+        {(step.body || []).map((paragraph, i) => (
           <p key={i}>{paragraph}</p>
         ))}
 
@@ -212,10 +212,12 @@ function StepCard({ step, index, total, onFollowRoute }) {
           <Callout key={i} type={callout.type} text={callout.text} />
         ))}
 
-        <p className={styles.check}>
-          <span>Before you continue</span>
-          {step.check}
-        </p>
+        {step.check && (
+          <p className={styles.check}>
+            <span>Before you continue</span>
+            {step.check}
+          </p>
+        )}
       </div>
     </article>
   );
@@ -345,7 +347,9 @@ export default function GetKoinPage() {
         <section className={styles.section}>
           <div className={styles.wrap}>
             <h2 className={styles.h2}>{NATIVE_VS_WRAPPED.title}</h2>
-            <p className={styles.sectionLead}>{NATIVE_VS_WRAPPED.intro}</p>
+            {NATIVE_VS_WRAPPED.intro && (
+              <p className={styles.sectionLead}>{NATIVE_VS_WRAPPED.intro}</p>
+            )}
 
             <div className={styles.compare}>
               {NATIVE_VS_WRAPPED.columns.map((column) => (
@@ -370,9 +374,7 @@ export default function GetKoinPage() {
             <div className={styles.contracts}>
               <h3 className={styles.h3}>The official vKOIN addresses</h3>
               <p className={styles.bodyText}>
-                Check any token you are about to swap against this list. The name
-                and the logo of a token prove nothing; the address is what
-                identifies it.
+                The address identifies a token; its name and logo prove nothing.
               </p>
               <div className={styles.tableScroll}>
                 <table className={styles.table}>
@@ -414,8 +416,7 @@ export default function GetKoinPage() {
                 </table>
               </div>
               <p className={styles.fineprint}>
-                Each address links to that network&apos;s block explorer, where the
-                symbol reads vKOIN and the name reads Vortex Koin.
+                Each address opens the network&apos;s block explorer (symbol vKOIN, name Vortex Koin).
               </p>
             </div>
           </div>
@@ -426,8 +427,7 @@ export default function GetKoinPage() {
           <div className={styles.wrap}>
             <h2 className={styles.h2}>Choose your path</h2>
             <p className={styles.sectionLead}>
-              Pick the wallet you want to use and where you want to buy.
-              Everything below rewrites itself for that combination.
+              Pick the wallet you will use and where you will buy.
             </p>
 
             <div className={styles.chooser}>
@@ -531,9 +531,7 @@ export default function GetKoinPage() {
                 </div>
 
                 <div className={styles.walletNotes}>
-                  <h3 className={styles.h3}>
-                    Things that are specific to {activeWallet.name}
-                  </h3>
+                  <h3 className={styles.h3}>Specific to {activeWallet.name}</h3>
                   <p className={styles.bodyText}>{activeWallet.summary}</p>
                   <ul className={styles.notesList}>
                     {activeWallet.quirks.map((quirk, i) => (
@@ -594,7 +592,7 @@ export default function GetKoinPage() {
         {/* ------------------------------------------------------ the faq */}
         <section className={styles.section}>
           <div className={styles.wrap}>
-            <h2 className={styles.h2}>Questions people ask</h2>
+            <h2 className={styles.h2}>Questions</h2>
             <ul className={styles.faqs}>
               {FAQS.map((faq, index) => (
                 <li key={index} className={styles.faq}>
@@ -628,7 +626,7 @@ export default function GetKoinPage() {
         {/* ------------------------------------------------- the glossary */}
         <section className={styles.section}>
           <div className={styles.wrap}>
-            <h2 className={styles.h2}>Words used on this page</h2>
+            <h2 className={styles.h2}>Glossary</h2>
             <dl className={styles.glossary}>
               {GLOSSARY.map(([term, definition]) => (
                 <div key={term}>
@@ -650,9 +648,9 @@ export default function GetKoinPage() {
               </p>
             ))}
             <p className={styles.fineprint}>
-              Steps last verified: {LAST_VERIFIED}. Interfaces change. If a screen
-              does not match a screenshot here, trust the network, token address,
-              destination and amount shown on your own screen, and ask in the{" "}
+              Steps last verified {LAST_VERIFIED}. Interfaces change; when a screen
+              differs from a screenshot here, trust what your own screen says, and
+              ask in the{" "}
               <Link
                 href={OFFICIAL_LINKS.telegram}
                 target="_blank"
@@ -660,7 +658,7 @@ export default function GetKoinPage() {
               >
                 Koinos community
               </Link>{" "}
-              before you sign anything you do not understand.
+              before signing anything you do not understand.
             </p>
           </div>
         </section>

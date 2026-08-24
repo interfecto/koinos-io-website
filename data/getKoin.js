@@ -4,8 +4,6 @@
 // wallet/route matrix and the step copy. Token addresses come from
 // data/koinTokens.js, which the homepage exchange section also uses.
 //
-// The page component only renders what this file describes.
-//
 // MAINTENANCE: re-walk every route and re-take every screenshot after any
 // bridge, token or contract migration, then bump LAST_VERIFIED. Captions derive
 // their date from it, so a stale date is visible on the page.
@@ -27,13 +25,10 @@ export const OFFICIAL_LINKS = {
   kondor: "https://kondorwallet.com/",
   kondorStore:
     "https://chromewebstore.google.com/detail/kondor-wallet/hfcdnighclikmdfkdcecohgnfdglpdmp",
-  docs: "https://docs.koinos.io",
   mana: "https://docs.koinos.io/overview/mana/",
   telegram: "https://telegram.koinos.io",
 };
 
-// Captions carry their own provenance so a reader can tell a screenshot of a
-// third-party product from something we drew.
 function captured(where) {
   return `${where}, captured ${LAST_VERIFIED}.`;
 }
@@ -49,19 +44,16 @@ export const WALLETS = [
     id: "metamask",
     name: "MetaMask",
     family: "Ethereum and Base",
-    summary:
-      "The most widely used browser wallet for Ethereum and Base. It asks you to confirm every transaction in a small pop-up.",
+    summary: "The most common browser wallet for Ethereum and Base.",
     install: "https://metamask.io/download",
     installLabel: "metamask.io/download",
     routes: ["ethereum", "base"],
-    addressKind: "an Ethereum-style address",
-    addressNote:
-      "The same address works on Ethereum and on Base, but it does not work on Solana or Koinos.",
+    addressKind: "one Ethereum-style address",
+    addressNote: "It works on Ethereum and on Base, not on Solana or Koinos.",
     quirks: [
-      "MetaMask shows the current network at the top of its window. Check it says the network in your plan before you confirm anything.",
-      "If a website asks to switch network, MetaMask shows a separate request for that. This is normal and it is not a spending permission.",
-      "If vKOIN does not appear after a swap, use Import tokens and paste the contract address from this page.",
-      "A spending cap is a different thing from connecting. It appears only when a website needs permission to move a token you already hold. Set it to the amount you are using rather than an unlimited amount.",
+      "The network name sits at the top of the window. Check it before you sign.",
+      "If vKOIN does not appear after a swap, use Import tokens and paste the address from this page.",
+      "When a site asks for a spending cap, set it to the amount you are using, not unlimited.",
     ],
   },
   {
@@ -69,37 +61,34 @@ export const WALLETS = [
     name: "Rabby",
     family: "Ethereum and Base",
     summary:
-      "A browser wallet for Ethereum-style networks. Before you sign, it simulates the transaction and shows the balance changes it expects.",
+      "A browser wallet for Ethereum-style networks that simulates each transaction before you sign it.",
     install: "https://rabby.io/",
     installLabel: "rabby.io",
     routes: ["ethereum", "base"],
-    addressKind: "an Ethereum-style address",
-    addressNote:
-      "The same address works on Ethereum and on Base, but it does not work on Solana or Koinos.",
+    addressKind: "one Ethereum-style address",
+    addressNote: "It works on Ethereum and on Base, not on Solana or Koinos.",
     quirks: [
-      "Rabby usually follows the network the website asks for, so you rarely switch networks by hand.",
-      "Rabby shows a check before you sign, with the balance changes it expects. Read it. If the expected result is not the swap you asked for, reject it.",
-      "Some websites list Rabby as Browser Wallet or Injected Wallet instead of by name.",
-      "Rabby normally finds standard tokens on its own. If vKOIN is missing, add it using the contract address from this page.",
+      "Rabby switches network to match the site, so you rarely do it by hand.",
+      "Before you sign, it shows the balance changes it expects. If they are not the swap you asked for, reject.",
+      "Some sites list it as Browser Wallet or Injected Wallet rather than Rabby.",
     ],
   },
   {
     id: "phantom",
     name: "Phantom",
-    family: "Solana",
+    family: "Solana, Ethereum and Base",
     summary:
-      "A browser wallet for Solana. Solana has no separate token permission step, so you sign the swap itself.",
+      "A browser wallet that started on Solana and now also supports Ethereum and Base.",
     install: "https://phantom.com/download",
     installLabel: "phantom.com/download",
-    routes: ["solana"],
-    addressKind: "a Solana address",
+    routes: ["ethereum", "base", "solana"],
+    addressKind: "a separate address for each network",
     addressNote:
-      "Phantom keeps a separate address for each network it supports. For this guide you need the Solana one.",
+      "Copy the one for the network in your plan; the Solana and Ethereum addresses look nothing alike.",
     quirks: [
-      "Phantom is used here for Solana only. This guide does not cover Phantom on Ethereum or Base.",
-      "Solana tokens usually appear on their own after a swap. Phantom does not import tokens by contract address the way MetaMask does.",
-      "Keep a small amount of SOL. Solana charges a fee for the swap and may charge a small one-time cost to create the token account.",
-      "If vKOIN is missing from the list, check the hidden tokens setting before assuming anything went wrong.",
+      "Open Receive and pick the network first — Phantom shows a different address for each.",
+      "On Solana, tokens usually appear by themselves. On Ethereum and Base you may need to add vKOIN by address.",
+      "Keep a little SOL or ETH on the network you use; every action costs a small fee.",
     ],
   },
   {
@@ -107,32 +96,29 @@ export const WALLETS = [
     name: "Kondor",
     family: "Koinos",
     summary:
-      "The Koinos browser wallet. It holds native KOIN, and it is the wallet KoinDX and the Koinos side of Vortex connect to.",
+      "The Koinos browser wallet. It holds native KOIN and connects to KoinDX and the Koinos side of Vortex.",
     install: "https://kondorwallet.com/",
     installLabel: "kondorwallet.com",
     routes: ["koinos"],
     addressKind: "a Koinos address",
-    addressNote:
-      "A Koinos address looks nothing like an Ethereum or Solana address, and none of them can stand in for another.",
+    addressNote: "It cannot receive anything sent on Ethereum, Base or Solana.",
     quirks: [
-      "Kondor holds a Koinos address only. It cannot receive assets sent on Ethereum, Base or Solana.",
-      "Kondor shows your mana next to your KOIN balance. Mana is what Koinos transactions use.",
-      "Kondor asks you to confirm each action separately in the extension window.",
-      "Its receive screen warns you to send only Koinos tokens to that address. Take that warning seriously.",
+      "Kondor shows mana next to your KOIN balance. Mana is what Koinos transactions use.",
+      "Its receive screen says to send only Koinos assets to it. Take that literally.",
     ],
   },
 ];
 
 // --- Routes ---------------------------------------------------------------
 //
-// The reason the routes end differently: the Vortex bridge currently connects
-// Koinos and Ethereum only — its network chooser offers exactly those two. So
-// vKOIN bought on Base or Solana cannot be turned into native KOIN in one step,
-// and the guide says so instead of implying a bridge that does not exist.
+// Vortex bridges Koinos <-> Ethereum only (its network chooser offers exactly
+// those two). vKOIN on Base and Solana is the Ethereum vKOIN moved there through
+// Portal (Wormhole) — verified on-chain: the Base contract reports Wormhole
+// chain id 2 (Ethereum) and the Solana mint authority is the Wormhole token
+// bridge. So those routes stop at vKOIN.
 //
-// The Koinos route is deliberately NOT a way to buy your first KOIN. KoinDX
-// runs on Koinos, and a Koinos account gets its mana from its own KOIN balance,
-// so an account holding no KOIN cannot transact there yet.
+// The Koinos route is not a way to buy a first KOIN: an empty Koinos account
+// has no mana of its own.
 
 export const ROUTES = [
   {
@@ -147,15 +133,13 @@ export const ROUTES = [
     reachesNativeKoin: true,
     outcome: "native KOIN on Koinos",
     outcomeShort: "Ends with native KOIN",
-    plan:
-      "Buy ETH, send it to your own wallet on Ethereum, swap it for vKOIN, then use Vortex to move it to Koinos as native KOIN.",
-    note:
-      "This is the route the bridge supports end to end, because Vortex connects Koinos and Ethereum.",
+    plan: "Buy ETH → send it to your wallet → swap it for vKOIN → bridge to Koinos with Vortex.",
+    note: "The only route the Vortex bridge serves end to end.",
   },
   {
     id: "base",
     name: "Base",
-    tagline: "Buy vKOIN on Base. Network fees are usually lower here.",
+    tagline: "Buy vKOIN on Base. Lower fees, no direct bridge to Koinos.",
     buyAsset: "ETH",
     network: "Base",
     gasAsset: "ETH on Base",
@@ -164,15 +148,13 @@ export const ROUTES = [
     reachesNativeKoin: false,
     outcome: "vKOIN on Base",
     outcomeShort: "Ends with vKOIN",
-    plan:
-      "Buy ETH, send it to your own wallet on Base, then swap it for vKOIN on Base.",
-    note:
-      "Vortex connects Koinos and Ethereum. It does not offer Base, so this route stops at vKOIN. The vKOIN on Base reached Base from Ethereum over a second, general-purpose bridge, so holding it means depending on two bridges rather than one. If you want native KOIN, decide that before you buy and use the Ethereum route.",
+    plan: "Buy ETH → send it to your wallet on Base → swap it for vKOIN.",
+    note: "Base vKOIN is the Ethereum vKOIN moved over through Portal (Wormhole). Vortex does not serve Base, so this route ends at vKOIN. For native KOIN, use the Ethereum route.",
   },
   {
     id: "solana",
     name: "Solana",
-    tagline: "Buy vKOIN on Solana.",
+    tagline: "Buy vKOIN on Solana. No direct bridge to Koinos.",
     buyAsset: "SOL",
     network: "Solana",
     gasAsset: "SOL",
@@ -181,15 +163,13 @@ export const ROUTES = [
     reachesNativeKoin: false,
     outcome: "vKOIN on Solana",
     outcomeShort: "Ends with vKOIN",
-    plan:
-      "Buy SOL, send it to your own wallet on Solana, then swap it for vKOIN on Solana.",
-    note:
-      "Vortex connects Koinos and Ethereum. It does not offer Solana, so this route stops at vKOIN. The vKOIN on Solana reached Solana from Ethereum over a second, general-purpose bridge, so holding it means depending on two bridges rather than one. If you want native KOIN, decide that before you buy and use the Ethereum route.",
+    plan: "Buy SOL → send it to your wallet → swap it for vKOIN on Jupiter.",
+    note: "Solana vKOIN is the Ethereum vKOIN moved over through Portal (Wormhole). Vortex does not serve Solana, so this route ends at vKOIN. For native KOIN, use the Ethereum route.",
   },
   {
     id: "koinos",
     name: "Koinos",
-    tagline: "Set up a Koinos wallet and use KoinDX once it holds KOIN.",
+    tagline: "Set up Kondor, fund it, then trade on KoinDX.",
     buyAsset: null,
     network: "Koinos",
     gasAsset: "mana",
@@ -198,10 +178,8 @@ export const ROUTES = [
     reachesNativeKoin: true,
     outcome: "a working Koinos wallet",
     outcomeShort: "Needs KOIN first",
-    plan:
-      "Install Kondor, receive native KOIN into it using the Ethereum route, and then trade on Koinos with KoinDX.",
-    note:
-      "This is not a way to buy your first KOIN. KoinDX runs on Koinos, and a Koinos account draws its mana from its own KOIN balance, so an empty account cannot pay for a trade there.",
+    plan: "Install Kondor → receive native KOIN through the Ethereum route → trade on KoinDX.",
+    note: "Not a way to buy your first KOIN. An empty Koinos account has no mana of its own, so it cannot pay for a trade yet.",
   },
 ];
 
@@ -220,12 +198,12 @@ export function suggestionFor(walletId, routeId) {
     (w) => w.name
   );
   return {
-    message: `${wallet.name} is not used for the ${route.name} route in this guide.`,
-    walletFix: `${wallet.name} works with the ${wallet.routes
+    message: `${wallet.name} is not used for the ${route.name} route.`,
+    walletFix: `${wallet.name} works with ${wallet.routes
       .map((id) => ROUTES.find((r) => r.id === id).name)
-      .join(" and ")} route.`,
+      .join(", ")}.`,
     routeFix: worksWith.length
-      ? `The ${route.name} route is shown with ${worksWith.join(" or ")}.`
+      ? `${route.name} is shown with ${worksWith.join(" or ")}.`
       : null,
     suggestedRoute: wallet.routes[0],
   };
@@ -234,36 +212,34 @@ export function suggestionFor(walletId, routeId) {
 // --- Wallet screenshots ---------------------------------------------------
 //
 // Extension pop-ups cannot be captured from a normal browser session, so these
-// come from each vendor's own documentation and are credited in the caption.
-// Rabby publishes no instructional screenshots, so the Rabby steps rely on the
-// written description and the shared exchange screenshots instead.
+// come from each vendor's own documentation or store listing, credited in the
+// caption.
 
 const WALLET_IMAGES = {
   metamask: {
     address: {
       src: `${IMG}/metamask-network.png`,
-      alt: "The MetaMask extension window with the network selector open, showing the list of available networks.",
-      caption: sourced(
-        "MetaMask shows the current network at the top.",
-        "support.metamask.io"
-      ),
-      frame: "phone",
-    },
-    connect: {
-      src: `${IMG}/metamask-connect.png`,
-      alt: "The MetaMask connection pop-up asking to connect a website, with the account listed and Cancel and Connect buttons.",
-      caption: sourced(
-        "A connection request. Connecting lets a site see your address; it does not let it move your tokens. The site name at the top must match the site you opened — here it is an example site, not one used in this guide.",
-        "support.metamask.io"
-      ),
+      alt: "The MetaMask extension window with the network selector open.",
+      caption: sourced("The network selector.", "support.metamask.io"),
       frame: "phone",
     },
     token: {
       src: `${IMG}/metamask-import-token.png`,
-      alt: "The MetaMask Import tokens dialog on the Custom token tab, with fields for the network, the token contract address and the token symbol, above a warning that anyone can create a fake version of an existing token.",
+      alt: "The MetaMask Import tokens dialog on the Custom token tab, with a warning that anyone can create a fake version of an existing token.",
       caption: sourced(
-        "Adding a token by contract address, if it does not appear by itself. MetaMask gives the same warning this page does. The example shown is a different token.",
+        "Adding a token by address. The example is a different token.",
         "support.metamask.io"
+      ),
+      frame: "phone",
+    },
+  },
+  rabby: {
+    sign: {
+      src: `${IMG}/rabby-sign.png`,
+      alt: "Rabby's signing screen: the token amount leaving the wallet, the chain, the destination address, the fee, and Sign and Cancel buttons.",
+      caption: sourced(
+        "What Rabby shows before you sign: amount, chain, destination and fee. The example is a different token.",
+        "Rabby's Chrome Web Store listing"
       ),
       frame: "phone",
     },
@@ -271,71 +247,51 @@ const WALLET_IMAGES = {
   phantom: {
     address: {
       src: `${IMG}/phantom-receive.png`,
-      alt: "Two Phantom screens: the wallet with the Receive button highlighted, and the resulting list of networks where the Solana address can be copied.",
-      caption: sourced(
-        "Phantom keeps one address per network. Copy the Solana one.",
-        "help.phantom.com"
-      ),
+      alt: "Two Phantom screens: the Receive button, then a list of networks each with its own address to copy.",
+      caption: sourced("One address per network.", "help.phantom.com"),
     },
   },
   kondor: {
     address: {
       src: `${IMG}/kondor-receive.png`,
-      alt: "The Kondor wallet Receive KOIN screen, showing a QR code, the Koinos address and a warning to send only Koinos tokens to it.",
+      alt: "The Kondor Receive KOIN screen with a QR code, the Koinos address and a warning to send only Koinos tokens to it.",
       caption: sourced("Kondor's receive screen.", "kondorwallet.com"),
       frame: "phone",
     },
   },
-  rabby: {},
 };
 
-// --- Shared step fragments ------------------------------------------------
+// --- Steps ----------------------------------------------------------------
 
-const ADDRESS_CHECK =
-  "Compare the whole address, not only its beginning and end. Attackers deliberately generate addresses that share the first and last characters with one of yours. Copy the address from your wallet's own receive screen, never from a transaction list or a message.";
-
-function walletSetupStep(wallet) {
+function walletSetupStep(wallet, route) {
   return {
     id: "wallet",
     title: `Install ${wallet.name} and copy your address`,
-    context:
-      "A wallet holds your keys. Nothing can arrive until you have one and know its address.",
-    body: [
-      `Install ${wallet.name} only from ${wallet.installLabel}. Never install a wallet from an advertisement, from a search result you do not recognise, or from a link someone sent you.`,
-      "During setup the wallet shows a recovery phrase. Write it on paper and keep it offline. Anyone who has those words can take everything in the wallet. No website, no support agent and no part of Koinos will ever need it.",
-    ],
+    context: `Install only from ${wallet.installLabel}, never from an ad or a link someone sent. The recovery phrase goes on paper — whoever has it owns the wallet, and nobody legitimate will ever ask for it.`,
     micro: [
-      `Open ${wallet.installLabel} and add the extension.`,
-      "Create a new wallet and set a password.",
-      "Write the recovery phrase on paper. Do not photograph it or save it in a note, chat or cloud drive.",
-      "Open the wallet and find your receive address.",
-      "Copy the address. You will paste it in a later step.",
+      `Add the extension from ${wallet.installLabel} and create a wallet.`,
+      "Write the recovery phrase on paper. No photo, no note, no cloud.",
+      `Open Receive and copy your ${route.network} address.`,
     ],
     image: WALLET_IMAGES[wallet.id].address || null,
     callouts: [
       {
         type: "warning",
-        text: `${wallet.name} gives you ${wallet.addressKind}. ${wallet.addressNote} Sending an asset on the wrong network is one of the most common ways beginners lose funds, and it usually cannot be undone.`,
+        text: `${wallet.name} gives you ${wallet.addressKind}. ${wallet.addressNote} An asset sent on the wrong network is usually gone.`,
       },
     ],
-    check: `${wallet.name} is installed, the recovery phrase is written down offline, and you have copied your address.`,
   };
 }
 
 function kondorSetupStep() {
   return {
     id: "kondor",
-    title: "Install Kondor, so there is somewhere for the KOIN to land",
+    title: "Install Kondor for the Koinos side",
     context:
-      "Native KOIN lives on Koinos, and your Ethereum wallet cannot hold it. You need a Koinos address before the bridge step.",
-    body: [
-      "Kondor is a browser wallet for Koinos. Start at kondorwallet.com, its official site, and follow its own download link to the Chrome Web Store. Do not search the store directly — a search result is exactly where a fake wallet would sit, and older listings for previous versions also still exist.",
-      "Set it up the same way as your other wallet: create a new wallet, set a password, and write the recovery phrase on paper. Then open the receive screen and copy the Koinos address.",
-    ],
+      "Native KOIN lives on Koinos and your Ethereum wallet cannot hold it. Start at kondorwallet.com and follow its download link — don't search the store, older listings still exist.",
     micro: [
-      "Open kondorwallet.com using the button below and follow its download link.",
-      "Create a wallet and set a password.",
-      "Write the recovery phrase on paper and keep it offline.",
+      "Open kondorwallet.com and add the extension it links to.",
+      "Create a wallet and write the recovery phrase on paper.",
       "Open Receive and copy your Koinos address.",
     ],
     link: { href: OFFICIAL_LINKS.kondor, label: "Open kondorwallet.com" },
@@ -343,10 +299,9 @@ function kondorSetupStep() {
     callouts: [
       {
         type: "warning",
-        text: "Kondor's own receive screen says it: send only Koinos assets to this address. It cannot receive anything sent on Ethereum, Base or Solana.",
+        text: "Only Koinos assets can be sent to this address.",
       },
     ],
-    check: "Kondor is installed and you have copied its Koinos address.",
   };
 }
 
@@ -354,192 +309,132 @@ function buyStep(route) {
   return {
     id: "buy",
     title: `Buy ${route.buyAsset} on an exchange`,
-    context: `You start with money and end with ${route.buyAsset} sitting in an exchange account.`,
-    body: [
-      `In most countries you cannot buy KOIN directly with a bank card. You first buy ${route.buyAsset}, then trade it for vKOIN in a later step. ${route.buyAsset} also pays the network fees along the way, so buy a little more than you plan to swap.`,
-      "Use an exchange that operates in your country and that can withdraw on the network in your plan. Coinbase, Kraken and Binance are examples of large exchanges. They are named as examples only: this is not a recommendation, Koinos has no relationship with any of them, and there are no referral links on this page. Identity checks, payment methods and available networks differ by country and by account.",
-    ],
+    context: `You cannot buy KOIN with a card. You buy ${route.buyAsset} first and swap it later; ${route.buyAsset} also pays the network fees, so buy a little more than you plan to swap.`,
     micro: [
-      "Open an account at an exchange available where you live and complete its identity check.",
-      "Add money using a payment method it offers.",
+      "Open an account at an exchange available in your country. Coinbase, Kraken and Binance are examples, not recommendations.",
       `Buy ${route.buyAsset}.`,
-      `Before you continue, check that the exchange can withdraw ${route.buyAsset} on ${route.network}.`,
+      `Check that the exchange can withdraw ${route.buyAsset} on ${route.network} before you go on.`,
     ],
     callouts: [
       {
-        type: "warning",
-        text: `Check the withdrawal networks before you buy. Not every exchange that sells ${route.buyAsset} can send it on ${route.network}. If yours cannot, choose a different exchange or a different route.`,
-      },
-      {
         type: "cost",
-        text: "Exchanges usually charge to buy and again to withdraw. Read the figures the exchange shows you before each confirmation; they change.",
+        text: "Buying and withdrawing each carry a fee. Both are shown before you confirm.",
       },
     ],
-    check: `You hold ${route.buyAsset} on the exchange, and the exchange offers ${route.network} withdrawals.`,
   };
 }
 
 function withdrawStep(wallet, route) {
   return {
     id: "withdraw",
-    title: `Send your ${route.buyAsset} to ${wallet.name} on ${route.network}`,
-    context: `This moves your ${route.buyAsset} off the exchange and into the wallet you control.`,
-    body: [
-      `Open the withdrawal screen for ${route.buyAsset} on the exchange and paste your ${wallet.name} address. Then choose the network. It must say ${route.network}.`,
-      "Consider sending a small test amount first and waiting until it arrives before sending the rest. It costs one extra withdrawal fee, and it turns a total loss into a small one if something is wrong.",
-      ADDRESS_CHECK,
-    ],
+    title: `Send it to ${wallet.name} on ${route.network}`,
+    context: `This moves your ${route.buyAsset} off the exchange into the wallet you control.`,
     micro: [
-      `Paste your ${wallet.name} address into the exchange withdrawal form.`,
-      "Check the whole address against your wallet, not just its ends.",
+      `Paste your ${wallet.name} address into the exchange's withdrawal form.`,
       `Select ${route.network} as the network.`,
-      "Read the fee and the amount that will actually arrive.",
-      "Send a small test amount and wait for it to appear before sending more.",
+      "Compare the whole address, not just the first and last characters — scammers make addresses that match at the ends.",
+      "Send a small test amount, wait for it to arrive, then send the rest.",
     ],
     callouts: [
       {
         type: "warning",
-        text: `${route.network} must be selected on the exchange. The same address can exist on several networks, and the exchange will not warn you if you pick the wrong one.`,
-      },
-      {
-        type: "tip",
-        text: `Leave enough ${route.gasAsset} for the steps that follow. Do not swap your whole balance.`,
+        text: `The network must say ${route.network}. The same address exists on other networks and the exchange will not stop you.`,
       },
     ],
-    check: `${wallet.name} shows your ${route.buyAsset} on ${route.network}.`,
   };
 }
 
 function swapStep(wallet, route) {
   const contract = contractFor(route.network);
-  const isJupiter = route.dex === "Jupiter";
   return {
     id: "swap",
     title: `Swap ${route.buyAsset} for vKOIN on ${route.dex}`,
-    context: `You end this step holding vKOIN on ${route.network}.`,
-    body: [
-      `Open ${route.dex} using the button below, so the correct network and token are already filled in. Then check your browser's address bar. Convincing fake copies of swap websites exist.`,
-      isJupiter
-        ? "Jupiter shows warnings on tokens that few people trade. A warning on vKOIN does not by itself mean the token is fake, but it does mean you should confirm the token address yourself before swapping."
-        : "DeFiLlama compares several exchanges and routes your trade to one of them, so the venue behind a quote can differ from one visit to the next.",
-      `Compare the token address shown by the site with the official address on this page: ${
-        contract ? contract.address : ""
-      }. Anyone can create a token called vKOIN.`,
-      `Because you are paying with ${route.buyAsset}, which is the network's own asset, no separate token permission is needed for this swap. You sign the swap itself.`,
-    ],
+    context: `The button below opens ${route.dex} with the network and token already set. Check your browser's address bar afterwards — fake swap sites exist.`,
     micro: [
-      `Open ${route.dex} and connect ${wallet.name}.`,
-      `Check that the network is ${route.network}.`,
-      `Enter how much ${route.buyAsset} you want to spend, keeping some back for fees.`,
-      "Compare the token address with the official address on this page.",
-      "Read the amount you are shown, then sign in your wallet.",
+      `Connect ${wallet.name} and check the network is ${route.network}.`,
+      `Enter the amount, keeping some ${route.gasAsset} back for fees.`,
+      `Compare the token address with ${contract ? contract.address : "the official one"}.`,
+      "Read the amount you will receive, then sign.",
     ],
     link: { href: route.dexUrl, label: `Open ${route.dex}` },
     image:
       route.id === "ethereum"
         ? {
             src: `${IMG}/defillama-ethereum.png`,
-            alt: "The DeFiLlama swap page with Ethereum selected, ETH in the You sell field and vKOIN in the You buy field.",
-            caption: captured("swap.defillama.com on Ethereum"),
+            alt: "DeFiLlama with Ethereum selected, ETH to sell and vKOIN to buy.",
+            caption: captured("swap.defillama.com"),
           }
         : route.id === "base"
         ? {
             src: `${IMG}/defillama-base.png`,
-            alt: "The DeFiLlama swap page with Base selected, ETH in the You sell field and vKOIN in the You buy field.",
-            caption: captured("swap.defillama.com on Base"),
+            alt: "DeFiLlama with Base selected, ETH to sell and vKOIN to buy.",
+            caption: captured("swap.defillama.com"),
           }
         : {
             src: `${IMG}/jupiter-solana.png`,
-            alt: "The Jupiter swap page with SOL in the Sell field and vKOIN in the Buy field, showing a warning label under the vKOIN token.",
-            caption: captured("jup.ag"),
+            alt: "Jupiter with SOL to sell and vKOIN to buy, showing a warning label under vKOIN.",
+            caption: captured(
+              "jup.ag. The warning marks a thinly traded token; confirm the address yourself"
+            ),
           },
     extraImages: [
-      WALLET_IMAGES[wallet.id].connect,
+      WALLET_IMAGES[wallet.id].sign,
       WALLET_IMAGES[wallet.id].token,
     ].filter(Boolean),
     callouts: [
       {
         type: "warning",
-        text: "Check the token address, not the name or the logo. A copied name and logo cost nothing to make.",
+        text: "Check the address, not the name or logo. Anyone can create a token called vKOIN.",
       },
       {
         type: "cost",
-        text: `Expect a network fee in ${route.gasAsset} and a trading fee, and expect your own order to move the price if the pool is small. The figures the site shows before you sign are the ones that apply; the amount you finally receive can still differ if the price moves while the transaction is being processed.`,
+        text: `A network fee in ${route.gasAsset}, a trading fee, and on larger orders a worse price. What the site shows before you sign is what applies.`,
       },
     ],
-    check: `Your wallet shows vKOIN on ${route.network}.`,
   };
 }
 
 function bridgeStep() {
   return {
     id: "bridge",
-    title: "Move your vKOIN to Koinos with Vortex",
+    title: "Bridge to Koinos with Vortex",
     context:
-      "You end this step holding native KOIN on the Koinos blockchain, in your Kondor wallet.",
-    body: [
-      "Vortex moves value between Ethereum and Koinos. You hand vKOIN to the bridge on Ethereum, and native KOIN becomes available to the Koinos address you name.",
-      "Vortex opens with a disclaimer stating that the interface and the protocol are provided as is, are not audited, and may not work correctly, which could result in the loss of your tokens. That is the bridge's own wording. Read it before you decide, not after.",
-      "Because you are handing over a token you already hold, rather than the network's own asset, the bridge needs your permission to move that token before the transfer itself. That is two signatures, not one.",
-      "Vortex does not finish on its own. After the transfer is validated you redeem it on the destination side. The bridge states this on its own page: the user is responsible for claiming their tokens on the destination blockchain.",
-    ],
+      "Vortex takes vKOIN on Ethereum and releases native KOIN to the Koinos address you name. It does not finish by itself: you redeem on the Koinos side at the end.",
     micro: [
-      "Open vortexbridge.io using the button below, read the disclaimer, and continue only if you accept it.",
-      "Set From to Ethereum and To to Koinos.",
-      "Choose vKOIN as the token and enter the amount.",
-      "Paste your Kondor address and check the whole address, not just its ends.",
-      "Sign what your wallet asks for, then wait, then complete the redeem step.",
+      "Open Vortex, read its disclaimer, continue only if you accept it.",
+      "From: Ethereum. To: Koinos. Token: vKOIN. Enter the amount.",
+      "Paste your Kondor address and compare the whole of it.",
+      "Sign the permission, then the deposit, in your wallet. Note the transaction hash.",
+      "Wait, then complete the Redeem step.",
     ],
     link: { href: OFFICIAL_LINKS.vortex, label: "Open Vortex" },
     image: {
       src: `${IMG}/vortex-bridge-form.png`,
-      alt: "The Vortex bridge form, with From and To network selectors, an amount field, a token selector, a receiving address field and a note that the user is responsible for claiming their tokens on the destination blockchain.",
-      caption: captured("The form you will fill in. vortexbridge.io"),
+      alt: "The Vortex bridge form with From and To network selectors, a token selector, an amount and a receiving address field.",
+      caption: captured("vortexbridge.io"),
     },
     extraImages: [
       {
-        src: `${IMG}/vortex-networks.png`,
-        alt: "The Vortex bridge network chooser, listing exactly two networks: Koinos and Ethereum.",
-        caption:
-          "The network chooser offers two networks, and only two. This is why Base and Solana have no direct route to Koinos.",
-      },
-      {
-        src: `${IMG}/vortex-tokens.png`,
-        alt: "The Vortex token chooser showing vKOIN, ETH, USDT and USDC.",
-        caption:
-          "Choose vKOIN. The other tokens arrive on Koinos as their own wrapped versions, not as KOIN.",
-      },
-      {
         src: `${IMG}/vortex-redeem.png`,
-        alt: "The Vortex Redeem tab, with fields for a source network, a redeem network and a source transaction ID.",
+        alt: "The Vortex Redeem tab with source network, redeem network and source transaction ID fields.",
         caption:
-          "If you close the page before redeeming, the Redeem tab resumes a transfer from its source transaction ID. Keep that ID.",
+          "The Redeem tab resumes a transfer from its transaction hash if you closed the page too early.",
       },
     ],
     callouts: [
       {
         type: "warning",
-        text: "Save the source transaction hash before you close the page. If the redeem step does not happen, that hash is what lets you resume the transfer from the Redeem tab.",
-      },
-      {
-        type: "warning",
-        text: "A bridge is a piece of software holding your value in transit. Vortex says plainly that it is unaudited and may malfunction. Only move an amount you could afford to lose.",
+        text: "Keep the transaction hash. Without it a half-finished transfer is hard to resume.",
       },
       {
         type: "cost",
-        text: "On the Ethereum side you pay Ethereum network fees, once to permit the token and once to deposit it. The redeem happens on the Koinos side, where transactions use mana rather than a gas fee.",
-      },
-      {
-        type: "warning",
-        text: "Read what the bridge asks for at the redeem stage before you deposit anything. If your Koinos account is brand new and holds no KOIN, it has no mana of its own, and this guide cannot promise that the redeem will be free for you. Check on screen, and ask in the Koinos community first if it is not clear.",
+        text: "Ethereum fees for the permission and the deposit. The redeem runs on Koinos, where transactions use mana — if your Kondor account is new and empty, read what the redeem asks for before you deposit.",
       },
       {
         type: "tip",
-        text: "Move a small amount first and complete the whole journey, including the redeem, before you move a larger amount.",
+        text: "Bridge a small amount first, all the way through the redeem.",
       },
     ],
-    check:
-      "The bridge reports the transfer as complete, and Kondor shows a native KOIN balance.",
   };
 }
 
@@ -547,42 +442,30 @@ function holdStep(route) {
   return {
     id: "hold",
     title: `You now hold vKOIN on ${route.network}`,
-    context: "This is the moment to be clear about what you actually own.",
-    body: [
-      `vKOIN on ${route.network} is a wrapped token. It is intended to represent KOIN and it trades on ${route.network}, but it is a separate token: its price can move differently, and what it is worth depends on the bridges behind it continuing to honour redemptions. It reached ${route.network} from Ethereum over a second, general-purpose bridge, on top of the Vortex bridge that issued it in the first place. It is not native KOIN and it gives you no mana on Koinos.`,
-      "Vortex, the Koinos bridge, connects Koinos and Ethereum only. Its network chooser offers exactly those two. So vKOIN held on Base or Solana has no single step that turns it into native KOIN.",
-      "If you want native KOIN, that decision belongs before you buy: use the Ethereum route from the start. Do not try to send the vKOIN you are holding now to Ethereum or to a Koinos address directly — an ordinary transfer will not cross networks and the funds will not arrive. Moving a wrapped token between networks needs a separate general-purpose bridge, which this guide does not cover and has not tested.",
-    ],
+    context: `This vKOIN is the Ethereum vKOIN moved to ${route.network} through Portal (Wormhole). It sits behind two bridges, it is not native KOIN, and Vortex cannot take it from here.`,
     micro: [
-      "Check that your wallet shows vKOIN and the amount you expected.",
-      "Compare the token address with the official address on this page.",
-      "Decide whether you are content holding vKOIN here, understanding that it depends on the bridge that issued it.",
+      "Check the amount and the token address.",
+      "Do not send it to Ethereum or to a Koinos address — a plain transfer does not cross networks.",
+      "If you want native KOIN, start again on the Ethereum route.",
     ],
     callouts: [
       {
         type: "warning",
-        text: "Holding a wrapped token means depending on the bridge that issued it, for as long as you hold it. That risk does not fade with time.",
+        text: "Holding a wrapped token means trusting the bridges behind it, for as long as you hold it.",
       },
     ],
-    check: `Your wallet shows vKOIN on ${route.network} and the address matches the official one.`,
   };
 }
 
 function koinosFundStep() {
   return {
     id: "fund",
-    title: "Get native KOIN into your Kondor wallet",
+    title: "Get native KOIN into Kondor",
     context:
-      "An empty Koinos account cannot pay for its own transactions yet. This is the step that changes that.",
-    body: [
-      "Koinos has no gas fee. Instead, an account draws mana from the KOIN it holds, and transactions spend mana. An account holding no KOIN has no mana of its own, so it cannot pay for its own transactions. Koinos does allow another account to sponsor a transaction, but that is something an application chooses to offer — never assume one will.",
-      "So KoinDX is not where you start. You need native KOIN in the wallet first, and the way to get it is the Ethereum route: buy vKOIN on Ethereum, then bridge it to Koinos with Vortex, sending it to the Kondor address from the previous step.",
-      "Bring across a little more than the minimum you had in mind. A larger action such as a swap needs more mana than a simple transfer, and mana refills over the following days rather than instantly.",
-    ],
+      "An empty Koinos account has no mana of its own, so it cannot pay for a trade. Fund it through the Ethereum route first, using your Kondor address as the destination.",
     micro: [
-      "Follow the Ethereum route in this guide, using your Kondor address as the destination.",
-      "Wait for the bridge transfer to complete, including the redeem step.",
-      "Check that Kondor shows both a KOIN balance and mana.",
+      "Follow the Ethereum route with your Kondor address in the bridge step.",
+      "Complete the redeem, then check Kondor shows KOIN and mana.",
     ],
     routeLink: {
       wallet: "metamask",
@@ -592,55 +475,34 @@ function koinosFundStep() {
     callouts: [
       {
         type: "warning",
-        text: "Do not send KOIN from an exchange to Kondor unless that exchange explicitly supports withdrawals on the Koinos network. Most do not.",
+        text: "Only withdraw KOIN from an exchange straight to Kondor if that exchange explicitly supports the Koinos network. Most do not.",
       },
     ],
-    check: "Kondor shows a native KOIN balance and available mana.",
   };
 }
 
 function koinDxSwapStep() {
   return {
     id: "koindx",
-    title: "Trade on Koinos with KoinDX",
-    context:
-      "With KOIN and mana in the wallet, you can now trade Koinos assets without leaving Koinos.",
-    body: [
-      "KoinDX is a decentralised exchange that runs on Koinos. It swaps between assets that already exist on Koinos: native KOIN, the project's own token, and assets brought over by the bridge.",
-      "Open it, accept its terms, and connect Kondor from the list of Koinos wallets. Choose the two tokens, read the trade details, and confirm in the extension.",
-      "Keep some KOIN after any trade. It is what gives the account mana for whatever you do next, and a pair that few people trade will give you a worse price on a large order.",
-    ],
+    title: "Trade on KoinDX",
+    context: "KoinDX swaps between assets that already live on Koinos.",
     micro: [
-      "Open app.koindx.com and tick the box to accept the terms.",
-      "Choose Kondor Wallet and confirm the connection in the extension.",
-      "Set the token you are paying with and the token you want.",
-      "Enter the amount and read the details of the trade.",
-      "Confirm the transaction in Kondor.",
+      "Open app.koindx.com and accept its terms.",
+      "Connect Kondor Wallet and confirm in the extension.",
+      "Set both tokens, read the details, confirm in Kondor.",
     ],
     link: { href: OFFICIAL_LINKS.koindx, label: "Open KoinDX" },
     image: {
       src: `${IMG}/koindx-connect.png`,
-      alt: "The KoinDX connect dialog: a checkbox to accept terms and privacy, then a list of wallets with Kondor Wallet, My Koinos Wallet and Wallet Connect.",
-      caption: captured(
-        "KoinDX asks you to accept its terms before it offers the wallet list. app.koindx.com"
-      ),
+      alt: "The KoinDX connect dialog: accept terms, then choose Kondor Wallet, My Koinos Wallet or Wallet Connect.",
+      caption: captured("app.koindx.com"),
     },
-    extraImages: [
-      {
-        src: `${IMG}/koindx-swap.png`,
-        alt: "The KoinDX swap card with two token fields, here showing KOIN and KOINDX, and a Connect button.",
-        caption: captured(
-          "The swap screen before a wallet is connected. It opens on whichever pair it defaults to — set both tokens yourself. app.koindx.com"
-        ),
-      },
-    ],
     callouts: [
       {
         type: "tip",
-        text: "Leave enough KOIN in the account to keep some mana available. Spending down to nothing leaves the account unable to act until it is topped up again.",
+        text: "Keep some KOIN after a trade. It is what gives the account mana.",
       },
     ],
-    check: "Kondor shows the result of the trade.",
   };
 }
 
@@ -650,11 +512,11 @@ export function buildSteps(walletId, routeId) {
   if (!wallet || !route || !isSupported(walletId, routeId)) return [];
 
   if (route.id === "koinos") {
-    return [walletSetupStep(wallet), koinosFundStep(), koinDxSwapStep()];
+    return [walletSetupStep(wallet, route), koinosFundStep(), koinDxSwapStep()];
   }
 
   const steps = [
-    walletSetupStep(wallet),
+    walletSetupStep(wallet, route),
     buyStep(route),
     withdrawStep(wallet, route),
     swapStep(wallet, route),
@@ -673,162 +535,112 @@ export function buildSteps(walletId, routeId) {
 
 export const INTRO = {
   title: "How to buy KOIN",
-  lead:
-    "A step-by-step guide for people who have never bought a cryptocurrency before.",
+  lead: "A short guide for people who have never bought crypto before.",
   paragraphs: [
-    "This guide starts at the very beginning. You do not need to own any crypto, and you do not need to know what a wallet is.",
-    "Choose your wallet and your route below, and the steps rewrite themselves for the tools you actually use. Every step says where your money is before it starts and where it will be when it finishes.",
-    "Take your time. Send a small test amount before a large one. Nothing here is urgent.",
+    "Pick your wallet and where you want to buy. The steps below change to match. Send a small test amount before a large one — nothing here is urgent.",
   ],
 };
 
 export const RISK_NOTE = {
-  title: "Read this before you choose",
+  title: "Before you start",
   points: [
-    "Buying KOIN means using several independent services in a row: an exchange, a decentralised exchange, and in one route a bridge. Each is run by someone else and each can fail.",
-    "How many bridges you end up depending on differs by route. vKOIN on Ethereum is issued by the Vortex bridge. The vKOIN on Base and on Solana got there from Ethereum over a second, general-purpose bridge, so holding either means trusting two bridges at once, for as long as you hold it.",
-    "The Vortex bridge, which is how wrapped vKOIN becomes native KOIN, opens with its own disclaimer: the interface and protocol are provided as is, are not audited, and might not work correctly, which could result in the loss of your tokens. Only use it with an amount you could afford to lose.",
-    "Blockchain transactions cannot be reversed. There is no support line that can undo a mistake for you.",
+    "You will use an exchange, a swap site and, for native KOIN, the Vortex bridge. Each is run by someone else, each can fail, and nothing can be reversed.",
+    "Vortex's own disclaimer says it is unaudited and may lose your tokens. Use only what you could afford to lose.",
   ],
 };
 
 export const NATIVE_VS_WRAPPED = {
-  title: "There are two different things called KOIN",
-  intro:
-    "This trips up almost everyone at the start, and it is worth two minutes now to save an expensive mistake later.",
+  title: "KOIN and vKOIN are not the same thing",
+  intro: null,
   columns: [
     {
       name: "Native KOIN",
-      where: "On the Koinos blockchain",
+      where: "On Koinos",
       points: [
-        "The token of the Koinos blockchain itself.",
-        "Gives the account mana, which is what Koinos transactions use instead of a fee.",
+        "The token of the Koinos blockchain.",
+        "Gives your account mana, which pays for transactions.",
         "Held in a Koinos wallet such as Kondor.",
-        "Needed to use Koinos applications.",
       ],
     },
     {
       name: "vKOIN",
       where: "On Ethereum, Base or Solana",
       points: [
-        "A wrapped token. The Vortex bridge issues it on Ethereum; the Base and Solana versions were then moved there over a second bridge.",
-        "Gives no mana and does nothing on Koinos.",
-        "Held in an Ethereum or Solana wallet such as MetaMask, Rabby or Phantom.",
-        "Tradeable where it lives, and dependent on the bridge — or, on Base and Solana, the two bridges — continuing to honour redemptions.",
+        "A wrapped KOIN, issued on Ethereum by the Vortex bridge.",
+        "The Base and Solana copies were moved there through Portal (Wormhole) — two bridges deep.",
+        "No mana, and it cannot be used on Koinos.",
       ],
     },
   ],
   outro: [
-    "Sending vKOIN to a Koinos address does not turn it into KOIN. The two live on different blockchains, and the Vortex bridge is what moves value between them.",
-    "Which one suits you depends on what you want to do. vKOIN can be traded on the network it lives on. Native KOIN is what Koinos applications use, and holding it does not depend on a bridge. Both can lose value.",
+    "Sending vKOIN to a Koinos address does not convert it; only Vortex moves value between Ethereum and Koinos. If you see wKOIN mentioned, that was an older wrapper from Chainge and is not used here.",
   ],
 };
 
 export const MANA = {
-  title: "Mana, and why your first Koinos transaction is different",
+  title: "Mana",
   paragraphs: [
-    "Koinos has no gas fee. Instead, holding KOIN gives the account mana, and transactions spend mana. Mana refills over the following days, so the same KOIN can be used again and again.",
-    "This has one consequence beginners run into: an account holding no KOIN has no mana of its own, and an account holding very little has very little. A swap needs more mana than a simple transfer. It is the reason a brand-new Koinos wallet cannot pay for a trade until KOIN reaches it. Koinos does let one account pay the mana for another, so an application can sponsor a transaction, but that is the application's choice and not something to count on.",
-    "The practical advice is short. Bring across a bit more than the minimum you had in mind, do not try to move your entire balance in one transaction, and if a transaction is refused for lack of mana, wait rather than repeat it.",
+    "Koinos has no gas fee. Holding KOIN gives your account mana; transactions spend it and it refills over a few days. An empty account has no mana of its own, so it cannot pay for its own transactions — that is why a new Kondor wallet must receive KOIN before it can do anything. Bring a little more than the minimum you had in mind, and don't move your whole balance at once.",
   ],
-  linkLabel: "Read the mana documentation",
+  linkLabel: "Mana documentation",
   linkHref: OFFICIAL_LINKS.mana,
 };
 
 export const SAFETY = {
-  title: "Before you send anything, check these",
+  title: "Check before every transaction",
   items: [
-    "Open wallets, swap sites and Vortex from the links on this page, then check your browser's address bar. Convincing fake copies of these sites exist.",
-    "Never type or photograph your recovery phrase. No website, wallet support agent or member of the Koinos community will ever need it.",
-    "Read the asset and the network together. ETH on Base and ETH on Ethereum are not interchangeable.",
-    "Compare token addresses, not names or logos. Anyone can create a token called vKOIN.",
-    "Check a destination address in full, including the middle. Attackers generate addresses that match yours at the start and the end.",
-    "Copy addresses from your wallet's receive screen, never from a transaction list or a message.",
-    "Send a small test amount first, and wait for it to arrive.",
-    "Keep enough ETH or SOL for the steps still to come. Do not swap your entire balance.",
-    "Read every wallet pop-up. The site, token, amount and destination should match the step you are on.",
-    "Connecting a wallet is not the same as giving permission to move a token. A permission with an unlimited amount deserves more care than one for the amount you are actually using.",
-    "Disconnecting a wallet from a site does not cancel a token permission you already granted. Those are revoked separately.",
-    "If a transfer is pending, do not repeat it. Save the transaction hash and check its status first.",
-    "Ignore anyone who contacts you privately offering help, recovery, a better price or a faster bridge. That is how people are robbed.",
+    "Open every site from this page, then check the address bar.",
+    "Never type or photograph your recovery phrase. Nobody legitimate needs it.",
+    "Asset and network together: ETH on Base is not ETH on Ethereum.",
+    "Compare token and destination addresses in full, not just the ends.",
+    "Small test amount first. Keep some ETH or SOL for the next step.",
+    "Read every wallet pop-up. Site, token, amount and destination must match the step you are on.",
+    "Ignore anyone who contacts you privately offering help, recovery or a better price.",
   ],
 };
 
 export const FAQS = [
   {
-    q: "Can I buy KOIN with a credit card?",
-    a: "Not directly, in most countries. You buy ETH or SOL on an exchange first, move it to your own wallet, and then swap it for vKOIN. To end up with native KOIN, the Ethereum route then bridges that vKOIN across with Vortex.",
+    q: "Can I buy KOIN with a card?",
+    a: "Not directly. You buy ETH or SOL on an exchange, move it to your own wallet, swap it for vKOIN, and — for native KOIN — bridge that through Vortex from Ethereum.",
   },
   {
-    q: "Which route should I choose?",
-    a: "If you want native KOIN, the Ethereum route is the one the bridge supports end to end. Base and Solana usually have lower network fees but stop at vKOIN, because Vortex does not connect those networks to Koinos. The Koinos route is not a way to buy your first KOIN; it is what you use once you already hold some.",
+    q: "Which route should I take?",
+    a: "For native KOIN: Ethereum, the only one Vortex serves end to end. Base and Solana are cheaper to trade on but end at vKOIN. The Koinos route is for when you already hold KOIN.",
   },
   {
-    q: "What is the difference between KOIN and vKOIN?",
-    a: "Native KOIN lives on the Koinos blockchain and gives the account mana. vKOIN is a wrapped token on Ethereum, Base or Solana, issued to represent KOIN there. They are separate tokens, and sending one to the other's network does not convert it.",
+    q: "Why can't I start on KoinDX?",
+    a: "A Koinos account gets mana from the KOIN it holds. An empty one has none of its own, so it cannot pay for a swap. Something has to arrive first.",
   },
   {
-    q: "Why can I not just start on KoinDX?",
-    a: "KoinDX runs on Koinos, and a Koinos account draws its mana from the KOIN it holds. An account with no KOIN has no mana of its own, so it cannot pay for a swap. Something has to arrive first, which is what the bridge is for.",
+    q: "What does it cost?",
+    a: "An exchange fee, a withdrawal fee, a network fee per transaction, a trading fee, and a worse price on large orders. Amounts change constantly — read the screen before each confirmation.",
   },
   {
-    q: "Do I have to use the bridge?",
-    a: "Only if you want native KOIN. You can hold vKOIN on the network where you bought it without bridging, but then you keep depending on the bridge that issued it, and you get no mana on Koinos.",
+    q: "My vKOIN doesn't show in my wallet.",
+    a: "Probably not lost. Check the transaction in the block explorer, then add the token using the official address on this page. Never add an address someone sent you.",
   },
   {
-    q: "Why do I need to keep some ETH or SOL?",
-    a: "Ethereum, Base and Solana charge a network fee for every action, paid in their own asset. You need it to swap, to permit a token, and to start a bridge transfer. If you swap your whole balance you will not be able to do the next step.",
-  },
-  {
-    q: "What will all of this cost?",
-    a: "Typically an exchange fee to buy, a withdrawal fee to leave the exchange, a network fee for each transaction, a trading fee on the swap, and the effect of your own order on the price. The amounts change constantly and depend on the services you choose, so read the figures on screen before each confirmation rather than relying on an estimate.",
-  },
-  {
-    q: "I received less than the price I first saw. Why?",
-    a: "Prices move while a swap is being prepared, and a large order in a small pool moves the price itself. Before you sign, a swap shows a minimum you should receive for that quote. Treat it as a floor for that attempt, not a guarantee about later ones.",
-  },
-  {
-    q: "My vKOIN is not showing in my wallet. Is it lost?",
-    a: "Probably not. Wallets do not always list a token automatically. Check the transaction in the network explorer first. In MetaMask or Rabby you can add the token using the official contract address on this page. Never add a contract address that someone sent you privately.",
-  },
-  {
-    q: "My bridge transfer is pending. Should I start it again?",
-    a: "No. Starting again can send a second transfer. Save the source transaction hash. Vortex has a Redeem tab where a transfer can be resumed from that hash if the redeem step did not complete.",
-  },
-  {
-    q: "Can Koinos reverse a transaction for me?",
-    a: "No. Blockchain transactions cannot be reversed once confirmed, and Koinos does not control your wallet, your exchange account, the swap site or the bridge. This is why checking before confirming matters so much.",
-  },
-  {
-    q: "How much should I buy?",
-    a: "That is your decision, and only you know your situation. Crypto assets can lose value, including all of it. Exchanges, swaps and bridges may also have their own minimum amounts.",
+    q: "My bridge transfer is stuck.",
+    a: "Don't start another. Take the source transaction hash to Vortex's Redeem tab, which resumes a transfer whose redeem did not complete.",
   },
   {
     q: "Is this financial advice?",
-    a: "No. This page explains how a technical process works. It does not tell you whether to buy, how much, or when, and it does not endorse any of the exchanges, wallets, decentralised exchanges or bridges it names.",
+    a: "No. It explains a process. It does not say whether to buy, how much, or endorse any service named here. KOIN and vKOIN can lose all their value.",
   },
 ];
 
 export const GLOSSARY = [
-  ["Address", "A public identifier that receives tokens. Safe to share, but it only works on its own network."],
-  ["Bridge", "A service that moves value between two blockchains. Vortex is the bridge between Ethereum and Koinos."],
-  ["Connecting a wallet", "Letting a website see your address so it can show your balances. On its own it does not let the site move anything."],
-  ["Contract address", "The unique identifier of a token. The only reliable way to tell a real token from a copy."],
-  ["DEX", "A decentralised exchange. It swaps tokens straight from your wallet, without holding your funds."],
-  ["Gas or network fee", "What a network charges to process a transaction, paid in that network's own asset."],
-  ["Liquidity", "How much of a token is available to trade. Low liquidity makes large trades more expensive."],
-  ["Mana", "The renewable resource Koinos transactions use. An account's KOIN balance is what gives it mana."],
-  ["Native token", "A token that exists on its own blockchain, rather than as a representation elsewhere."],
-  ["Price impact", "How much your own order moves the price against you. It grows with the size of the trade."],
-  ["Recovery phrase", "The secret words that restore a wallet. Anyone who has them controls the wallet completely."],
-  ["Slippage", "How much price movement you accept between requesting a swap and it being processed."],
-  ["Spending permission", "Separate consent that lets a contract move a token you already hold, up to a set amount. It stays in place until revoked."],
-  ["Transaction hash", "The public reference for a transaction. Use it to look up what happened."],
-  ["Wrapped token", "A token on one blockchain issued to represent an asset from another. vKOIN is a wrapped representation of KOIN."],
+  ["Address", "Where tokens are received. Safe to share, but it only works on its own network."],
+  ["Bridge", "Moves value between two blockchains. Vortex: Ethereum ↔ Koinos. Portal (Wormhole): Ethereum ↔ Base / Solana."],
+  ["Contract address", "The unique identifier of a token, and the only reliable way to tell a real one from a copy."],
+  ["DEX", "A swap site that trades straight from your wallet without holding your funds."],
+  ["Mana", "What Koinos transactions use instead of a fee. Comes from holding KOIN and refills over time."],
+  ["Network fee", "What Ethereum, Base or Solana charge per transaction, paid in ETH or SOL."],
+  ["Recovery phrase", "The words that restore a wallet. Whoever has them controls it."],
+  ["Wrapped token", "A token on one chain that represents an asset from another. vKOIN is wrapped KOIN."],
 ];
 
 export const DISCLAIMER = [
-  "This guide is educational information only. It is not financial, investment, legal or tax advice. KOIN and vKOIN can lose value, including all of it.",
-  "Exchanges, wallets, decentralised exchanges and bridges are independent services with their own risks, terms, fees, limits and regional availability. Koinos does not guarantee a price, a quote, an amount received, a completion time, available liquidity, or that any service will keep working. The Vortex bridge states that it is unaudited and may malfunction.",
-  "Blockchain transactions cannot be reversed. Before signing anything, check the website address, the network, the token contract, the destination address, the amount and the fees shown on screen. You are responsible for your own wallet security and for the laws that apply where you live.",
+  "This guide is educational information only, not financial, legal or tax advice. KOIN and vKOIN can lose all their value. Exchanges, wallets, swap sites and bridges are independent services with their own risks, fees and availability; Koinos does not guarantee any price, amount, completion time or that a service keeps working, and Vortex states that it is unaudited. Blockchain transactions cannot be reversed. Check the site address, network, token address, destination, amount and fees before you sign anything.",
 ];
