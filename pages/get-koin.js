@@ -532,7 +532,6 @@ export default function GetKoinPage() {
 
                 <div className={styles.walletNotes}>
                   <h3 className={styles.h3}>Specific to {activeWallet.name}</h3>
-                  <p className={styles.bodyText}>{activeWallet.summary}</p>
                   <ul className={styles.notesList}>
                     {activeWallet.quirks.map((quirk, i) => (
                       <li key={i}>{quirk}</li>
@@ -648,9 +647,9 @@ export default function GetKoinPage() {
               </p>
             ))}
             <p className={styles.fineprint}>
-              Steps last verified {LAST_VERIFIED}. Interfaces change; when a screen
-              differs from a screenshot here, trust what your own screen says, and
-              ask in the{" "}
+              Steps last verified {LAST_VERIFIED}. Interfaces change. If a screen
+              differs from a screenshot here, stop, check the network, token
+              address, destination and amount before signing, and ask in the{" "}
               <Link
                 href={OFFICIAL_LINKS.telegram}
                 target="_blank"

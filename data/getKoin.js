@@ -44,7 +44,6 @@ export const WALLETS = [
     id: "metamask",
     name: "MetaMask",
     family: "Ethereum and Base",
-    summary: "The most common browser wallet for Ethereum and Base.",
     install: "https://metamask.io/download",
     installLabel: "metamask.io/download",
     routes: ["ethereum", "base"],
@@ -60,8 +59,6 @@ export const WALLETS = [
     id: "rabby",
     name: "Rabby",
     family: "Ethereum and Base",
-    summary:
-      "A browser wallet for Ethereum-style networks that simulates each transaction before you sign it.",
     install: "https://rabby.io/",
     installLabel: "rabby.io",
     routes: ["ethereum", "base"],
@@ -77,26 +74,22 @@ export const WALLETS = [
     id: "phantom",
     name: "Phantom",
     family: "Solana, Ethereum and Base",
-    summary:
-      "A browser wallet that started on Solana and now also supports Ethereum and Base.",
     install: "https://phantom.com/download",
     installLabel: "phantom.com/download",
     routes: ["ethereum", "base", "solana"],
-    addressKind: "a separate address for each network",
+    addressKind: "two addresses",
     addressNote:
-      "Copy the one for the network in your plan; the Solana and Ethereum addresses look nothing alike.",
+      "One 0x address shared by Ethereum and Base, and a separate Solana address. Copy the one for the network in your plan.",
     quirks: [
-      "Open Receive and pick the network first — Phantom shows a different address for each.",
-      "On Solana, tokens usually appear by themselves. On Ethereum and Base you may need to add vKOIN by address.",
-      "Keep a little SOL or ETH on the network you use; every action costs a small fee.",
+      "Open Receive and pick the network first. Ethereum and Base share one address; Solana has its own.",
+      "Phantom finds tokens by itself and has no import-by-address. If vKOIN is missing, check the transaction in the explorer, then Phantom's hidden tokens list.",
+      "Keep some SOL or ETH on the network you use; every transaction costs a fee, and on Ethereum it is not always small.",
     ],
   },
   {
     id: "kondor",
     name: "Kondor",
     family: "Koinos",
-    summary:
-      "The Koinos browser wallet. It holds native KOIN and connects to KoinDX and the Koinos side of Vortex.",
     install: "https://kondorwallet.com/",
     installLabel: "kondorwallet.com",
     routes: ["koinos"],
@@ -113,9 +106,11 @@ export const WALLETS = [
 //
 // Vortex bridges Koinos <-> Ethereum only (its network chooser offers exactly
 // those two). vKOIN on Base and Solana is the Ethereum vKOIN moved there through
-// Portal (Wormhole) — verified on-chain: the Base contract reports Wormhole
-// chain id 2 (Ethereum) and the Solana mint authority is the Wormhole token
-// bridge. So those routes stop at vKOIN.
+// Portal (Wormhole). Evidence: the Base contract answers Wormhole
+// TokenImplementation.chainId() = 2 (Ethereum origin), the Solana mint
+// authority is the Wormhole token bridge, and the project's own announcements
+// (data/history-content.json) describe the Wormhole/Portal route. So those
+// routes stop at vKOIN.
 //
 // The Koinos route is not a way to buy a first KOIN: an empty Koinos account
 // has no mana of its own.
@@ -423,10 +418,6 @@ function bridgeStep() {
     ],
     callouts: [
       {
-        type: "warning",
-        text: "Keep the transaction hash. Without it a half-finished transfer is hard to resume.",
-      },
-      {
         type: "cost",
         text: "Ethereum fees for the permission and the deposit. The redeem runs on Koinos, where transactions use mana — if your Kondor account is new and empty, read what the redeem asks for before you deposit.",
       },
@@ -595,6 +586,7 @@ export const SAFETY = {
     "Compare token and destination addresses in full, not just the ends.",
     "Small test amount first. Keep some ETH or SOL for the next step.",
     "Read every wallet pop-up. Site, token, amount and destination must match the step you are on.",
+    "A token permission outlives disconnecting from a site. Approve only the amount you need, and revoke it afterwards.",
     "Ignore anyone who contacts you privately offering help, recovery or a better price.",
   ],
 };
