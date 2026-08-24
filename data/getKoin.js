@@ -573,7 +573,7 @@ function koinosFundStep() {
     id: "fund",
     title: "Get native KOIN into your Kondor wallet",
     context:
-      "An empty Koinos account cannot do anything yet. This is the step that changes that.",
+      "An empty Koinos account cannot pay for its own transactions yet. This is the step that changes that.",
     body: [
       "Koinos has no gas fee. Instead, an account draws mana from the KOIN it holds, and transactions spend mana. An account holding no KOIN has no mana of its own, so it cannot pay for its own transactions. Koinos does allow another account to sponsor a transaction, but that is something an application chooses to offer — never assume one will.",
       "So KoinDX is not where you start. You need native KOIN in the wallet first, and the way to get it is the Ethereum route: buy vKOIN on Ethereum, then bridge it to Koinos with Vortex, sending it to the Kondor address from the previous step.",
@@ -728,7 +728,7 @@ export const MANA = {
   title: "Mana, and why your first Koinos transaction is different",
   paragraphs: [
     "Koinos has no gas fee. Instead, holding KOIN gives the account mana, and transactions spend mana. Mana refills over the following days, so the same KOIN can be used again and again.",
-    "This has one consequence beginners run into: an account holding no KOIN has no mana of its own, and an account holding very little has very little. A swap needs more mana than a simple transfer. It is the reason a brand-new Koinos wallet cannot trade until KOIN reaches it. Koinos does let one account pay the mana for another, so an application can sponsor a transaction, but that is the application's choice and not something to count on.",
+    "This has one consequence beginners run into: an account holding no KOIN has no mana of its own, and an account holding very little has very little. A swap needs more mana than a simple transfer. It is the reason a brand-new Koinos wallet cannot pay for a trade until KOIN reaches it. Koinos does let one account pay the mana for another, so an application can sponsor a transaction, but that is the application's choice and not something to count on.",
     "The practical advice is short. Bring across a bit more than the minimum you had in mind, do not try to move your entire balance in one transaction, and if a transaction is refused for lack of mana, wait rather than repeat it.",
   ],
   linkLabel: "Read the mana documentation",
