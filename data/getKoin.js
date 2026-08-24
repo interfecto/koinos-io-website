@@ -243,7 +243,10 @@ const WALLET_IMAGES = {
     address: {
       src: `${IMG}/phantom-receive.png`,
       alt: "Two Phantom screens: the Receive button, then a list of networks each with its own address to copy.",
-      caption: sourced("One address per network.", "help.phantom.com"),
+      caption: sourced(
+        "Receive lists every network. Ethereum and Base show the same 0x address; Solana has its own.",
+        "help.phantom.com"
+      ),
     },
   },
   kondor: {
