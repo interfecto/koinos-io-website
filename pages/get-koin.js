@@ -34,11 +34,7 @@ function normaliseRoute(value) {
   return ROUTES.some((r) => r.id === value) ? value : DEFAULT_ROUTE;
 }
 
-function shortAddress(address) {
-  return `${address.slice(0, 6)}…${address.slice(-4)}`;
-}
-
-function CopyButton({ value, label }) {
+function CopyButton({ value, label, subject }) {
   const [state, setState] = useState("idle");
 
   async function handleCopy() {
@@ -51,18 +47,32 @@ function CopyButton({ value, label }) {
       // Say so, rather than looking like nothing happened.
       setState("failed");
     }
-    window.setTimeout(() => setState("idle"), 3000);
+    window.setTimeout(() => setState("idle"), 4000);
   }
 
   return (
-    <button
-      type="button"
-      className={styles.copyButton}
-      onClick={handleCopy}
-      aria-label={label}
-    >
-      {state === "copied" ? "Copied" : state === "failed" ? "Select it" : "Copy"}
-    </button>
+    <>
+      <button
+        type="button"
+        className={styles.copyButton}
+        onClick={handleCopy}
+        aria-label={state === "idle" ? label : undefined}
+      >
+        {state === "copied"
+          ? "Copied"
+          : state === "failed"
+          ? "Copy failed"
+          : "Copy"}
+      </button>
+      {/* The button's own label is static, so the outcome is announced here. */}
+      <span role="status" className={styles.srOnly}>
+        {state === "copied"
+          ? `${subject} copied to the clipboard.`
+          : state === "failed"
+          ? `Could not copy the ${subject}. Select the address in the table and copy it manually.`
+          : ""}
+      </span>
+    </>
   );
 }
 
@@ -255,7 +265,13 @@ export default function GetKoinPage() {
     (nextWallet, nextRoute) => {
       if (nextWallet === wallet && nextRoute === route) return;
       router.push(
-        { pathname: "/get-koin", query: { wallet: nextWallet, route: nextRoute } },
+        {
+          pathname: "/get-koin",
+          query: { wallet: nextWallet, route: nextRoute },
+          // Keep whatever section the reader arrived at or scrolled to, so
+          // changing a choice does not quietly rewrite a shared link.
+          hash: router.asPath.split("#")[1],
+        },
         undefined,
         { shallow: true, scroll: false }
       );
@@ -389,6 +405,7 @@ export default function GetKoinPage() {
                           <CopyButton
                             value={contract.address}
                             label={`Copy the ${contract.chain} vKOIN contract address`}
+                            subject={`${contract.chain} vKOIN contract address`}
                           />
                         </td>
                       </tr>

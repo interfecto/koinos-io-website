@@ -496,10 +496,15 @@
   background: #000;
 }
 
+/* Vendor documentation screenshots of extension pop-ups are portrait and
+   often light-themed; give them a neutral mat so they sit on the dark page
+   without looking cropped, and keep them phone-width. */
 .shotNarrow img {
   width: auto;
-  max-width: min(280px, 100%);
+  max-width: min(320px, 100%);
   margin: 0 auto;
+  padding: 0.75rem;
+  background: var(--gk-panel-2);
 }
 
 .shot figcaption {
