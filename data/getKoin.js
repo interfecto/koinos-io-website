@@ -19,12 +19,18 @@ export const CONTRACTS = VKOIN_CONTRACTS;
 export const OFFICIAL_LINKS = {
   vortex: "https://vortexbridge.io/bridge",
   koindx: SWAP_LINKS.koindx,
-  // kondorwallet.com is the canonical entry point and currently points at the
-  // Kondor Wallet v2 listing below. The older "Kondor" listing (extension id
-  // ghipkefk…) is a previous version — do not link it.
-  kondor: "https://kondorwallet.com/",
-  kondorStore:
-    "https://chromewebstore.google.com/detail/kondor-wallet/hfcdnighclikmdfkdcecohgnfdglpdmp",
+  // The guide links Kondor 1.3 (Chrome listing "Kondor", id ghipkefk…), not
+  // Kondor 2 from kondorwallet.com. Kondor 2.0.3's "Use free mana" keeps the
+  // dApp's rc_limit (= the signer's own mana, 0 on a new account) and retries
+  // once with +1 KOIN, so a new account cannot pay the ~1.9 KOIN Vortex redeem.
+  // Kondor 1 dry-runs every transaction and, when the signer's mana is short
+  // and the sharer has mana, switches the payer to the sharer by itself
+  // (estimateAndAdjustMana); verified
+  // from a 0-KOIN account on mainnet 26 Aug 2026 (tx 0x1220ccd3…d33d).
+  // Bug reported to the Kondor team. Switch back to kondorwallet.com once
+  // Kondor 2 handles it.
+  kondor:
+    "https://chromewebstore.google.com/detail/kondor/ghipkefkpgkladckmlmdnadmcchefhjl",
   mana: "https://docs.koinos.io/overview/mana/",
   telegram: "https://telegram.koinos.io",
 };
@@ -90,13 +96,16 @@ export const WALLETS = [
     id: "kondor",
     name: "Kondor",
     family: "Koinos",
-    install: "https://kondorwallet.com/",
-    installLabel: "kondorwallet.com",
+    install:
+      "https://chromewebstore.google.com/detail/kondor/ghipkefkpgkladckmlmdnadmcchefhjl",
+    installLabel: "the Chrome Web Store (Kondor 1.3)",
     routes: ["koinos"],
     addressKind: "a Koinos address",
     addressNote: "It cannot receive anything sent on Ethereum, Base or Solana.",
     quirks: [
       "Kondor shows mana next to your KOIN balance. Mana is what Koinos transactions use.",
+      "When your account cannot pay a transaction's mana and Kondor's free-mana account can, the signing pop-up switches the payer to that account by itself — you see it in the Payer field.",
+      "This guide is written for Kondor 1.3, the listing linked above — not Kondor 2. The FAQ explains why.",
       "Its receive screen says to send only Koinos assets to it. Take that literally.",
     ],
   },
@@ -113,7 +122,8 @@ export const WALLETS = [
 // routes stop at vKOIN.
 //
 // The Koinos route is not a way to buy a first KOIN: an empty Koinos account
-// has no mana of its own.
+// holds nothing to trade. Its lack of mana is not the blocker — Kondor can have
+// its free-mana sharer pay instead (see the redeem note in bridgeStep).
 
 export const ROUTES = [
   {
@@ -174,7 +184,7 @@ export const ROUTES = [
     outcome: "a working Koinos wallet",
     outcomeShort: "Needs KOIN first",
     plan: "Install Kondor → receive native KOIN through the Ethereum route → trade on KoinDX.",
-    note: "Not a way to buy your first KOIN. An empty Koinos account has no mana of its own, so it cannot pay for a trade yet.",
+    note: "Not a way to buy your first KOIN — an empty Koinos account has nothing to trade yet. Fund it first through the Ethereum route.",
   },
 ];
 
@@ -250,12 +260,10 @@ const WALLET_IMAGES = {
     },
   },
   kondor: {
-    address: {
-      src: `${IMG}/kondor-receive.png`,
-      alt: "The Kondor Receive KOIN screen with a QR code, the Koinos address and a warning to send only Koinos tokens to it.",
-      caption: sourced("Kondor's receive screen.", "kondorwallet.com"),
-      frame: "phone",
-    },
+    // No Kondor 1.3 screenshot yet: kondorwallet.com only shows Kondor 2, and
+    // the Chrome Web Store page carries no real screenshots. Add one from the
+    // extension itself (Receive view) when available.
+    address: null,
   },
 };
 
@@ -286,18 +294,22 @@ function kondorSetupStep() {
     id: "kondor",
     title: "Install Kondor for the Koinos side",
     context:
-      "Native KOIN lives on Koinos and your Ethereum wallet cannot hold it. Start at kondorwallet.com and follow its download link — don't search the store, older listings still exist.",
+      "Native KOIN lives on Koinos and your Ethereum wallet cannot hold it. Install Kondor 1.3 from the link below; this guide is written for that version (the FAQ explains why not Kondor 2).",
     micro: [
-      "Open kondorwallet.com and add the extension it links to.",
+      "Add the Kondor extension from the link above.",
       "Create a wallet and write the recovery phrase on paper.",
       "Open Receive and copy your Koinos address.",
     ],
-    link: { href: OFFICIAL_LINKS.kondor, label: "Open kondorwallet.com" },
+    link: { href: OFFICIAL_LINKS.kondor, label: "Open Kondor in the Chrome Web Store" },
     image: WALLET_IMAGES.kondor.address,
     callouts: [
       {
         type: "warning",
         text: "Only Koinos assets can be sent to this address.",
+      },
+      {
+        type: "tip",
+        text: "A new Koinos account holds no KOIN, so it has no mana of its own yet. Kondor 1.3 covers that by itself: when your account cannot pay and its free-mana account can, the signing pop-up puts that account in the Payer field. Nothing to switch on — it carries you through the redeem in the last step.",
       },
     ],
   };
@@ -392,37 +404,59 @@ function swapStep(wallet, route) {
   };
 }
 
+// Verified 26 Aug 2026 against the live vortexbridge.io bundle and mainnet:
+// the redeem is complete_transfer (entry 0x4d4d3ef9) on the Koinos bridge
+// contract 1aqHtNRDkiAZeFtuM8fRFuurcje6eHqF8. The frontend sets no payer and
+// its relayer list is empty, so the signing account pays. Kondor 1.3's default
+// "Optimize mana" flow dry-runs the transaction and, when the signer's mana is
+// short and the sharer has enough, switches the payer to Kondor's sharer
+// 162GhJwsciDiKsgwzj2t6VoFHt3RMzGKdG by itself (authorize() accepts any
+// transaction, 100 KOIN of mana cap per tx), setting rc_limit from rc_used plus
+// the sharer's offset; otherwise it stops with "Free mana service is congested"
+// or "unavailable due to lack of funds". The "Use free mana" box under Advanced
+// is only the manual form. Walked end to end on mainnet
+// 26 Aug 2026 from a brand-new 0-KOIN account: the sharer paid, rc_used 1.74 KOIN
+// (tx 0x1220ccd3…d33d). Kondor 2.0.3 fails this case (see OFFICIAL_LINKS).
+// Expired validator signatures are renewed with request_new_signatures,
+// another Koinos transaction.
 function bridgeStep() {
   return {
     id: "bridge",
     title: "Bridge to Koinos with Vortex",
     context:
-      "Vortex takes vKOIN on Ethereum and releases native KOIN to the Koinos address you name. It does not finish by itself: you redeem on the Koinos side at the end.",
+      "Vortex takes vKOIN on Ethereum and releases native KOIN to the Koinos address you name. It does not finish by itself: you redeem on the Koinos side, and Vortex does not pay for that transaction — by default, the account that signs it does.",
     micro: [
-      "Open Vortex, read its disclaimer, continue only if you accept it.",
-      "From: Ethereum. To: Koinos. Token: vKOIN. Enter the amount.",
+      "Open Vortex, read its disclaimer, then set From: Ethereum, To: Koinos, Token: vKOIN, and the amount.",
       "Paste your Kondor address and compare the whole of it.",
       "Sign the permission, then the deposit, in your wallet. Note the transaction hash.",
-      "Wait, then complete the Redeem step.",
+      "Wait, then press Redeem and Sign in Kondor's pop-up — while your account is empty, Kondor pays the mana from its free-mana account by itself, as long as that account has mana to spare. This delivers your KOIN.",
     ],
     link: { href: OFFICIAL_LINKS.vortex, label: "Open Vortex" },
     image: {
       src: `${IMG}/vortex-bridge-form.png`,
-      alt: "The Vortex bridge form with From and To network selectors, a token selector, an amount and a receiving address field.",
-      caption: captured("vortexbridge.io"),
+      alt: "The Vortex bridge form filled in: From Ethereum, To Koinos, 2 vKOIN, a receiving address (blurred), and the summary You will receive 2 KOIN above the Bridge button.",
+      caption:
+        "The bridge form filled in: 2 vKOIN from Ethereum to Koinos, with the Kondor address as the receiving address. vortexbridge.io, captured 26 August 2026.",
     },
     extraImages: [
       {
         src: `${IMG}/vortex-redeem.png`,
-        alt: "The Vortex Redeem tab with source network, redeem network and source transaction ID fields.",
+        alt: "The Vortex Redeem tab showing source network Ethereum, redeem network Koinos, the source transaction ID (blurred), a status box with Tx Status signed, block time, expiry and three signatures, and a Redeem button.",
         caption:
-          "The Redeem tab resumes a transfer from its transaction hash if you closed the page too early.",
+          "The Redeem tab once the validators have signed: press Redeem. If you closed the page too early, paste the source transaction ID here to resume. Captured 26 August 2026.",
+      },
+      {
+        src: `${IMG}/kondor-sign.png`,
+        alt: "Kondor 1.3's signing pop-up for the redeem: the site vortexbridge.io, the operation Complete transfer, a koin Transfer event of 2 KOIN, an Advanced link, a warning about unknown contracts, and Cancel and Sign buttons.",
+        caption:
+          "Kondor 1.3 asking you to sign the redeem: the operation is Complete transfer and the event shows the KOIN you receive. Press Sign. Captured 26 August 2026.",
+        frame: "phone",
       },
     ],
     callouts: [
       {
         type: "cost",
-        text: "Ethereum fees for the permission and the deposit. The redeem runs on Koinos, where transactions use mana — if your Kondor account is new and empty, read what the redeem asks for before you deposit.",
+        text: "Ethereum fees for the permission and the deposit. The redeem runs on Koinos and spends mana instead of a fee; while your account is still empty, Kondor's free-mana account covers it by itself if it can — if not, Kondor says so and you try again later.",
       },
       {
         type: "tip",
@@ -456,7 +490,7 @@ function koinosFundStep() {
     id: "fund",
     title: "Get native KOIN into Kondor",
     context:
-      "An empty Koinos account has no mana of its own, so it cannot pay for a trade. Fund it through the Ethereum route first, using your Kondor address as the destination.",
+      "KoinDX trades between assets that are already on Koinos, so something has to arrive first. Fund the account through the Ethereum route, using your Kondor address as the destination.",
     micro: [
       "Follow the Ethereum route with your Kondor address in the bridge step.",
       "Complete the redeem, then check Kondor shows KOIN and mana.",
@@ -574,7 +608,9 @@ export const NATIVE_VS_WRAPPED = {
 export const MANA = {
   title: "Mana",
   paragraphs: [
-    "Koinos has no gas fee. Holding KOIN gives your account mana; transactions spend it and it refills over a few days. An empty account has no mana of its own, so it cannot pay for its own transactions — that is why a new Kondor wallet must receive KOIN before it can do anything. Bring a little more than the minimum you had in mind, and don't move your whole balance at once.",
+    "Koinos has no gas fee. Holding KOIN gives your account mana; transactions spend it and it refills over a few days. A new account holds no KOIN, so it has no mana of its own.",
+    "That would leave a new wallet unable to pay for anything, so Koinos lets one account pay the mana for another. Kondor 1.3 uses this by itself: when your account cannot pay and its free-mana account can, the signing pop-up puts that account in the Payer field. That is what carries a new wallet through its first transaction.",
+    "Once your KOIN arrives you have your own mana. Keep some KOIN rather than moving the whole balance out, or the account goes back to having none.",
   ],
   linkLabel: "Mana documentation",
   linkHref: OFFICIAL_LINKS.mana,
@@ -605,7 +641,7 @@ export const FAQS = [
   },
   {
     q: "Why can't I start on KoinDX?",
-    a: "A Koinos account gets mana from the KOIN it holds. An empty one has none of its own, so it cannot pay for a swap. Something has to arrive first.",
+    a: "KoinDX swaps between assets that are already on Koinos. A new account holds none, so there is nothing to swap yet. Bring KOIN over from Ethereum first.",
   },
   {
     q: "What does it cost?",
@@ -616,8 +652,16 @@ export const FAQS = [
     a: "Probably not lost. Check the transaction in the block explorer, then add the token using the official address on this page. Never add an address someone sent you.",
   },
   {
+    q: "Why Kondor 1.3 and not Kondor 2?",
+    a: "Kondor 2 (kondorwallet.com) is the newer wallet, but as of August 2026 its free-mana option cannot pay the Vortex redeem for an account that holds no KOIN yet. Kondor 1.3 can, and that is what a first purchase needs. The bug has been reported; this guide will move to Kondor 2 once it is fixed.",
+  },
+  {
+    q: "My Kondor account is empty. Can it pay for the redeem?",
+    a: "Not from its own mana — it has none until the KOIN arrives. Kondor 1.3 notices that and, if its own free-mana account has enough mana, lets it pay instead; the pop-up's Payer field shows it. If Kondor says the free mana service is congested or unavailable, keep your transaction hash and come back later; the Redeem tab picks the transfer up again.",
+  },
+  {
     q: "My bridge transfer is stuck.",
-    a: "Don't start another. Take the source transaction hash to Vortex's Redeem tab, which resumes a transfer whose redeem did not complete.",
+    a: "Don't start another. Take the source transaction hash to Vortex's Redeem tab, which resumes a transfer whose redeem did not complete. If it shows the signatures as expired, press Renew signatures — a Koinos transaction too, paid the same way while your account is empty and free mana is available — wait, then redeem.",
   },
   {
     q: "Is this financial advice?",
@@ -630,6 +674,7 @@ export const GLOSSARY = [
   ["Bridge", "Moves value between two blockchains. Vortex: Ethereum ↔ Koinos. Portal (Wormhole): Ethereum ↔ Base / Solana."],
   ["Contract address", "The unique identifier of a token, and the only reliable way to tell a real one from a copy."],
   ["DEX", "A swap site that trades straight from your wallet without holding your funds."],
+  ["Free mana", "Kondor paying a transaction's mana from its own account instead of yours, so a wallet with no KOIN can still send a transaction. Kondor 1.3 does this by itself when your account cannot pay and that account can."],
   ["Mana", "What Koinos transactions use instead of a fee. Comes from holding KOIN and refills over time."],
   ["Network fee", "What Ethereum, Base or Solana charge per transaction, paid in ETH or SOL."],
   ["Recovery phrase", "The words that restore a wallet. Whoever has them controls it."],

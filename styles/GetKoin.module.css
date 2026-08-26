@@ -94,6 +94,8 @@
 .section {
   padding: 2.75rem 0;
   border-top: 1px solid var(--gk-line);
+  /* #choose and #guide are shared as links, so a jump must clear the header. */
+  scroll-margin-top: 1.5rem;
 }
 
 .h2 {
@@ -799,6 +801,15 @@
 }
 
 /* ------------------------------------------------------------- responsive */
+
+/* Below 992px the site header is fixed (public/css/menu.css) and 80px tall
+   (public/css/responsive.css overrides the 54px base in both mobile ranges),
+   so an anchored section has to start below it. Measured at 390px and 768px. */
+@media (max-width: 991px) {
+  .section {
+    scroll-margin-top: 96px;
+  }
+}
 
 @media (max-width: 720px) {
   .wrap {
